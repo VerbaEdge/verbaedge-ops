@@ -1,0 +1,1 @@
+Private proprietary source for VerbaEdge Systems LLC. Contains original draft code plus user-provided legacy brand/portfolio assets. No third-party source redistributed. Trademarks of other companies are mentioned for comparative research only. Contact the rights holder before reuse by third parties.

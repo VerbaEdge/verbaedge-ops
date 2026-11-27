@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6fc7af1e251561da2fe647a5cee72a13 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+</head>
+<body>
+    
+    <div style="position:fixed;bottom:12px;left:12px;z-index:999;background:white;color:#234;padding:10px 14px;border-radius:10px;max-width:300px;font:12px/1.45 Arial;box-shadow:0 5px 20px #0015"><b>African Trade Corridors (legacy project scope)</b><br>Planning pins only. No route lines, live statuses, permissions or navigation claims. Data attribution: OpenStreetMap contributors.</div>
+    
+            <div class="folium-map" id="map_6fc7af1e251561da2fe647a5cee72a13" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6fc7af1e251561da2fe647a5cee72a13 = L.map(
+                "map_6fc7af1e251561da2fe647a5cee72a13",
+                {
+                    center: [1.0, 23.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": true,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_6fc7af1e251561da2fe647a5cee72a13);
+
+            
+
+        
+    
+            var tile_layer_5a18c00b16c9a0b058777cb2e505c1d3 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5a18c00b16c9a0b058777cb2e505c1d3.addTo(map_6fc7af1e251561da2fe647a5cee72a13);
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_6fc7af1e251561da2fe647a5cee72a13);
+        
+    
+            var feature_group_6b491edcf8a8233630c47eed404cac6e = L.featureGroup(
+                {
+}
+            );
+        
+    
+            feature_group_6b491edcf8a8233630c47eed404cac6e.addTo(map_6fc7af1e251561da2fe647a5cee72a13);
+        
+    
+            var feature_group_5b7a9cba26d93bb38927af0c81651dee = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_baa413501bb4c93838436d1e584857ba = L.circleMarker(
+                [5.67, 0.017],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a9bbcf", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5b7a9cba26d93bb38927af0c81651dee);
+        
+    
+        var popup_e470f6dc436c749ea843002cd355898b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cf5707336cf5841299152d71794544d2 = $(`<div id="html_cf5707336cf5841299152d71794544d2" style="width: 100.0%; height: 100.0%;"><b>Tema</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_e470f6dc436c749ea843002cd355898b.setContent(html_cf5707336cf5841299152d71794544d2);
+            
+        
+
+        circle_marker_baa413501bb4c93838436d1e584857ba.bindPopup(popup_e470f6dc436c749ea843002cd355898b)
+        ;
+
+        
+    
+    
+            circle_marker_baa413501bb4c93838436d1e584857ba.bindTooltip(
+                `<div>
+                     Tema
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0b2bbc02f92b2bbf004dec0731f0ded6 = L.circleMarker(
+                [-4.043, 39.668],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a9bbcf", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5b7a9cba26d93bb38927af0c81651dee);
+        
+    
+        var popup_7dfa58b3266da97dd142fe14e5d85678 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2fa7c1ddd6b40a1d23752bd3d14708e6 = $(`<div id="html_2fa7c1ddd6b40a1d23752bd3d14708e6" style="width: 100.0%; height: 100.0%;"><b>Mombasa</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_7dfa58b3266da97dd142fe14e5d85678.setContent(html_2fa7c1ddd6b40a1d23752bd3d14708e6);
+            
+        
+
+        circle_marker_0b2bbc02f92b2bbf004dec0731f0ded6.bindPopup(popup_7dfa58b3266da97dd142fe14e5d85678)
+        ;
+
+        
+    
+    
+            circle_marker_0b2bbc02f92b2bbf004dec0731f0ded6.bindTooltip(
+                `<div>
+                     Mombasa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6f0d9226aeb2807041ee105cd6fa68cb = L.circleMarker(
+                [-29.858, 31.022],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a9bbcf", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5b7a9cba26d93bb38927af0c81651dee);
+        
+    
+        var popup_f32b84eab4ee87c14e1ffd0eb0edc9e6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1c687fb9c73425576ab377898e51a023 = $(`<div id="html_1c687fb9c73425576ab377898e51a023" style="width: 100.0%; height: 100.0%;"><b>Durban</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_f32b84eab4ee87c14e1ffd0eb0edc9e6.setContent(html_1c687fb9c73425576ab377898e51a023);
+            
+        
+
+        circle_marker_6f0d9226aeb2807041ee105cd6fa68cb.bindPopup(popup_f32b84eab4ee87c14e1ffd0eb0edc9e6)
+        ;
+
+        
+    
+    
+            circle_marker_6f0d9226aeb2807041ee105cd6fa68cb.bindTooltip(
+                `<div>
+                     Durban
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e40bd0935db86583c306db5488fe75bd = L.circleMarker(
+                [33.736, -118.263],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a9bbcf", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5b7a9cba26d93bb38927af0c81651dee);
+        
+    
+        var popup_1fcf2306e9879b14e0cacfc7f706e50b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b6240fe93782198d863f6520d99c4705 = $(`<div id="html_b6240fe93782198d863f6520d99c4705" style="width: 100.0%; height: 100.0%;"><b>Los Angeles</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_1fcf2306e9879b14e0cacfc7f706e50b.setContent(html_b6240fe93782198d863f6520d99c4705);
+            
+        
+
+        circle_marker_e40bd0935db86583c306db5488fe75bd.bindPopup(popup_1fcf2306e9879b14e0cacfc7f706e50b)
+        ;
+
+        
+    
+    
+            circle_marker_e40bd0935db86583c306db5488fe75bd.bindTooltip(
+                `<div>
+                     Los Angeles
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_58060723563d83d3dc15b76fe4724300 = L.circleMarker(
+                [40.713, -74.006],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a9bbcf", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5b7a9cba26d93bb38927af0c81651dee);
+        
+    
+        var popup_6b5749ae8a02c7eb72aeaa83b4a3b193 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_07e095e043328503a12b0835e8cc3c54 = $(`<div id="html_07e095e043328503a12b0835e8cc3c54" style="width: 100.0%; height: 100.0%;"><b>New York</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_6b5749ae8a02c7eb72aeaa83b4a3b193.setContent(html_07e095e043328503a12b0835e8cc3c54);
+            
+        
+
+        circle_marker_58060723563d83d3dc15b76fe4724300.bindPopup(popup_6b5749ae8a02c7eb72aeaa83b4a3b193)
+        ;
+
+        
+    
+    
+            circle_marker_58060723563d83d3dc15b76fe4724300.bindTooltip(
+                `<div>
+                     New York
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe97cc9cb57bf1eaf68b886d1a97cc47 = L.circleMarker(
+                [29.76, -95.369],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a9bbcf", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_5b7a9cba26d93bb38927af0c81651dee);
+        
+    
+        var popup_6fea83b659430bcaabbe48262f6f9600 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3d15e3560884166f474d679598498c55 = $(`<div id="html_3d15e3560884166f474d679598498c55" style="width: 100.0%; height: 100.0%;"><b>Houston</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_6fea83b659430bcaabbe48262f6f9600.setContent(html_3d15e3560884166f474d679598498c55);
+            
+        
+
+        circle_marker_fe97cc9cb57bf1eaf68b886d1a97cc47.bindPopup(popup_6fea83b659430bcaabbe48262f6f9600)
+        ;
+
+        
+    
+    
+            circle_marker_fe97cc9cb57bf1eaf68b886d1a97cc47.bindTooltip(
+                `<div>
+                     Houston
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_5b7a9cba26d93bb38927af0c81651dee.addTo(map_6fc7af1e251561da2fe647a5cee72a13);
+        
+    
+            var feature_group_94fdd46641793f314323c55b92d2a927 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_910fab906d930ecd2da77f8e2c52f337 = L.circleMarker(
+                [-4.043, 39.668],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4fa7e7", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_94fdd46641793f314323c55b92d2a927);
+        
+    
+        var popup_ce52e4a71e48c7229590dd78dec242ff = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b3cc53dc5731d2e3ae91566dd015b756 = $(`<div id="html_b3cc53dc5731d2e3ae91566dd015b756" style="width: 100.0%; height: 100.0%;"><b>Mombasa</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_ce52e4a71e48c7229590dd78dec242ff.setContent(html_b3cc53dc5731d2e3ae91566dd015b756);
+            
+        
+
+        circle_marker_910fab906d930ecd2da77f8e2c52f337.bindPopup(popup_ce52e4a71e48c7229590dd78dec242ff)
+        ;
+
+        
+    
+    
+            circle_marker_910fab906d930ecd2da77f8e2c52f337.bindTooltip(
+                `<div>
+                     Mombasa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0891f3477ad6a333581deb8fb6771652 = L.circleMarker(
+                [-1.292, 36.822],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4fa7e7", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_94fdd46641793f314323c55b92d2a927);
+        
+    
+        var popup_ae3956e57574930faafc1143f135df75 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_14fc8ccbc0ecea71b3d811d8cd9c87b3 = $(`<div id="html_14fc8ccbc0ecea71b3d811d8cd9c87b3" style="width: 100.0%; height: 100.0%;"><b>Nairobi</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_ae3956e57574930faafc1143f135df75.setContent(html_14fc8ccbc0ecea71b3d811d8cd9c87b3);
+            
+        
+
+        circle_marker_0891f3477ad6a333581deb8fb6771652.bindPopup(popup_ae3956e57574930faafc1143f135df75)
+        ;
+
+        
+    
+    
+            circle_marker_0891f3477ad6a333581deb8fb6771652.bindTooltip(
+                `<div>
+                     Nairobi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b03dbc2e5f1bf1b6ccf331ee045272ec = L.circleMarker(
+                [-0.303, 36.08],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4fa7e7", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_94fdd46641793f314323c55b92d2a927);
+        
+    
+        var popup_653966fa33b3fb28b13f9724f77551ed = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d2fbc83406ab8675179afa12e9137a0e = $(`<div id="html_d2fbc83406ab8675179afa12e9137a0e" style="width: 100.0%; height: 100.0%;"><b>Nakuru</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_653966fa33b3fb28b13f9724f77551ed.setContent(html_d2fbc83406ab8675179afa12e9137a0e);
+            
+        
+
+        circle_marker_b03dbc2e5f1bf1b6ccf331ee045272ec.bindPopup(popup_653966fa33b3fb28b13f9724f77551ed)
+        ;
+
+        
+    
+    
+            circle_marker_b03dbc2e5f1bf1b6ccf331ee045272ec.bindTooltip(
+                `<div>
+                     Nakuru
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e5c12d62ddeb2fe8e441a93abdd90ca2 = L.circleMarker(
+                [0.514, 35.269],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4fa7e7", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_94fdd46641793f314323c55b92d2a927);
+        
+    
+        var popup_34a11b43c778715e6c403c95c89a62be = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3bbc09b0558002d81447845d95f22564 = $(`<div id="html_3bbc09b0558002d81447845d95f22564" style="width: 100.0%; height: 100.0%;"><b>Eldoret</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_34a11b43c778715e6c403c95c89a62be.setContent(html_3bbc09b0558002d81447845d95f22564);
+            
+        
+
+        circle_marker_e5c12d62ddeb2fe8e441a93abdd90ca2.bindPopup(popup_34a11b43c778715e6c403c95c89a62be)
+        ;
+
+        
+    
+    
+            circle_marker_e5c12d62ddeb2fe8e441a93abdd90ca2.bindTooltip(
+                `<div>
+                     Eldoret
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_efaceedca5be2ac88164108b81017534 = L.circleMarker(
+                [0.635, 34.279],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4fa7e7", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_94fdd46641793f314323c55b92d2a927);
+        
+    
+        var popup_d205eb532994ae067ed3e25494d74dfb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ffb73c9cce96e9e2babcecbb3c60000a = $(`<div id="html_ffb73c9cce96e9e2babcecbb3c60000a" style="width: 100.0%; height: 100.0%;"><b>Malaba</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_d205eb532994ae067ed3e25494d74dfb.setContent(html_ffb73c9cce96e9e2babcecbb3c60000a);
+            
+        
+
+        circle_marker_efaceedca5be2ac88164108b81017534.bindPopup(popup_d205eb532994ae067ed3e25494d74dfb)
+        ;
+
+        
+    
+    
+            circle_marker_efaceedca5be2ac88164108b81017534.bindTooltip(
+                `<div>
+                     Malaba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b425f9f0d501b8da6789a9bce11d6969 = L.circleMarker(
+                [0.425, 33.204],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4fa7e7", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_94fdd46641793f314323c55b92d2a927);
+        
+    
+        var popup_67a1367488817d34a93b757f8516fb32 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fbb78b1e66a9e2c4a04b4c75a2665f12 = $(`<div id="html_fbb78b1e66a9e2c4a04b4c75a2665f12" style="width: 100.0%; height: 100.0%;"><b>Jinja</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_67a1367488817d34a93b757f8516fb32.setContent(html_fbb78b1e66a9e2c4a04b4c75a2665f12);
+            
+        
+
+        circle_marker_b425f9f0d501b8da6789a9bce11d6969.bindPopup(popup_67a1367488817d34a93b757f8516fb32)
+        ;
+
+        
+    
+    
+            circle_marker_b425f9f0d501b8da6789a9bce11d6969.bindTooltip(
+                `<div>
+                     Jinja
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b75fd78d3c994a3a98b169d0d26c6f1 = L.circleMarker(
+                [0.348, 32.582],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4fa7e7", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_94fdd46641793f314323c55b92d2a927);
+        
+    
+        var popup_030a394cd13b29936cfd53bb72cb2896 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_262f21eb6ddb5b17a1728149a011acec = $(`<div id="html_262f21eb6ddb5b17a1728149a011acec" style="width: 100.0%; height: 100.0%;"><b>Kampala</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_030a394cd13b29936cfd53bb72cb2896.setContent(html_262f21eb6ddb5b17a1728149a011acec);
+            
+        
+
+        circle_marker_1b75fd78d3c994a3a98b169d0d26c6f1.bindPopup(popup_030a394cd13b29936cfd53bb72cb2896)
+        ;
+
+        
+    
+    
+            circle_marker_1b75fd78d3c994a3a98b169d0d26c6f1.bindTooltip(
+                `<div>
+                     Kampala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8703f77fb1924c1d9e81b259973a04b9 = L.circleMarker(
+                [-1.422, 30.009],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4fa7e7", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_94fdd46641793f314323c55b92d2a927);
+        
+    
+        var popup_40d8429d1492565440c5ffe9af9e4a93 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_486d2362b8582d55462a1af4a035142e = $(`<div id="html_486d2362b8582d55462a1af4a035142e" style="width: 100.0%; height: 100.0%;"><b>Katuna/Gatuna</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_40d8429d1492565440c5ffe9af9e4a93.setContent(html_486d2362b8582d55462a1af4a035142e);
+            
+        
+
+        circle_marker_8703f77fb1924c1d9e81b259973a04b9.bindPopup(popup_40d8429d1492565440c5ffe9af9e4a93)
+        ;
+
+        
+    
+    
+            circle_marker_8703f77fb1924c1d9e81b259973a04b9.bindTooltip(
+                `<div>
+                     Katuna/Gatuna
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_092c5ba62d0a59d9dfda461cab8a9e85 = L.circleMarker(
+                [-1.944, 30.062],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4fa7e7", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_94fdd46641793f314323c55b92d2a927);
+        
+    
+        var popup_a40fd516d2e4df800489847dd402ebca = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c65a97d71007c6a7fa13132ee25090f3 = $(`<div id="html_c65a97d71007c6a7fa13132ee25090f3" style="width: 100.0%; height: 100.0%;"><b>Kigali</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_a40fd516d2e4df800489847dd402ebca.setContent(html_c65a97d71007c6a7fa13132ee25090f3);
+            
+        
+
+        circle_marker_092c5ba62d0a59d9dfda461cab8a9e85.bindPopup(popup_a40fd516d2e4df800489847dd402ebca)
+        ;
+
+        
+    
+    
+            circle_marker_092c5ba62d0a59d9dfda461cab8a9e85.bindTooltip(
+                `<div>
+                     Kigali
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eaae7ff5f8cb98e7d088681c47f38603 = L.circleMarker(
+                [0.463, 34.088],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4fa7e7", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_94fdd46641793f314323c55b92d2a927);
+        
+    
+        var popup_eb72a98080fa6cf24d228289535fd438 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_abe80df4eadc541e99c6b40fe183053b = $(`<div id="html_abe80df4eadc541e99c6b40fe183053b" style="width: 100.0%; height: 100.0%;"><b>Busia</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_eb72a98080fa6cf24d228289535fd438.setContent(html_abe80df4eadc541e99c6b40fe183053b);
+            
+        
+
+        circle_marker_eaae7ff5f8cb98e7d088681c47f38603.bindPopup(popup_eb72a98080fa6cf24d228289535fd438)
+        ;
+
+        
+    
+    
+            circle_marker_eaae7ff5f8cb98e7d088681c47f38603.bindTooltip(
+                `<div>
+                     Busia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_efd659e1844140b03c5bbc6171a86b5b = L.circleMarker(
+                [-1.076, 30.482],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4fa7e7", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_94fdd46641793f314323c55b92d2a927);
+        
+    
+        var popup_cc36c246c28d909e10b1beb3d2892529 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c2f56ce9e172649f785d2bd7a33748e2 = $(`<div id="html_c2f56ce9e172649f785d2bd7a33748e2" style="width: 100.0%; height: 100.0%;"><b>Kagitumba/Mirama Hills</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_cc36c246c28d909e10b1beb3d2892529.setContent(html_c2f56ce9e172649f785d2bd7a33748e2);
+            
+        
+
+        circle_marker_efd659e1844140b03c5bbc6171a86b5b.bindPopup(popup_cc36c246c28d909e10b1beb3d2892529)
+        ;
+
+        
+    
+    
+            circle_marker_efd659e1844140b03c5bbc6171a86b5b.bindTooltip(
+                `<div>
+                     Kagitumba/Mirama Hills
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2e793ea570b3ffde56babe4cf7fa6bb3 = L.circleMarker(
+                [-3.361, 29.36],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4fa7e7", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_94fdd46641793f314323c55b92d2a927);
+        
+    
+        var popup_a93be3b37b3e9c8e75ec4e5c5bf85199 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4ac38be6760bd94dd43007fa93a32831 = $(`<div id="html_4ac38be6760bd94dd43007fa93a32831" style="width: 100.0%; height: 100.0%;"><b>Bujumbura</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_a93be3b37b3e9c8e75ec4e5c5bf85199.setContent(html_4ac38be6760bd94dd43007fa93a32831);
+            
+        
+
+        circle_marker_2e793ea570b3ffde56babe4cf7fa6bb3.bindPopup(popup_a93be3b37b3e9c8e75ec4e5c5bf85199)
+        ;
+
+        
+    
+    
+            circle_marker_2e793ea570b3ffde56babe4cf7fa6bb3.bindTooltip(
+                `<div>
+                     Bujumbura
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7cabd20e299374117df6e67e1558b01 = L.circleMarker(
+                [-1.678, 29.221],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4fa7e7", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_94fdd46641793f314323c55b92d2a927);
+        
+    
+        var popup_d3dcd642bb46f18fc7920447c7896784 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_12fad0d1ade33a85d07c61c004a3f0d5 = $(`<div id="html_12fad0d1ade33a85d07c61c004a3f0d5" style="width: 100.0%; height: 100.0%;"><b>Goma</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_d3dcd642bb46f18fc7920447c7896784.setContent(html_12fad0d1ade33a85d07c61c004a3f0d5);
+            
+        
+
+        circle_marker_d7cabd20e299374117df6e67e1558b01.bindPopup(popup_d3dcd642bb46f18fc7920447c7896784)
+        ;
+
+        
+    
+    
+            circle_marker_d7cabd20e299374117df6e67e1558b01.bindTooltip(
+                `<div>
+                     Goma
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4ed04876354773be3e770c858980750e = L.circleMarker(
+                [4.859, 31.571],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4fa7e7", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_94fdd46641793f314323c55b92d2a927);
+        
+    
+        var popup_dd060d0b3b4fd23855afa1bd487a9472 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f1b0fdd216a2be7096db25a4e6ee528d = $(`<div id="html_f1b0fdd216a2be7096db25a4e6ee528d" style="width: 100.0%; height: 100.0%;"><b>Juba</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_dd060d0b3b4fd23855afa1bd487a9472.setContent(html_f1b0fdd216a2be7096db25a4e6ee528d);
+            
+        
+
+        circle_marker_4ed04876354773be3e770c858980750e.bindPopup(popup_dd060d0b3b4fd23855afa1bd487a9472)
+        ;
+
+        
+    
+    
+            circle_marker_4ed04876354773be3e770c858980750e.bindTooltip(
+                `<div>
+                     Juba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_94fdd46641793f314323c55b92d2a927.addTo(map_6fc7af1e251561da2fe647a5cee72a13);
+        
+    
+            var feature_group_a46e4e8df833c5ad6cd73e43525bcde9 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_d80bb5a82209d17c9d90f792399634da = L.circleMarker(
+                [-26.204, 28.047],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5a65c", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_a46e4e8df833c5ad6cd73e43525bcde9);
+        
+    
+        var popup_713ccea83e84485ffa7969a99d3f5538 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_31985b904ff2b26b9b2635ff8cd17ed5 = $(`<div id="html_31985b904ff2b26b9b2635ff8cd17ed5" style="width: 100.0%; height: 100.0%;"><b>Johannesburg</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_713ccea83e84485ffa7969a99d3f5538.setContent(html_31985b904ff2b26b9b2635ff8cd17ed5);
+            
+        
+
+        circle_marker_d80bb5a82209d17c9d90f792399634da.bindPopup(popup_713ccea83e84485ffa7969a99d3f5538)
+        ;
+
+        
+    
+    
+            circle_marker_d80bb5a82209d17c9d90f792399634da.bindTooltip(
+                `<div>
+                     Johannesburg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d2385fba0bbbb28c7dc83a05e80116e2 = L.circleMarker(
+                [-22.216, 30.0],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5a65c", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_a46e4e8df833c5ad6cd73e43525bcde9);
+        
+    
+        var popup_bd12c1cf78150514be0ca8478956ab40 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c75370e13a2d46a1c2559fd4364ad9f7 = $(`<div id="html_c75370e13a2d46a1c2559fd4364ad9f7" style="width: 100.0%; height: 100.0%;"><b>Beitbridge</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_bd12c1cf78150514be0ca8478956ab40.setContent(html_c75370e13a2d46a1c2559fd4364ad9f7);
+            
+        
+
+        circle_marker_d2385fba0bbbb28c7dc83a05e80116e2.bindPopup(popup_bd12c1cf78150514be0ca8478956ab40)
+        ;
+
+        
+    
+    
+            circle_marker_d2385fba0bbbb28c7dc83a05e80116e2.bindTooltip(
+                `<div>
+                     Beitbridge
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4545a4b297d69c92348b98dc24021ba7 = L.circleMarker(
+                [-17.824, 31.049],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5a65c", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_a46e4e8df833c5ad6cd73e43525bcde9);
+        
+    
+        var popup_5beed83309cb48193a657dacb67605e2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d1e89df423f93eaf86d930a622101195 = $(`<div id="html_d1e89df423f93eaf86d930a622101195" style="width: 100.0%; height: 100.0%;"><b>Harare</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_5beed83309cb48193a657dacb67605e2.setContent(html_d1e89df423f93eaf86d930a622101195);
+            
+        
+
+        circle_marker_4545a4b297d69c92348b98dc24021ba7.bindPopup(popup_5beed83309cb48193a657dacb67605e2)
+        ;
+
+        
+    
+    
+            circle_marker_4545a4b297d69c92348b98dc24021ba7.bindTooltip(
+                `<div>
+                     Harare
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cc0e568395221ce1c04f3355c5bb0b35 = L.circleMarker(
+                [-16.033, 28.849],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5a65c", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_a46e4e8df833c5ad6cd73e43525bcde9);
+        
+    
+        var popup_28c9e10dad689c6eb7ec0348e88998cf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_293389dd59ead6ec4f1bbd144d59bd8e = $(`<div id="html_293389dd59ead6ec4f1bbd144d59bd8e" style="width: 100.0%; height: 100.0%;"><b>Chirundu</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_28c9e10dad689c6eb7ec0348e88998cf.setContent(html_293389dd59ead6ec4f1bbd144d59bd8e);
+            
+        
+
+        circle_marker_cc0e568395221ce1c04f3355c5bb0b35.bindPopup(popup_28c9e10dad689c6eb7ec0348e88998cf)
+        ;
+
+        
+    
+    
+            circle_marker_cc0e568395221ce1c04f3355c5bb0b35.bindTooltip(
+                `<div>
+                     Chirundu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5be3067bbd4acf3d9bf516009aa61e1d = L.circleMarker(
+                [-15.388, 28.322],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5a65c", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_a46e4e8df833c5ad6cd73e43525bcde9);
+        
+    
+        var popup_9467cb4878ad9fb08d00000ae7ac45d3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cf1b2c4ff6a67fa7e9af11c24de54bb5 = $(`<div id="html_cf1b2c4ff6a67fa7e9af11c24de54bb5" style="width: 100.0%; height: 100.0%;"><b>Lusaka</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_9467cb4878ad9fb08d00000ae7ac45d3.setContent(html_cf1b2c4ff6a67fa7e9af11c24de54bb5);
+            
+        
+
+        circle_marker_5be3067bbd4acf3d9bf516009aa61e1d.bindPopup(popup_9467cb4878ad9fb08d00000ae7ac45d3)
+        ;
+
+        
+    
+    
+            circle_marker_5be3067bbd4acf3d9bf516009aa61e1d.bindTooltip(
+                `<div>
+                     Lusaka
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_52ae516df045e866f350c0f0f32a4e4d = L.circleMarker(
+                [-29.858, 31.022],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5a65c", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_a46e4e8df833c5ad6cd73e43525bcde9);
+        
+    
+        var popup_2f48b5476c54a315cb58bef7224dbcc4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cf919738b05103ee18882cd70fb4a478 = $(`<div id="html_cf919738b05103ee18882cd70fb4a478" style="width: 100.0%; height: 100.0%;"><b>Durban</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_2f48b5476c54a315cb58bef7224dbcc4.setContent(html_cf919738b05103ee18882cd70fb4a478);
+            
+        
+
+        circle_marker_52ae516df045e866f350c0f0f32a4e4d.bindPopup(popup_2f48b5476c54a315cb58bef7224dbcc4)
+        ;
+
+        
+    
+    
+            circle_marker_52ae516df045e866f350c0f0f32a4e4d.bindTooltip(
+                `<div>
+                     Durban
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_936d32f6f7bf8ef6436385a18639bd99 = L.circleMarker(
+                [-12.958, 28.636],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5a65c", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_a46e4e8df833c5ad6cd73e43525bcde9);
+        
+    
+        var popup_2bf95274babc70039d90cd4a2908f433 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a9578df3ed1e81ab4e3e7a0d6119959f = $(`<div id="html_a9578df3ed1e81ab4e3e7a0d6119959f" style="width: 100.0%; height: 100.0%;"><b>Ndola</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_2bf95274babc70039d90cd4a2908f433.setContent(html_a9578df3ed1e81ab4e3e7a0d6119959f);
+            
+        
+
+        circle_marker_936d32f6f7bf8ef6436385a18639bd99.bindPopup(popup_2bf95274babc70039d90cd4a2908f433)
+        ;
+
+        
+    
+    
+            circle_marker_936d32f6f7bf8ef6436385a18639bd99.bindTooltip(
+                `<div>
+                     Ndola
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_33ecfd07799e6de197f937b8af427b42 = L.circleMarker(
+                [-12.251, 27.804],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5a65c", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_a46e4e8df833c5ad6cd73e43525bcde9);
+        
+    
+        var popup_b97d90b27eaef3533aebb0595b8185a0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4072effb340423cd12fddf673f19dd06 = $(`<div id="html_4072effb340423cd12fddf673f19dd06" style="width: 100.0%; height: 100.0%;"><b>Kasumbalesa</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_b97d90b27eaef3533aebb0595b8185a0.setContent(html_4072effb340423cd12fddf673f19dd06);
+            
+        
+
+        circle_marker_33ecfd07799e6de197f937b8af427b42.bindPopup(popup_b97d90b27eaef3533aebb0595b8185a0)
+        ;
+
+        
+    
+    
+            circle_marker_33ecfd07799e6de197f937b8af427b42.bindTooltip(
+                `<div>
+                     Kasumbalesa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fdcf8c6e9e6913c94966aa214474e011 = L.circleMarker(
+                [-11.664, 27.479],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5a65c", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_a46e4e8df833c5ad6cd73e43525bcde9);
+        
+    
+        var popup_522033b2ef8c78feedd6ba91f9775e68 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eec57f23beaa473e9e592a2812726634 = $(`<div id="html_eec57f23beaa473e9e592a2812726634" style="width: 100.0%; height: 100.0%;"><b>Lubumbashi</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_522033b2ef8c78feedd6ba91f9775e68.setContent(html_eec57f23beaa473e9e592a2812726634);
+            
+        
+
+        circle_marker_fdcf8c6e9e6913c94966aa214474e011.bindPopup(popup_522033b2ef8c78feedd6ba91f9775e68)
+        ;
+
+        
+    
+    
+            circle_marker_fdcf8c6e9e6913c94966aa214474e011.bindTooltip(
+                `<div>
+                     Lubumbashi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_a46e4e8df833c5ad6cd73e43525bcde9.addTo(map_6fc7af1e251561da2fe647a5cee72a13);
+        
+    
+            var feature_group_e5c466fc1754c2cdf38efb33fa39ffe2 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_13c2330353cf914edacca80c6f6221ad = L.circleMarker(
+                [5.67, 0.017],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#68c9ac", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e5c466fc1754c2cdf38efb33fa39ffe2);
+        
+    
+        var popup_8434e8d1899b9232ef67809440e2fefd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8dc9dfd0a96c0f0182ef3953b9ec2e20 = $(`<div id="html_8dc9dfd0a96c0f0182ef3953b9ec2e20" style="width: 100.0%; height: 100.0%;"><b>Tema</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_8434e8d1899b9232ef67809440e2fefd.setContent(html_8dc9dfd0a96c0f0182ef3953b9ec2e20);
+            
+        
+
+        circle_marker_13c2330353cf914edacca80c6f6221ad.bindPopup(popup_8434e8d1899b9232ef67809440e2fefd)
+        ;
+
+        
+    
+    
+            circle_marker_13c2330353cf914edacca80c6f6221ad.bindTooltip(
+                `<div>
+                     Tema
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f1194d84a0c3043cf48e805dc16be67c = L.circleMarker(
+                [5.604, -0.187],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#68c9ac", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e5c466fc1754c2cdf38efb33fa39ffe2);
+        
+    
+        var popup_97d97d6b68045932b838cbae7fe920cd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1b1e5d666b67411ec4b4c1c686fd3199 = $(`<div id="html_1b1e5d666b67411ec4b4c1c686fd3199" style="width: 100.0%; height: 100.0%;"><b>Accra</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_97d97d6b68045932b838cbae7fe920cd.setContent(html_1b1e5d666b67411ec4b4c1c686fd3199);
+            
+        
+
+        circle_marker_f1194d84a0c3043cf48e805dc16be67c.bindPopup(popup_97d97d6b68045932b838cbae7fe920cd)
+        ;
+
+        
+    
+    
+            circle_marker_f1194d84a0c3043cf48e805dc16be67c.bindTooltip(
+                `<div>
+                     Accra
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cad531a73bb7f7935931a31ac458fe5b = L.circleMarker(
+                [6.688, -1.625],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#68c9ac", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e5c466fc1754c2cdf38efb33fa39ffe2);
+        
+    
+        var popup_7be542beb02aec79bf1dc3d1a0a90c21 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_919dc26feb9bcb38a2851f321c665879 = $(`<div id="html_919dc26feb9bcb38a2851f321c665879" style="width: 100.0%; height: 100.0%;"><b>Kumasi</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_7be542beb02aec79bf1dc3d1a0a90c21.setContent(html_919dc26feb9bcb38a2851f321c665879);
+            
+        
+
+        circle_marker_cad531a73bb7f7935931a31ac458fe5b.bindPopup(popup_7be542beb02aec79bf1dc3d1a0a90c21)
+        ;
+
+        
+    
+    
+            circle_marker_cad531a73bb7f7935931a31ac458fe5b.bindTooltip(
+                `<div>
+                     Kumasi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b0665a498d7f374ea39a1127c405382 = L.circleMarker(
+                [9.408, -0.853],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#68c9ac", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e5c466fc1754c2cdf38efb33fa39ffe2);
+        
+    
+        var popup_1c2e3f9218236974676966df044c5982 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_50f534cf048b1459caed5826b0280ffc = $(`<div id="html_50f534cf048b1459caed5826b0280ffc" style="width: 100.0%; height: 100.0%;"><b>Tamale</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_1c2e3f9218236974676966df044c5982.setContent(html_50f534cf048b1459caed5826b0280ffc);
+            
+        
+
+        circle_marker_6b0665a498d7f374ea39a1127c405382.bindPopup(popup_1c2e3f9218236974676966df044c5982)
+        ;
+
+        
+    
+    
+            circle_marker_6b0665a498d7f374ea39a1127c405382.bindTooltip(
+                `<div>
+                     Tamale
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_85aa5c2d7abfa610d95d9b30b50c6a4d = L.circleMarker(
+                [10.986, -1.113],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#68c9ac", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e5c466fc1754c2cdf38efb33fa39ffe2);
+        
+    
+        var popup_66d69a9f53fdd55431221e300c6c075f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_02494cd7c8bebb68e88450f9d41f110c = $(`<div id="html_02494cd7c8bebb68e88450f9d41f110c" style="width: 100.0%; height: 100.0%;"><b>Paga</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_66d69a9f53fdd55431221e300c6c075f.setContent(html_02494cd7c8bebb68e88450f9d41f110c);
+            
+        
+
+        circle_marker_85aa5c2d7abfa610d95d9b30b50c6a4d.bindPopup(popup_66d69a9f53fdd55431221e300c6c075f)
+        ;
+
+        
+    
+    
+            circle_marker_85aa5c2d7abfa610d95d9b30b50c6a4d.bindTooltip(
+                `<div>
+                     Paga
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7a449d70ac55bfd8ac3c73c05d768c5f = L.circleMarker(
+                [12.371, -1.52],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#68c9ac", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e5c466fc1754c2cdf38efb33fa39ffe2);
+        
+    
+        var popup_703b5010faa4c9b5c1d50c04d0e71a1a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1ed61b6ec2f80446623a27021c6add27 = $(`<div id="html_1ed61b6ec2f80446623a27021c6add27" style="width: 100.0%; height: 100.0%;"><b>Ouagadougou</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_703b5010faa4c9b5c1d50c04d0e71a1a.setContent(html_1ed61b6ec2f80446623a27021c6add27);
+            
+        
+
+        circle_marker_7a449d70ac55bfd8ac3c73c05d768c5f.bindPopup(popup_703b5010faa4c9b5c1d50c04d0e71a1a)
+        ;
+
+        
+    
+    
+            circle_marker_7a449d70ac55bfd8ac3c73c05d768c5f.bindTooltip(
+                `<div>
+                     Ouagadougou
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_becde163ba0e2540cd0f229d0451a8b7 = L.circleMarker(
+                [4.901, -1.784],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#68c9ac", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e5c466fc1754c2cdf38efb33fa39ffe2);
+        
+    
+        var popup_56ecd85cef69970bdf8999bafae4b7e2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0a5e5fa4b0152b59fb8ce6ab3c8ba163 = $(`<div id="html_0a5e5fa4b0152b59fb8ce6ab3c8ba163" style="width: 100.0%; height: 100.0%;"><b>Takoradi</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_56ecd85cef69970bdf8999bafae4b7e2.setContent(html_0a5e5fa4b0152b59fb8ce6ab3c8ba163);
+            
+        
+
+        circle_marker_becde163ba0e2540cd0f229d0451a8b7.bindPopup(popup_56ecd85cef69970bdf8999bafae4b7e2)
+        ;
+
+        
+    
+    
+            circle_marker_becde163ba0e2540cd0f229d0451a8b7.bindTooltip(
+                `<div>
+                     Takoradi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6214c4aaa2086941f5573eba71e121c0 = L.circleMarker(
+                [12.639, -8.003],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#68c9ac", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e5c466fc1754c2cdf38efb33fa39ffe2);
+        
+    
+        var popup_1ad5b2f3a660d264640dc6bdfd808bdf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b60ae2065818636e83d85851283f5c0b = $(`<div id="html_b60ae2065818636e83d85851283f5c0b" style="width: 100.0%; height: 100.0%;"><b>Bamako</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_1ad5b2f3a660d264640dc6bdfd808bdf.setContent(html_b60ae2065818636e83d85851283f5c0b);
+            
+        
+
+        circle_marker_6214c4aaa2086941f5573eba71e121c0.bindPopup(popup_1ad5b2f3a660d264640dc6bdfd808bdf)
+        ;
+
+        
+    
+    
+            circle_marker_6214c4aaa2086941f5573eba71e121c0.bindTooltip(
+                `<div>
+                     Bamako
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c99886cb84e8ff9915dcea9ff8ba80a1 = L.circleMarker(
+                [13.511, 2.126],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#68c9ac", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e5c466fc1754c2cdf38efb33fa39ffe2);
+        
+    
+        var popup_21692bd4518df7354cb4852b548c65bf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_352f6eaec59ccfb671d1bb407a3f179a = $(`<div id="html_352f6eaec59ccfb671d1bb407a3f179a" style="width: 100.0%; height: 100.0%;"><b>Niamey</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_21692bd4518df7354cb4852b548c65bf.setContent(html_352f6eaec59ccfb671d1bb407a3f179a);
+            
+        
+
+        circle_marker_c99886cb84e8ff9915dcea9ff8ba80a1.bindPopup(popup_21692bd4518df7354cb4852b548c65bf)
+        ;
+
+        
+    
+    
+            circle_marker_c99886cb84e8ff9915dcea9ff8ba80a1.bindTooltip(
+                `<div>
+                     Niamey
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f50d0520c374e3869f480497a6a71f6d = L.circleMarker(
+                [5.36, -4.008],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#68c9ac", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e5c466fc1754c2cdf38efb33fa39ffe2);
+        
+    
+        var popup_e1c9f90ee72bf424c92c0a41d5d7ceae = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f3383e429b40951acfc78ea13072af35 = $(`<div id="html_f3383e429b40951acfc78ea13072af35" style="width: 100.0%; height: 100.0%;"><b>Abidjan</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_e1c9f90ee72bf424c92c0a41d5d7ceae.setContent(html_f3383e429b40951acfc78ea13072af35);
+            
+        
+
+        circle_marker_f50d0520c374e3869f480497a6a71f6d.bindPopup(popup_e1c9f90ee72bf424c92c0a41d5d7ceae)
+        ;
+
+        
+    
+    
+            circle_marker_f50d0520c374e3869f480497a6a71f6d.bindTooltip(
+                `<div>
+                     Abidjan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d0738cb0cb90f4206bc01a478e43996e = L.circleMarker(
+                [6.137, 1.213],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#68c9ac", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e5c466fc1754c2cdf38efb33fa39ffe2);
+        
+    
+        var popup_c9f3345943abe8d033124bccd660c103 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f7d401ffa336d38b9dd964471c56d14a = $(`<div id="html_f7d401ffa336d38b9dd964471c56d14a" style="width: 100.0%; height: 100.0%;"><b>Lomé</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_c9f3345943abe8d033124bccd660c103.setContent(html_f7d401ffa336d38b9dd964471c56d14a);
+            
+        
+
+        circle_marker_d0738cb0cb90f4206bc01a478e43996e.bindPopup(popup_c9f3345943abe8d033124bccd660c103)
+        ;
+
+        
+    
+    
+            circle_marker_d0738cb0cb90f4206bc01a478e43996e.bindTooltip(
+                `<div>
+                     Lomé
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4e6f89b8940cef05e8eff0d6878e1782 = L.circleMarker(
+                [6.365, 2.418],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#68c9ac", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e5c466fc1754c2cdf38efb33fa39ffe2);
+        
+    
+        var popup_032b17714bad80de6da0c7b82c68c435 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d9e16a4169a0a16ffb5d1fc52ba2a3d8 = $(`<div id="html_d9e16a4169a0a16ffb5d1fc52ba2a3d8" style="width: 100.0%; height: 100.0%;"><b>Cotonou</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_032b17714bad80de6da0c7b82c68c435.setContent(html_d9e16a4169a0a16ffb5d1fc52ba2a3d8);
+            
+        
+
+        circle_marker_4e6f89b8940cef05e8eff0d6878e1782.bindPopup(popup_032b17714bad80de6da0c7b82c68c435)
+        ;
+
+        
+    
+    
+            circle_marker_4e6f89b8940cef05e8eff0d6878e1782.bindTooltip(
+                `<div>
+                     Cotonou
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e0ca4dbe1f7d6fa1453bcf90803a3890 = L.circleMarker(
+                [6.524, 3.379],
+                {"bubblingMouseEvents": true, "color": "#fff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#68c9ac", "fillOpacity": 0.96, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(feature_group_e5c466fc1754c2cdf38efb33fa39ffe2);
+        
+    
+        var popup_4b1ef5ed92114bb4a34ed6f80614b4ee = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_80b1e4141bf286e9e3603eb325a36884 = $(`<div id="html_80b1e4141bf286e9e3603eb325a36884" style="width: 100.0%; height: 100.0%;"><b>Lagos</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                popup_4b1ef5ed92114bb4a34ed6f80614b4ee.setContent(html_80b1e4141bf286e9e3603eb325a36884);
+            
+        
+
+        circle_marker_e0ca4dbe1f7d6fa1453bcf90803a3890.bindPopup(popup_4b1ef5ed92114bb4a34ed6f80614b4ee)
+        ;
+
+        
+    
+    
+            circle_marker_e0ca4dbe1f7d6fa1453bcf90803a3890.bindTooltip(
+                `<div>
+                     Lagos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_e5c466fc1754c2cdf38efb33fa39ffe2.addTo(map_6fc7af1e251561da2fe647a5cee72a13);
+        
+    
+            var layer_control_7f34e83cd4a4bf27ecd2d2d1e657b31b_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_5a18c00b16c9a0b058777cb2e505c1d3,
+                },
+                overlays :  {
+                    "Africa\u2013Europe" : feature_group_6b491edcf8a8233630c47eed404cac6e,
+                    "Cross-region" : feature_group_5b7a9cba26d93bb38927af0c81651dee,
+                    "East Africa" : feature_group_94fdd46641793f314323c55b92d2a927,
+                    "Southern Africa" : feature_group_a46e4e8df833c5ad6cd73e43525bcde9,
+                    "West Africa" : feature_group_e5c466fc1754c2cdf38efb33fa39ffe2,
+                },
+            };
+            let layer_control_7f34e83cd4a4bf27ecd2d2d1e657b31b = L.control.layers(
+                layer_control_7f34e83cd4a4bf27ecd2d2d1e657b31b_layers.base_layers,
+                layer_control_7f34e83cd4a4bf27ecd2d2d1e657b31b_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_6fc7af1e251561da2fe647a5cee72a13);
+
+        
+</script>
+</html>
