@@ -1,2 +1,43 @@
-(()=>{const b=document.querySelector('[data-menu]'),n=document.querySelector('[data-nav]');if(b&&n){b.addEventListener('click',()=>{const open=n.classList.toggle('open');b.setAttribute('aria-expanded',String(open));});}const year=document.querySelector('[data-year]');if(year)year.textContent=String(new Date().getFullYear());const f=document.querySelector('[data-inquiry-form]');if(f){f.addEventListener('submit',e=>{e.preventDefault();const data=new FormData(f),sub=String(data.get('topic')||'Project inquiry'),name=String(data.get('name')||''),msg=String(data.get('message')||'');const body=`Name: ${name}\nProject: ${sub}\n\n${msg}\n\nPlease do not include confidential data in this initial email.`;window.location.href='mailto:contracts@verbaedge.com?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body)})}})();
-for(const img of document.querySelectorAll('img.photo')){img.addEventListener('error',()=>{if(!img.dataset.fallbackApplied){img.dataset.fallbackApplied='true';img.src='/assets/brand/legacy-africa-corridors.png';img.alt='Existing VerbaEdge Africa trade workflow illustration';}else{img.style.display='none';}});}
+const menuButton = document.querySelector('[data-menu]');
+const navigation = document.querySelector('[data-nav]');
+
+if (menuButton && navigation) {
+  const header = menuButton.closest('header');
+  const compact = window.matchMedia('(max-width: 900px)');
+
+  function setMenuOpen(open) {
+    navigation.classList.toggle('open', open);
+    menuButton.setAttribute('aria-expanded', String(open));
+  }
+
+  header.classList.add('menu-ready');
+  menuButton.addEventListener('click', () => {
+    setMenuOpen(menuButton.getAttribute('aria-expanded') === 'false');
+  });
+  header.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+      event.preventDefault();
+      menuButton.focus();
+      setMenuOpen(false);
+    }
+  });
+  header.addEventListener('focusout', event => {
+    if (!header.contains(event.relatedTarget)) setMenuOpen(false);
+  });
+  compact.addEventListener('change', () => setMenuOpen(false));
+}
+
+const year = document.querySelector('[data-year]');
+if (year) year.textContent = String(new Date().getFullYear());
+
+const inquiry = document.querySelector('[data-inquiry-form]');
+if (inquiry) {
+  inquiry.addEventListener('submit', event => {
+    event.preventDefault();
+    const data = new FormData(inquiry);
+    const subject = data.get('topic');
+    const body = `Name: ${data.get('name')}\nProject: ${subject}\n\n${data.get('message')}`;
+    window.location.href = `mailto:contracts@verbaedge.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+  inquiry.hidden = false;
+}

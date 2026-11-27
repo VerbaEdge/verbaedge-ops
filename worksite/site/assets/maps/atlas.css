@@ -1,0 +1,74 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+  background: #081320;
+  color: #e4eef8;
+}
+
+body {
+  margin: 0;
+}
+
+.atlas {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-height: 100dvh;
+}
+
+.atlas-header,
+.atlas-overview {
+  padding: 12px 16px;
+}
+
+.atlas-header h1 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.atlas-header p,
+.atlas-overview p {
+  margin: 4px 0 10px;
+}
+
+.atlas a {
+  color: #7de7d8;
+}
+
+.atlas a:focus-visible,
+.atlas .leaflet-interactive:focus-visible {
+  outline: 3px solid #3577a8;
+  outline-offset: 2px;
+}
+
+.atlas-content {
+  position: relative;
+  min-height: 260px;
+}
+
+.atlas-overview img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 55dvh;
+  object-fit: contain;
+}
+
+.atlas .folium-map {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+}
+
+.atlas-ready .atlas .folium-map {
+  visibility: visible;
+}
+
+.atlas-ready .atlas-overview {
+  display: none;
+}
+
+.atlas .leaflet-container,
+.atlas .leaflet-container a {
+  color: #15354c;
+}

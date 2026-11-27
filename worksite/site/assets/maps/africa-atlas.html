@@ -1,66 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
-    
-            <meta name="viewport" content="width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-            <style>
-                #map_6fc7af1e251561da2fe647a5cee72a13 {
-                    position: relative;
-                    width: 100.0%;
-                    height: 100.0%;
-                    left: 0.0%;
-                    top: 0.0%;
-                }
-                .leaflet-container { font-size: 1rem; }
-            </style>
-
-            <style>html, body {
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
-            </style>
-
-            <style>#map {
-                position:absolute;
-                top:0;
-                bottom:0;
-                right:0;
-                left:0;
-                }
-            </style>
-
-            <script>
-                L_NO_TOUCH = false;
-                L_DISABLE_3D = false;
-            </script>
-
-        
-    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Africa gateway atlas | VerbaEdge Ops</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css">
+    <link rel="stylesheet" href="atlas.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <script defer src="atlas.js"></script>
 </head>
 <body>
-    
-    <div style="position:fixed;bottom:12px;left:12px;z-index:999;background:white;color:#234;padding:10px 14px;border-radius:10px;max-width:300px;font:12px/1.45 Arial;box-shadow:0 5px 20px #0015"><b>African Trade Corridors (legacy project scope)</b><br>Planning pins only. No route lines, live statuses, permissions or navigation claims. Data attribution: OpenStreetMap contributors.</div>
-    
-            <div class="folium-map" id="map_6fc7af1e251561da2fe647a5cee72a13" ></div>
-        
-</body>
-<script>
+    <main class="atlas">
+        <header class="atlas-header">
+            <h1>Africa gateway atlas</h1>
+            <p>Approximate locations for planning. <a href="/corridors/" target="_top">Read the planning scenarios</a>.</p>
+        </header>
+        <div class="atlas-content">
+            <section class="atlas-overview" aria-label="Static map overview">
+                <p>The interactive map requires an internet connection for map tiles.</p>
+                <a href="africa-overview.png" target="_top"><img src="africa-overview.png" width="1040" height="838" alt="Map of reference locations in Western, Eastern and Southern Africa."></a>
+            </section>
+            <div class="folium-map" id="map_6fc7af1e251561da2fe647a5cee72a13" role="region" aria-label="Interactive africa gateway atlas"></div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!window.L) return;
     
     
             var map_6fc7af1e251561da2fe647a5cee72a13 = L.map(
@@ -71,7 +38,7 @@
                     ...{
   "zoom": 4,
   "zoomControl": true,
-  "preferCanvas": true,
+  "scrollWheelZoom": false,
 }
 
                 }
@@ -102,7 +69,8 @@
             tile_layer_5a18c00b16c9a0b058777cb2e505c1d3.addTo(map_6fc7af1e251561da2fe647a5cee72a13);
         
     
-            L.control.fullscreen(
+            if (L.control.fullscreen) {
+                L.control.fullscreen(
                 {
   "position": "topleft",
   "title": "Full Screen",
@@ -110,6 +78,7 @@
   "forceSeparateButton": false,
 }
             ).addTo(map_6fc7af1e251561da2fe647a5cee72a13);
+            }
         
     
             var feature_group_6b491edcf8a8233630c47eed404cac6e = L.featureGroup(
@@ -139,7 +108,7 @@
 
         
             
-                var html_cf5707336cf5841299152d71794544d2 = $(`<div id="html_cf5707336cf5841299152d71794544d2" style="width: 100.0%; height: 100.0%;"><b>Tema</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_cf5707336cf5841299152d71794544d2 = `<div id="html_cf5707336cf5841299152d71794544d2" style="width: 100.0%; height: 100.0%;"><b>Tema</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_e470f6dc436c749ea843002cd355898b.setContent(html_cf5707336cf5841299152d71794544d2);
             
         
@@ -172,7 +141,7 @@
 
         
             
-                var html_2fa7c1ddd6b40a1d23752bd3d14708e6 = $(`<div id="html_2fa7c1ddd6b40a1d23752bd3d14708e6" style="width: 100.0%; height: 100.0%;"><b>Mombasa</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_2fa7c1ddd6b40a1d23752bd3d14708e6 = `<div id="html_2fa7c1ddd6b40a1d23752bd3d14708e6" style="width: 100.0%; height: 100.0%;"><b>Mombasa</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_7dfa58b3266da97dd142fe14e5d85678.setContent(html_2fa7c1ddd6b40a1d23752bd3d14708e6);
             
         
@@ -205,7 +174,7 @@
 
         
             
-                var html_1c687fb9c73425576ab377898e51a023 = $(`<div id="html_1c687fb9c73425576ab377898e51a023" style="width: 100.0%; height: 100.0%;"><b>Durban</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_1c687fb9c73425576ab377898e51a023 = `<div id="html_1c687fb9c73425576ab377898e51a023" style="width: 100.0%; height: 100.0%;"><b>Durban</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_f32b84eab4ee87c14e1ffd0eb0edc9e6.setContent(html_1c687fb9c73425576ab377898e51a023);
             
         
@@ -238,7 +207,7 @@
 
         
             
-                var html_b6240fe93782198d863f6520d99c4705 = $(`<div id="html_b6240fe93782198d863f6520d99c4705" style="width: 100.0%; height: 100.0%;"><b>Los Angeles</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_b6240fe93782198d863f6520d99c4705 = `<div id="html_b6240fe93782198d863f6520d99c4705" style="width: 100.0%; height: 100.0%;"><b>Los Angeles</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_1fcf2306e9879b14e0cacfc7f706e50b.setContent(html_b6240fe93782198d863f6520d99c4705);
             
         
@@ -271,7 +240,7 @@
 
         
             
-                var html_07e095e043328503a12b0835e8cc3c54 = $(`<div id="html_07e095e043328503a12b0835e8cc3c54" style="width: 100.0%; height: 100.0%;"><b>New York</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_07e095e043328503a12b0835e8cc3c54 = `<div id="html_07e095e043328503a12b0835e8cc3c54" style="width: 100.0%; height: 100.0%;"><b>New York</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_6b5749ae8a02c7eb72aeaa83b4a3b193.setContent(html_07e095e043328503a12b0835e8cc3c54);
             
         
@@ -304,7 +273,7 @@
 
         
             
-                var html_3d15e3560884166f474d679598498c55 = $(`<div id="html_3d15e3560884166f474d679598498c55" style="width: 100.0%; height: 100.0%;"><b>Houston</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_3d15e3560884166f474d679598498c55 = `<div id="html_3d15e3560884166f474d679598498c55" style="width: 100.0%; height: 100.0%;"><b>Houston</b><br>Cross-region<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_6fea83b659430bcaabbe48262f6f9600.setContent(html_3d15e3560884166f474d679598498c55);
             
         
@@ -346,7 +315,7 @@
 
         
             
-                var html_b3cc53dc5731d2e3ae91566dd015b756 = $(`<div id="html_b3cc53dc5731d2e3ae91566dd015b756" style="width: 100.0%; height: 100.0%;"><b>Mombasa</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_b3cc53dc5731d2e3ae91566dd015b756 = `<div id="html_b3cc53dc5731d2e3ae91566dd015b756" style="width: 100.0%; height: 100.0%;"><b>Mombasa</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_ce52e4a71e48c7229590dd78dec242ff.setContent(html_b3cc53dc5731d2e3ae91566dd015b756);
             
         
@@ -379,7 +348,7 @@
 
         
             
-                var html_14fc8ccbc0ecea71b3d811d8cd9c87b3 = $(`<div id="html_14fc8ccbc0ecea71b3d811d8cd9c87b3" style="width: 100.0%; height: 100.0%;"><b>Nairobi</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_14fc8ccbc0ecea71b3d811d8cd9c87b3 = `<div id="html_14fc8ccbc0ecea71b3d811d8cd9c87b3" style="width: 100.0%; height: 100.0%;"><b>Nairobi</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_ae3956e57574930faafc1143f135df75.setContent(html_14fc8ccbc0ecea71b3d811d8cd9c87b3);
             
         
@@ -412,7 +381,7 @@
 
         
             
-                var html_d2fbc83406ab8675179afa12e9137a0e = $(`<div id="html_d2fbc83406ab8675179afa12e9137a0e" style="width: 100.0%; height: 100.0%;"><b>Nakuru</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_d2fbc83406ab8675179afa12e9137a0e = `<div id="html_d2fbc83406ab8675179afa12e9137a0e" style="width: 100.0%; height: 100.0%;"><b>Nakuru</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_653966fa33b3fb28b13f9724f77551ed.setContent(html_d2fbc83406ab8675179afa12e9137a0e);
             
         
@@ -445,7 +414,7 @@
 
         
             
-                var html_3bbc09b0558002d81447845d95f22564 = $(`<div id="html_3bbc09b0558002d81447845d95f22564" style="width: 100.0%; height: 100.0%;"><b>Eldoret</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_3bbc09b0558002d81447845d95f22564 = `<div id="html_3bbc09b0558002d81447845d95f22564" style="width: 100.0%; height: 100.0%;"><b>Eldoret</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_34a11b43c778715e6c403c95c89a62be.setContent(html_3bbc09b0558002d81447845d95f22564);
             
         
@@ -478,7 +447,7 @@
 
         
             
-                var html_ffb73c9cce96e9e2babcecbb3c60000a = $(`<div id="html_ffb73c9cce96e9e2babcecbb3c60000a" style="width: 100.0%; height: 100.0%;"><b>Malaba</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_ffb73c9cce96e9e2babcecbb3c60000a = `<div id="html_ffb73c9cce96e9e2babcecbb3c60000a" style="width: 100.0%; height: 100.0%;"><b>Malaba</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_d205eb532994ae067ed3e25494d74dfb.setContent(html_ffb73c9cce96e9e2babcecbb3c60000a);
             
         
@@ -511,7 +480,7 @@
 
         
             
-                var html_fbb78b1e66a9e2c4a04b4c75a2665f12 = $(`<div id="html_fbb78b1e66a9e2c4a04b4c75a2665f12" style="width: 100.0%; height: 100.0%;"><b>Jinja</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_fbb78b1e66a9e2c4a04b4c75a2665f12 = `<div id="html_fbb78b1e66a9e2c4a04b4c75a2665f12" style="width: 100.0%; height: 100.0%;"><b>Jinja</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_67a1367488817d34a93b757f8516fb32.setContent(html_fbb78b1e66a9e2c4a04b4c75a2665f12);
             
         
@@ -544,7 +513,7 @@
 
         
             
-                var html_262f21eb6ddb5b17a1728149a011acec = $(`<div id="html_262f21eb6ddb5b17a1728149a011acec" style="width: 100.0%; height: 100.0%;"><b>Kampala</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_262f21eb6ddb5b17a1728149a011acec = `<div id="html_262f21eb6ddb5b17a1728149a011acec" style="width: 100.0%; height: 100.0%;"><b>Kampala</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_030a394cd13b29936cfd53bb72cb2896.setContent(html_262f21eb6ddb5b17a1728149a011acec);
             
         
@@ -577,7 +546,7 @@
 
         
             
-                var html_486d2362b8582d55462a1af4a035142e = $(`<div id="html_486d2362b8582d55462a1af4a035142e" style="width: 100.0%; height: 100.0%;"><b>Katuna/Gatuna</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_486d2362b8582d55462a1af4a035142e = `<div id="html_486d2362b8582d55462a1af4a035142e" style="width: 100.0%; height: 100.0%;"><b>Katuna/Gatuna</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_40d8429d1492565440c5ffe9af9e4a93.setContent(html_486d2362b8582d55462a1af4a035142e);
             
         
@@ -610,7 +579,7 @@
 
         
             
-                var html_c65a97d71007c6a7fa13132ee25090f3 = $(`<div id="html_c65a97d71007c6a7fa13132ee25090f3" style="width: 100.0%; height: 100.0%;"><b>Kigali</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_c65a97d71007c6a7fa13132ee25090f3 = `<div id="html_c65a97d71007c6a7fa13132ee25090f3" style="width: 100.0%; height: 100.0%;"><b>Kigali</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_a40fd516d2e4df800489847dd402ebca.setContent(html_c65a97d71007c6a7fa13132ee25090f3);
             
         
@@ -643,7 +612,7 @@
 
         
             
-                var html_abe80df4eadc541e99c6b40fe183053b = $(`<div id="html_abe80df4eadc541e99c6b40fe183053b" style="width: 100.0%; height: 100.0%;"><b>Busia</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_abe80df4eadc541e99c6b40fe183053b = `<div id="html_abe80df4eadc541e99c6b40fe183053b" style="width: 100.0%; height: 100.0%;"><b>Busia</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_eb72a98080fa6cf24d228289535fd438.setContent(html_abe80df4eadc541e99c6b40fe183053b);
             
         
@@ -676,7 +645,7 @@
 
         
             
-                var html_c2f56ce9e172649f785d2bd7a33748e2 = $(`<div id="html_c2f56ce9e172649f785d2bd7a33748e2" style="width: 100.0%; height: 100.0%;"><b>Kagitumba/Mirama Hills</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_c2f56ce9e172649f785d2bd7a33748e2 = `<div id="html_c2f56ce9e172649f785d2bd7a33748e2" style="width: 100.0%; height: 100.0%;"><b>Kagitumba/Mirama Hills</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_cc36c246c28d909e10b1beb3d2892529.setContent(html_c2f56ce9e172649f785d2bd7a33748e2);
             
         
@@ -709,7 +678,7 @@
 
         
             
-                var html_4ac38be6760bd94dd43007fa93a32831 = $(`<div id="html_4ac38be6760bd94dd43007fa93a32831" style="width: 100.0%; height: 100.0%;"><b>Bujumbura</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_4ac38be6760bd94dd43007fa93a32831 = `<div id="html_4ac38be6760bd94dd43007fa93a32831" style="width: 100.0%; height: 100.0%;"><b>Bujumbura</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_a93be3b37b3e9c8e75ec4e5c5bf85199.setContent(html_4ac38be6760bd94dd43007fa93a32831);
             
         
@@ -742,7 +711,7 @@
 
         
             
-                var html_12fad0d1ade33a85d07c61c004a3f0d5 = $(`<div id="html_12fad0d1ade33a85d07c61c004a3f0d5" style="width: 100.0%; height: 100.0%;"><b>Goma</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_12fad0d1ade33a85d07c61c004a3f0d5 = `<div id="html_12fad0d1ade33a85d07c61c004a3f0d5" style="width: 100.0%; height: 100.0%;"><b>Goma</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_d3dcd642bb46f18fc7920447c7896784.setContent(html_12fad0d1ade33a85d07c61c004a3f0d5);
             
         
@@ -775,7 +744,7 @@
 
         
             
-                var html_f1b0fdd216a2be7096db25a4e6ee528d = $(`<div id="html_f1b0fdd216a2be7096db25a4e6ee528d" style="width: 100.0%; height: 100.0%;"><b>Juba</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_f1b0fdd216a2be7096db25a4e6ee528d = `<div id="html_f1b0fdd216a2be7096db25a4e6ee528d" style="width: 100.0%; height: 100.0%;"><b>Juba</b><br>East Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_dd060d0b3b4fd23855afa1bd487a9472.setContent(html_f1b0fdd216a2be7096db25a4e6ee528d);
             
         
@@ -817,7 +786,7 @@
 
         
             
-                var html_31985b904ff2b26b9b2635ff8cd17ed5 = $(`<div id="html_31985b904ff2b26b9b2635ff8cd17ed5" style="width: 100.0%; height: 100.0%;"><b>Johannesburg</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_31985b904ff2b26b9b2635ff8cd17ed5 = `<div id="html_31985b904ff2b26b9b2635ff8cd17ed5" style="width: 100.0%; height: 100.0%;"><b>Johannesburg</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_713ccea83e84485ffa7969a99d3f5538.setContent(html_31985b904ff2b26b9b2635ff8cd17ed5);
             
         
@@ -850,7 +819,7 @@
 
         
             
-                var html_c75370e13a2d46a1c2559fd4364ad9f7 = $(`<div id="html_c75370e13a2d46a1c2559fd4364ad9f7" style="width: 100.0%; height: 100.0%;"><b>Beitbridge</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_c75370e13a2d46a1c2559fd4364ad9f7 = `<div id="html_c75370e13a2d46a1c2559fd4364ad9f7" style="width: 100.0%; height: 100.0%;"><b>Beitbridge</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_bd12c1cf78150514be0ca8478956ab40.setContent(html_c75370e13a2d46a1c2559fd4364ad9f7);
             
         
@@ -883,7 +852,7 @@
 
         
             
-                var html_d1e89df423f93eaf86d930a622101195 = $(`<div id="html_d1e89df423f93eaf86d930a622101195" style="width: 100.0%; height: 100.0%;"><b>Harare</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_d1e89df423f93eaf86d930a622101195 = `<div id="html_d1e89df423f93eaf86d930a622101195" style="width: 100.0%; height: 100.0%;"><b>Harare</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_5beed83309cb48193a657dacb67605e2.setContent(html_d1e89df423f93eaf86d930a622101195);
             
         
@@ -916,7 +885,7 @@
 
         
             
-                var html_293389dd59ead6ec4f1bbd144d59bd8e = $(`<div id="html_293389dd59ead6ec4f1bbd144d59bd8e" style="width: 100.0%; height: 100.0%;"><b>Chirundu</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_293389dd59ead6ec4f1bbd144d59bd8e = `<div id="html_293389dd59ead6ec4f1bbd144d59bd8e" style="width: 100.0%; height: 100.0%;"><b>Chirundu</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_28c9e10dad689c6eb7ec0348e88998cf.setContent(html_293389dd59ead6ec4f1bbd144d59bd8e);
             
         
@@ -949,7 +918,7 @@
 
         
             
-                var html_cf1b2c4ff6a67fa7e9af11c24de54bb5 = $(`<div id="html_cf1b2c4ff6a67fa7e9af11c24de54bb5" style="width: 100.0%; height: 100.0%;"><b>Lusaka</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_cf1b2c4ff6a67fa7e9af11c24de54bb5 = `<div id="html_cf1b2c4ff6a67fa7e9af11c24de54bb5" style="width: 100.0%; height: 100.0%;"><b>Lusaka</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_9467cb4878ad9fb08d00000ae7ac45d3.setContent(html_cf1b2c4ff6a67fa7e9af11c24de54bb5);
             
         
@@ -982,7 +951,7 @@
 
         
             
-                var html_cf919738b05103ee18882cd70fb4a478 = $(`<div id="html_cf919738b05103ee18882cd70fb4a478" style="width: 100.0%; height: 100.0%;"><b>Durban</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_cf919738b05103ee18882cd70fb4a478 = `<div id="html_cf919738b05103ee18882cd70fb4a478" style="width: 100.0%; height: 100.0%;"><b>Durban</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_2f48b5476c54a315cb58bef7224dbcc4.setContent(html_cf919738b05103ee18882cd70fb4a478);
             
         
@@ -1015,7 +984,7 @@
 
         
             
-                var html_a9578df3ed1e81ab4e3e7a0d6119959f = $(`<div id="html_a9578df3ed1e81ab4e3e7a0d6119959f" style="width: 100.0%; height: 100.0%;"><b>Ndola</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_a9578df3ed1e81ab4e3e7a0d6119959f = `<div id="html_a9578df3ed1e81ab4e3e7a0d6119959f" style="width: 100.0%; height: 100.0%;"><b>Ndola</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_2bf95274babc70039d90cd4a2908f433.setContent(html_a9578df3ed1e81ab4e3e7a0d6119959f);
             
         
@@ -1048,7 +1017,7 @@
 
         
             
-                var html_4072effb340423cd12fddf673f19dd06 = $(`<div id="html_4072effb340423cd12fddf673f19dd06" style="width: 100.0%; height: 100.0%;"><b>Kasumbalesa</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_4072effb340423cd12fddf673f19dd06 = `<div id="html_4072effb340423cd12fddf673f19dd06" style="width: 100.0%; height: 100.0%;"><b>Kasumbalesa</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_b97d90b27eaef3533aebb0595b8185a0.setContent(html_4072effb340423cd12fddf673f19dd06);
             
         
@@ -1081,7 +1050,7 @@
 
         
             
-                var html_eec57f23beaa473e9e592a2812726634 = $(`<div id="html_eec57f23beaa473e9e592a2812726634" style="width: 100.0%; height: 100.0%;"><b>Lubumbashi</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_eec57f23beaa473e9e592a2812726634 = `<div id="html_eec57f23beaa473e9e592a2812726634" style="width: 100.0%; height: 100.0%;"><b>Lubumbashi</b><br>Southern Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_522033b2ef8c78feedd6ba91f9775e68.setContent(html_eec57f23beaa473e9e592a2812726634);
             
         
@@ -1123,7 +1092,7 @@
 
         
             
-                var html_8dc9dfd0a96c0f0182ef3953b9ec2e20 = $(`<div id="html_8dc9dfd0a96c0f0182ef3953b9ec2e20" style="width: 100.0%; height: 100.0%;"><b>Tema</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_8dc9dfd0a96c0f0182ef3953b9ec2e20 = `<div id="html_8dc9dfd0a96c0f0182ef3953b9ec2e20" style="width: 100.0%; height: 100.0%;"><b>Tema</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_8434e8d1899b9232ef67809440e2fefd.setContent(html_8dc9dfd0a96c0f0182ef3953b9ec2e20);
             
         
@@ -1156,7 +1125,7 @@
 
         
             
-                var html_1b1e5d666b67411ec4b4c1c686fd3199 = $(`<div id="html_1b1e5d666b67411ec4b4c1c686fd3199" style="width: 100.0%; height: 100.0%;"><b>Accra</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_1b1e5d666b67411ec4b4c1c686fd3199 = `<div id="html_1b1e5d666b67411ec4b4c1c686fd3199" style="width: 100.0%; height: 100.0%;"><b>Accra</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_97d97d6b68045932b838cbae7fe920cd.setContent(html_1b1e5d666b67411ec4b4c1c686fd3199);
             
         
@@ -1189,7 +1158,7 @@
 
         
             
-                var html_919dc26feb9bcb38a2851f321c665879 = $(`<div id="html_919dc26feb9bcb38a2851f321c665879" style="width: 100.0%; height: 100.0%;"><b>Kumasi</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_919dc26feb9bcb38a2851f321c665879 = `<div id="html_919dc26feb9bcb38a2851f321c665879" style="width: 100.0%; height: 100.0%;"><b>Kumasi</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_7be542beb02aec79bf1dc3d1a0a90c21.setContent(html_919dc26feb9bcb38a2851f321c665879);
             
         
@@ -1222,7 +1191,7 @@
 
         
             
-                var html_50f534cf048b1459caed5826b0280ffc = $(`<div id="html_50f534cf048b1459caed5826b0280ffc" style="width: 100.0%; height: 100.0%;"><b>Tamale</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_50f534cf048b1459caed5826b0280ffc = `<div id="html_50f534cf048b1459caed5826b0280ffc" style="width: 100.0%; height: 100.0%;"><b>Tamale</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_1c2e3f9218236974676966df044c5982.setContent(html_50f534cf048b1459caed5826b0280ffc);
             
         
@@ -1255,7 +1224,7 @@
 
         
             
-                var html_02494cd7c8bebb68e88450f9d41f110c = $(`<div id="html_02494cd7c8bebb68e88450f9d41f110c" style="width: 100.0%; height: 100.0%;"><b>Paga</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_02494cd7c8bebb68e88450f9d41f110c = `<div id="html_02494cd7c8bebb68e88450f9d41f110c" style="width: 100.0%; height: 100.0%;"><b>Paga</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_66d69a9f53fdd55431221e300c6c075f.setContent(html_02494cd7c8bebb68e88450f9d41f110c);
             
         
@@ -1288,7 +1257,7 @@
 
         
             
-                var html_1ed61b6ec2f80446623a27021c6add27 = $(`<div id="html_1ed61b6ec2f80446623a27021c6add27" style="width: 100.0%; height: 100.0%;"><b>Ouagadougou</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_1ed61b6ec2f80446623a27021c6add27 = `<div id="html_1ed61b6ec2f80446623a27021c6add27" style="width: 100.0%; height: 100.0%;"><b>Ouagadougou</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_703b5010faa4c9b5c1d50c04d0e71a1a.setContent(html_1ed61b6ec2f80446623a27021c6add27);
             
         
@@ -1321,7 +1290,7 @@
 
         
             
-                var html_0a5e5fa4b0152b59fb8ce6ab3c8ba163 = $(`<div id="html_0a5e5fa4b0152b59fb8ce6ab3c8ba163" style="width: 100.0%; height: 100.0%;"><b>Takoradi</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_0a5e5fa4b0152b59fb8ce6ab3c8ba163 = `<div id="html_0a5e5fa4b0152b59fb8ce6ab3c8ba163" style="width: 100.0%; height: 100.0%;"><b>Takoradi</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_56ecd85cef69970bdf8999bafae4b7e2.setContent(html_0a5e5fa4b0152b59fb8ce6ab3c8ba163);
             
         
@@ -1354,7 +1323,7 @@
 
         
             
-                var html_b60ae2065818636e83d85851283f5c0b = $(`<div id="html_b60ae2065818636e83d85851283f5c0b" style="width: 100.0%; height: 100.0%;"><b>Bamako</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_b60ae2065818636e83d85851283f5c0b = `<div id="html_b60ae2065818636e83d85851283f5c0b" style="width: 100.0%; height: 100.0%;"><b>Bamako</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_1ad5b2f3a660d264640dc6bdfd808bdf.setContent(html_b60ae2065818636e83d85851283f5c0b);
             
         
@@ -1387,7 +1356,7 @@
 
         
             
-                var html_352f6eaec59ccfb671d1bb407a3f179a = $(`<div id="html_352f6eaec59ccfb671d1bb407a3f179a" style="width: 100.0%; height: 100.0%;"><b>Niamey</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_352f6eaec59ccfb671d1bb407a3f179a = `<div id="html_352f6eaec59ccfb671d1bb407a3f179a" style="width: 100.0%; height: 100.0%;"><b>Niamey</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_21692bd4518df7354cb4852b548c65bf.setContent(html_352f6eaec59ccfb671d1bb407a3f179a);
             
         
@@ -1420,7 +1389,7 @@
 
         
             
-                var html_f3383e429b40951acfc78ea13072af35 = $(`<div id="html_f3383e429b40951acfc78ea13072af35" style="width: 100.0%; height: 100.0%;"><b>Abidjan</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_f3383e429b40951acfc78ea13072af35 = `<div id="html_f3383e429b40951acfc78ea13072af35" style="width: 100.0%; height: 100.0%;"><b>Abidjan</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_e1c9f90ee72bf424c92c0a41d5d7ceae.setContent(html_f3383e429b40951acfc78ea13072af35);
             
         
@@ -1453,7 +1422,7 @@
 
         
             
-                var html_f7d401ffa336d38b9dd964471c56d14a = $(`<div id="html_f7d401ffa336d38b9dd964471c56d14a" style="width: 100.0%; height: 100.0%;"><b>Lomé</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_f7d401ffa336d38b9dd964471c56d14a = `<div id="html_f7d401ffa336d38b9dd964471c56d14a" style="width: 100.0%; height: 100.0%;"><b>Lomé</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_c9f3345943abe8d033124bccd660c103.setContent(html_f7d401ffa336d38b9dd964471c56d14a);
             
         
@@ -1486,7 +1455,7 @@
 
         
             
-                var html_d9e16a4169a0a16ffb5d1fc52ba2a3d8 = $(`<div id="html_d9e16a4169a0a16ffb5d1fc52ba2a3d8" style="width: 100.0%; height: 100.0%;"><b>Cotonou</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_d9e16a4169a0a16ffb5d1fc52ba2a3d8 = `<div id="html_d9e16a4169a0a16ffb5d1fc52ba2a3d8" style="width: 100.0%; height: 100.0%;"><b>Cotonou</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_032b17714bad80de6da0c7b82c68c435.setContent(html_d9e16a4169a0a16ffb5d1fc52ba2a3d8);
             
         
@@ -1519,7 +1488,7 @@
 
         
             
-                var html_80b1e4141bf286e9e3603eb325a36884 = $(`<div id="html_80b1e4141bf286e9e3603eb325a36884" style="width: 100.0%; height: 100.0%;"><b>Lagos</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`)[0];
+                var html_80b1e4141bf286e9e3603eb325a36884 = `<div id="html_80b1e4141bf286e9e3603eb325a36884" style="width: 100.0%; height: 100.0%;"><b>Lagos</b><br>West Africa<br><small>Approximate location; not a live shipment or surveyed road.</small></div>`;
                 popup_4b1ef5ed92114bb4a34ed6f80614b4ee.setContent(html_80b1e4141bf286e9e3603eb325a36884);
             
         
@@ -1566,5 +1535,8 @@
             ).addTo(map_6fc7af1e251561da2fe647a5cee72a13);
 
         
-</script>
+            finishAtlas(tile_layer_5a18c00b16c9a0b058777cb2e505c1d3, layer_control_7f34e83cd4a4bf27ecd2d2d1e657b31b_layers.overlays);
+        });
+    </script>
+</body>
 </html>

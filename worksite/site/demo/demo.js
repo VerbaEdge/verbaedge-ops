@@ -1,1 +1,139 @@
-(()=>{const key='veops-demo-v1';const defaults={work:[{id:'WO-001',asset:'Demo Bay Door',task:'Inspect hinges and seal',priority:'Routine',status:'Open'},{id:'WO-002',asset:'Demo Forklift',task:'Check defect report',priority:'Urgent',status:'Open'}],ships:[{id:'DEMO-001',lane:'Mombasa → Kigali',status:'Booked (fictional)'},{id:'DEMO-002',lane:'Los Angeles → Chicago',status:'Documents pending (fictional)'}]};let state;try{state=JSON.parse(localStorage.getItem(key))||structuredClone(defaults)}catch{state=structuredClone(defaults)}const work=document.getElementById('work-list'),ship=document.getElementById('shipment-list');const save=()=>localStorage.setItem(key,JSON.stringify(state));function elt(tag,text,cls){const e=document.createElement(tag);e.textContent=text;if(cls)e.className=cls;return e}function render(){work.replaceChildren();ship.replaceChildren();for(const r of state.work){const box=elt('div','','feature');const div=elt('div','');div.append(elt('strong',r.id+' · '+r.asset),elt('p',r.task+' · '+r.priority,'tiny muted'));const btn=elt('button',r.status==='Open'?'Close demo ticket':'Reopen','btn');btn.type='button';btn.addEventListener('click',()=>{r.status=r.status==='Open'?'Closed':'Open';save();render()});box.append(div,btn);work.append(box)}for(const s of state.ships){const box=elt('div','','feature');const div=elt('div','');div.append(elt('strong',s.id),elt('p',s.lane+' · '+s.status,'tiny muted'));const btn=elt('button','Next fictional status','btn');btn.type='button';btn.addEventListener('click',()=>{const steps=['Booked (fictional)','Documents pending (fictional)','In transit (fictional)','Delivered (fictional)'];s.status=steps[(steps.indexOf(s.status)+1)%steps.length];save();render()});box.append(div,btn);ship.append(box)}}document.querySelector('#work-form').addEventListener('submit',e=>{e.preventDefault();const fd=new FormData(e.currentTarget);state.work.unshift({id:'WO-'+String(Date.now()).slice(-6),asset:String(fd.get('asset')),task:String(fd.get('task')),priority:String(fd.get('priority')),status:'Open'});save();e.currentTarget.reset();render()});document.querySelector('#shipment-form').addEventListener('submit',e=>{e.preventDefault();const fd=new FormData(e.currentTarget);state.ships.unshift({id:String(fd.get('reference')),lane:String(fd.get('lane')),status:'Booked (fictional)'});save();e.currentTarget.reset();render()});document.querySelector('#reset-demo').addEventListener('click',()=>{state=structuredClone(defaults);save();render()});render()})();
+const storageKey = 'veops-demo-v1';
+const defaults = {
+  work: [
+    {id: 'WO-001', asset: 'Demo Bay Door', task: 'Inspect hinges and seal', priority: 'Routine', status: 'Open'},
+    {id: 'WO-002', asset: 'Demo Forklift', task: 'Check defect report', priority: 'Urgent', status: 'Open'},
+  ],
+  ships: [
+    {id: 'DEMO-001', lane: 'Mombasa → Kigali', status: 'Booked (fictional)'},
+    {id: 'DEMO-002', lane: 'Los Angeles → Chicago', status: 'Documents pending (fictional)'},
+  ],
+};
+const shipmentStatuses = [
+  'Booked (fictional)',
+  'Documents pending (fictional)',
+  'In transit (fictional)',
+  'Delivered (fictional)',
+];
+const workForm = document.querySelector('#work-form');
+const shipmentForm = document.querySelector('#shipment-form');
+const workList = document.querySelector('#work-list');
+const shipmentList = document.querySelector('#shipment-list');
+const reset = document.querySelector('#reset-demo');
+const status = document.querySelector('#demo-status');
+
+function hasFields(records, fields) {
+  return Array.isArray(records) && records.every(record =>
+    record && fields.every(field => typeof record[field] === 'string'));
+}
+
+let state = structuredClone(defaults);
+try {
+  const saved = JSON.parse(localStorage.getItem(storageKey));
+  if (hasFields(saved?.work, ['id', 'asset', 'task', 'priority', 'status']) &&
+      hasFields(saved?.ships, ['id', 'lane', 'status'])) {
+    state = saved;
+  }
+} catch {
+  // Start with example records when browser storage cannot be read.
+}
+
+function commitDemoChange(message) {
+  try {
+    localStorage.setItem(storageKey, JSON.stringify(state));
+    status.textContent = message;
+  } catch {
+    status.textContent = `${message} Browser storage is unavailable. Changes last until this page closes or reloads.`;
+  }
+}
+
+function element(tag, text, className) {
+  const node = document.createElement(tag);
+  node.textContent = text;
+  if (className) node.className = className;
+  return node;
+}
+
+function createRow(title, details, label) {
+  const box = element('div', '', 'feature demo-record');
+  const summary = element('div', '');
+  const detail = element('p', details, 'tiny muted');
+  const button = element('button', label, 'btn');
+  button.type = 'button';
+  summary.append(element('strong', title), detail);
+  box.append(summary, button);
+  return {box, detail, button};
+}
+
+function createWorkRow(record) {
+  const details = () => `${record.task} · ${record.priority} · ${record.status}`;
+  const action = () => record.status === 'Open' ? 'Close demo ticket' : 'Reopen demo ticket';
+  const {box, detail, button} = createRow(`${record.id} · ${record.asset}`, details(), action());
+  function updateLabel() {
+    button.textContent = action();
+    button.setAttribute('aria-label', `${action()} ${record.id}`);
+  }
+  updateLabel();
+  button.addEventListener('click', () => {
+    record.status = record.status === 'Open' ? 'Closed' : 'Open';
+    detail.textContent = details();
+    updateLabel();
+    commitDemoChange(`Work order ${record.id} is ${record.status.toLowerCase()}.`);
+  });
+  return box;
+}
+
+function createShipmentRow(record) {
+  const details = () => `${record.lane} · ${record.status}`;
+  const {box, detail, button} = createRow(record.id, details(), 'Next fictional status');
+  button.setAttribute('aria-label', `Next fictional status for ${record.id}`);
+  button.addEventListener('click', () => {
+    const index = shipmentStatuses.indexOf(record.status);
+    record.status = shipmentStatuses[(index + 1) % shipmentStatuses.length];
+    detail.textContent = details();
+    commitDemoChange(`Shipment ${record.id}: ${record.status}.`);
+  });
+  return box;
+}
+
+function renderLists() {
+  workList.replaceChildren(...state.work.map(createWorkRow));
+  shipmentList.replaceChildren(...state.ships.map(createShipmentRow));
+}
+
+workForm.addEventListener('submit', event => {
+  event.preventDefault();
+  const data = new FormData(workForm);
+  const record = {
+    id: `WO-${String(Date.now()).slice(-6)}`,
+    asset: data.get('asset'),
+    task: data.get('task'),
+    priority: data.get('priority'),
+    status: 'Open',
+  };
+  state.work.unshift(record);
+  workList.prepend(createWorkRow(record));
+  workForm.reset();
+  commitDemoChange(`Added work order ${record.id}.`);
+});
+
+shipmentForm.addEventListener('submit', event => {
+  event.preventDefault();
+  const data = new FormData(shipmentForm);
+  const record = {id: data.get('reference'), lane: data.get('lane'), status: shipmentStatuses[0]};
+  state.ships.unshift(record);
+  shipmentList.prepend(createShipmentRow(record));
+  shipmentForm.reset();
+  commitDemoChange(`Added fictional shipment ${record.id}.`);
+});
+
+reset.addEventListener('click', () => {
+  state = structuredClone(defaults);
+  renderLists();
+  commitDemoChange('Restored the fictional example records.');
+});
+
+renderLists();
+workForm.hidden = false;
+shipmentForm.hidden = false;
+reset.hidden = false;

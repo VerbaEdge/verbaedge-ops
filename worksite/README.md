@@ -1,16 +1,17 @@
-# VerbaEdge Ops — Operations Website
+# VerbaEdge Ops worksite
 
-Private source-code website starter for **VerbaEdge Systems LLC**. Built as a zero-dependency static web project with a Node development server, functional UI features and a Cloudflare Pages-compatible build.
+Static staging source for the proposed VerbaEdge Ops trade name of **VerbaEdge Systems LLC**. The worksite uses plain HTML, CSS and JavaScript with no package dependencies.
+
+Run commands from `worksite/`:
 
 ```bash
 node --version           # Node 20+
-npm run dev              # http://localhost:3000
-npm test
-npm run build            # emits dist/
+npm run dev              # local preview on port 3000
+npm run check            # run tests and build dist/
 ```
 
-Cloudflare Pages: connect a PRIVATE GitHub repository, production branch `main`, build command `npm run build`, output directory `dist`, build root repository root. Default project subdomain `*.pages.dev`. Attach domain only after review.
+The worksite is designed to be served from the root of a staging host using `worksite/dist/`. Its canonical URLs identify the intended host, `ops.verbaedge.com`. This staging source is separate from the existing GitHub Pages website at the repository root. See [source provenance](docs/MERGE_PROVENANCE.md) and [release gates](docs/LEGAL_RELEASE_GATES.md).
 
-There is no backend or secret management in this demo. Work-order and shipment workflows in /demo/ are fictional localStorage examples. Map pins represent approximate geographic locations, not physical routes or live events.
+The maintenance and shipment workflows in `/demo/` use fictional data and browser-local storage. The relocated [shipment checklist](site/legacy/freight-demo/index.html) and [invoice reference demo](site/billing/demo/index.html) retain their original fictional examples. Corridor maps depict approximate locations for reference. They require third-party resources for the interactive basemap.
 
-See `WORK_PROJECT_INSTRUCTIONS.md`, `WORK_FIRST_TASK.md`, `CODEX_FIRST_TASK.md`, `docs/LEGAL_RELEASE_GATES.md`, `docs/IMAGE_RIGHTS_AND_DESIGN.md` and `AGENTS.md`.
+See [AGENTS.md](AGENTS.md) for worksite rules and [image rights](docs/IMAGE_RIGHTS_AND_DESIGN.md) for attribution and release requirements.

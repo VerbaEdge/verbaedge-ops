@@ -1,8 +1,8 @@
 # Source merge and provenance — verbaedge-ops
 
-- **Current connected GitHub repo:** `VerbaEdge/verbaedge-logistics`. Checked 2026-11-26.
-- **Existing GitHub Pages custom domain:** `logistics.verbaedge.com` (verified from repository `CNAME`; not a live DNS proof).
-- **New Cloudflare staging candidate:** `ops.verbaedge.com` (Ops requires new domain binding; not yet live).
+- **Review repository:** `VerbaEdge/verbaedge-ops`. The legacy archive came from the logistics site.
+- **Root GitHub Pages:** The existing root site and `CNAME` are preserved. The checked-in `CNAME` specifies `ops.verbaedge.com`; live domain configuration was outside this review.
+- **Worksite staging:** Serve the build from `worksite/dist/` on an isolated preview host. Canonical metadata uses the intended `ops.verbaedge.com` hostname.
 - **Refreshed website source:** November 26 two-site starter project, `02_VerbaEdge_Ops`.
 - **Legacy public site snapshot:** November 17 VerbaEdge relaunch archive, `logistics`.
 - **Legacy paths added without conflict:** 8.

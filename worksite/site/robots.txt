@@ -1,3 +1,3 @@
 User-agent: *
-Disallow: /legacy/
+Disallow:
 Sitemap: https://ops.verbaedge.com/sitemap.xml
