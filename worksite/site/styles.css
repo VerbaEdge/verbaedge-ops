@@ -12,6 +12,11 @@
   box-shadow: var(--shadow);
 }
 .hero-visual h2 { margin: 0 0 22px; font-size: clamp(1.65rem, 4vw, 2.4rem); line-height: 1.15; }
+.home-photo { min-width: 0; margin: 0; }
+.home-photo img { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); }
+.home-photo figcaption { margin-top: 8px; color: var(--muted); font-size: .8rem; }
+.hero-photo { margin-bottom: 22px; }
+.hero-photo img { aspect-ratio: 16 / 9; object-fit: cover; }
 .workflow-links { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
 .workflow-links a { display: grid; gap: 4px; padding: 14px 16px; background: #0c2134; border: 1px solid var(--line); border-radius: 12px; }
 .workflow-links a:hover { border-color: var(--teal); }
