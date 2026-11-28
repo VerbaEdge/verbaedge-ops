@@ -1,6 +1,6 @@
 # OpsCare CMMS-style original application blueprint
 
-No Atlas CMMS code is included. The current `/demo/` page is a non-authenticated localStorage prototype and not a production CMMS.
+The public `/demo/` page uses fictional records and browser-local storage.
 
 ## Primary entities
 `Organization`, `Site`, `Asset`, `AssetHierarchy`, `WorkRequest`, `WorkOrder`, `WorkOrderEvent`, `PreventivePlan`, `ConditionReading`, `ServiceVendor`, `StaffCredential`, `Part`, `InventoryTransaction`, `PurchaseRequest`, `FacilityInspection`, `Vehicle`, `DriverQualificationReference`, `Shipment`, `ShipmentLeg`, `ShipmentEvent`, `DocumentReference`, `Exception`, `AuditEvent`.
