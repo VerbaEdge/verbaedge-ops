@@ -8,5 +8,5 @@
 - Commit code on branches, run `npm test && npm run build` and document verified outcomes.
 - No deployment to production without explicit owner authorization.
 - Use only rights-cleared imagery. Remote Unsplash image links need final per-photo check.
-- Do not copy Intelloop's ADAPT names or Atlas CMMS source, screenshots or trademarked design.
+- Use VerbaEdge’s own service names, copy, code and visual design. Keep competitor comparisons and referral links out of release materials.
 - Keep Xernavia legally and operationally separate from this project.

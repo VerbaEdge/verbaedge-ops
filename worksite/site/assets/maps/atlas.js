@@ -1,5 +1,5 @@
-function finishAtlas(tileLayer, overlays) {
-  tileLayer.once('tileload', () => document.documentElement.classList.add('atlas-ready'));
+function finishAtlas(overlays) {
+  document.documentElement.classList.add('atlas-ready');
 
   for (const group of Object.values(overlays)) {
     group.eachLayer(marker => {
