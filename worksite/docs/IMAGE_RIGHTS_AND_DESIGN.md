@@ -24,6 +24,6 @@ The atlas links each photograph and caption to its publisher record. DVIDS marks
 
 ## Maps
 
-The atlas retains the eleven supplied cartographic HTML and PNG maps from maps.zip. The four branded regional illustrations are WebP derivatives of the owner's supplied logo-image ZIP. Their original visible titles and geography are retained. The owner should confirm redistribution rights in any underlying third-party artwork before public release.
+The regional maps derive from the supplied map archive. The four overview exports carry updated VerbaEdge titles. The global map uses the supplied gateway coordinates, ordered corridor records and a locally hosted Leaflet renderer. The four branded regional illustrations are WebP derivatives of the owner's supplied logo-image ZIP. Their original visible titles and geography are retained. The owner should confirm redistribution rights in any underlying third-party artwork before public release.
 
 The eight new vector maps use [Natural Earth public-domain geography](https://www.naturalearthdata.com/about/terms-of-use/) with approximate gateway coordinates for planning. The U.S. geographic groups reference [MARAD’s marine highway designations](https://www.maritime.dot.gov/grants-finances/marine-highways/designated-us-marine-highway-routes). Map labels and group names are editorial. The interactive source maps retain their provider credits and require an internet connection for tiles. [OpenStreetMap attribution](https://www.openstreetmap.org/copyright) · [CARTO attribution](https://carto.com/attributions)

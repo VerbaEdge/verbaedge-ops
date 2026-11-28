@@ -7,6 +7,9 @@
     const key = location.hash.slice(1);
     const panel = panels.find(item => item.id === key) || panels[0];
     select.value = panel.id;
+    const frame = document.querySelector('.route-map');
+    const src = '/assets/maps/global-atlas.html?region=' + encodeURIComponent(panel.id);
+    if (frame.getAttribute('src') !== src) frame.setAttribute('src', src);
     for (const item of panels) item.hidden = item !== panel;
   }
 
