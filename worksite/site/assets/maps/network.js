@@ -9,18 +9,11 @@
     return response.json();
   }
   try {
-    const [network, land] = await Promise.all([read('network.json'), read('land.json')]);
+    const network = await read('network.json');
     const routes = network.routes.filter(r => region === 'global' || r.region === region ||
       (region === 'africa' && africa.includes(r.region)));
-    const map = L.map('map', {scrollWheelZoom: window.top === window.self, minZoom: 1, maxZoom: 18});
-    L.geoJSON(land, {interactive: false, pane:'tilePane', style: {color:'#99b6b3', weight:0.7, fillColor:'#eff3e8', fillOpacity:1}}).addTo(map);
-    const tiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
-      {attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · <a href="https://carto.com/attributions">CARTO</a>', maxZoom:19});
-    // The local land layer and planning overlays also work without detailed tiles.
-    map.createPane('streetDetail').style.zIndex = 220;
-    tiles.options.pane = 'streetDetail';
-    tiles.addTo(map);
-    map.attributionControl.addAttribution('Land: Natural Earth');
+    const map = L.map('map', {scrollWheelZoom: window.top === window.self, minZoom: 1, maxZoom: 10});
+    await addAtlasLand(map);
     const layer = L.layerGroup().addTo(map);
     select.replaceChildren(new Option('All routes in this view', ''));
     for (const route of routes) select.add(new Option(route.name, route.id));

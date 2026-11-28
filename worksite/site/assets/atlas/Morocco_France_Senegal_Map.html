@@ -3,19 +3,19 @@
 <head>
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
             <meta name="viewport" content="width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+                initial-scale=1.0" />
             <style>
                 #map_b1c2878e2f00dfce067f6cd4f77a4a16 {
                     position: relative;
@@ -50,11 +50,11 @@
             </script>
 
         
-    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
-    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
-</head>
+    
+    
+    
+    
+<link rel="stylesheet" href="/assets/maps/leaflet/leaflet.css"><script src="/assets/maps/leaflet/leaflet.min.js"></script><script src="/assets/maps/basemap.js"></script><style>.leaflet-container{background:#d3e8ee}</style></head>
 <body>
     
     <div style="position:fixed;bottom:22px;left:20px;z-index:9999;background:#ffffffed;border:1px solid #ced8d9;padding:12px 16px;border-radius:8px;max-width:340px;font:13px/1.45 system-ui;box-shadow:0 2px 14px #0002"><b>VerbaEdge | Africa–Europe document workflows</b><br><span style="color:#34495e">OpenStreetMap cartographic base · Approximate waypoints only. No route lines, live movements, customs clearance, road permissions or guaranteed transit.</span></div>
@@ -79,69 +79,19 @@
                 }
             );
             L.control.scale().addTo(map_b1c2878e2f00dfce067f6cd4f77a4a16);
+            addAtlasLand(map_b1c2878e2f00dfce067f6cd4f77a4a16).catch(() => console.warn("Local geography unavailable"));
 
             
 
         
     
-            var tile_layer_45125a3097cd87a3f5c0db0335b276d9 = L.tileLayer(
-                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 19,
-  "maxNativeZoom": 19,
-  "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
-  "subdomains": "abc",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
-            );
+            
         
     
-            tile_layer_45125a3097cd87a3f5c0db0335b276d9.addTo(map_b1c2878e2f00dfce067f6cd4f77a4a16);
+            
         
     
-            var tile_layer_0ed2ad30785c79a33310020d40030321 = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 20,
-  "maxNativeZoom": 20,
-  "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
-  "subdomains": "abcd",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
-            );
-        
-    
-            tile_layer_0ed2ad30785c79a33310020d40030321.addTo(map_b1c2878e2f00dfce067f6cd4f77a4a16);
-        
-    
-            var tile_layer_3ec31395a3c237c01805cb7148f0d2a0 = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 20,
-  "maxNativeZoom": 20,
-  "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
-  "subdomains": "abcd",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
-            );
-        
-    
-            tile_layer_3ec31395a3c237c01805cb7148f0d2a0.addTo(map_b1c2878e2f00dfce067f6cd4f77a4a16);
+            
         
     
             var feature_group_5831cddc7ffa28d6db129eed8773a7de = L.featureGroup(
@@ -162,7 +112,7 @@
 
         
             
-                var html_c6e3016be51246554b2b32fc83410edc = $(`<div id="html_c6e3016be51246554b2b32fc83410edc" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Paris</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_c6e3016be51246554b2b32fc83410edc = `<div id="html_c6e3016be51246554b2b32fc83410edc" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Paris</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_caf96959b07395626e2a9649b0b86058.setContent(html_c6e3016be51246554b2b32fc83410edc);
             
         
@@ -195,7 +145,7 @@
 
         
             
-                var html_58c15215c5e93c32e510ff0e2a3597fc = $(`<div id="html_58c15215c5e93c32e510ff0e2a3597fc" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Marseille</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_58c15215c5e93c32e510ff0e2a3597fc = `<div id="html_58c15215c5e93c32e510ff0e2a3597fc" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Marseille</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_7b04cc633042499ab2d2ca677b7a2fcd.setContent(html_58c15215c5e93c32e510ff0e2a3597fc);
             
         
@@ -228,7 +178,7 @@
 
         
             
-                var html_5220908fee4a90303402a1a0a784bb27 = $(`<div id="html_5220908fee4a90303402a1a0a784bb27" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Tangier</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_5220908fee4a90303402a1a0a784bb27 = `<div id="html_5220908fee4a90303402a1a0a784bb27" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Tangier</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_d9c200d36a847beef593000d4bfcd002.setContent(html_5220908fee4a90303402a1a0a784bb27);
             
         
@@ -261,7 +211,7 @@
 
         
             
-                var html_08b44d6bd308893a4ea5efa773888245 = $(`<div id="html_08b44d6bd308893a4ea5efa773888245" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Casablanca</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_08b44d6bd308893a4ea5efa773888245 = `<div id="html_08b44d6bd308893a4ea5efa773888245" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Casablanca</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_0f7eb0e91093d4d359d7c1959493508f.setContent(html_08b44d6bd308893a4ea5efa773888245);
             
         
@@ -294,7 +244,7 @@
 
         
             
-                var html_b368f9fdc9c8217a57da29cb6965152b = $(`<div id="html_b368f9fdc9c8217a57da29cb6965152b" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Dakar</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_b368f9fdc9c8217a57da29cb6965152b = `<div id="html_b368f9fdc9c8217a57da29cb6965152b" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Dakar</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_ea71d994167738d304c4994582e7a71f.setContent(html_b368f9fdc9c8217a57da29cb6965152b);
             
         
@@ -319,11 +269,7 @@
         
     
             var layer_control_e0281703cb712723859b2581b989332b_layers = {
-                base_layers : {
-                    "openstreetmap" : tile_layer_45125a3097cd87a3f5c0db0335b276d9,
-                    "Light cartographic base" : tile_layer_0ed2ad30785c79a33310020d40030321,
-                    "Dark cartographic base" : tile_layer_3ec31395a3c237c01805cb7148f0d2a0,
-                },
+                base_layers : {},
                 overlays :  {
                     "Africa\u2013Europe \u2014 France, Morocco, Senegal document workflows" : feature_group_5831cddc7ffa28d6db129eed8773a7de,
                 },
@@ -340,7 +286,7 @@
 
         
     
-            L.control.fullscreen(
+            if (L.control.fullscreen) L.control.fullscreen(
                 {
   "position": "topleft",
   "title": "Full Screen",
@@ -350,7 +296,7 @@
             ).addTo(map_b1c2878e2f00dfce067f6cd4f77a4a16);
         
     
-            var mouse_position_39ec7b302c645adcef23d4fd5369a4b8 = new L.Control.MousePosition(
+            if (L.Control.MousePosition) {var mouse_position_39ec7b302c645adcef23d4fd5369a4b8 = new L.Control.MousePosition(
                 {
   "position": "bottomright",
   "separator": " : ",
@@ -364,7 +310,7 @@
                 undefined;
             mouse_position_39ec7b302c645adcef23d4fd5369a4b8.options["lngFormatter"] =
                 undefined;
-            map_b1c2878e2f00dfce067f6cd4f77a4a16.addControl(mouse_position_39ec7b302c645adcef23d4fd5369a4b8);
+            map_b1c2878e2f00dfce067f6cd4f77a4a16.addControl(mouse_position_39ec7b302c645adcef23d4fd5369a4b8);}
         
 </script>
 </html>

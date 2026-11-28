@@ -1,0 +1,4 @@
+main img:not([src*="logo.svg"]):not(.leaflet-tile),main .route-map{border-radius:clamp(14px,1.5vw,24px)}
+main .ed-scene{border-radius:22px;overflow:hidden}
+.ed-card>img{border-radius:18px;margin:10px 10px 0;width:calc(100% - 20px)}
+main figure img{max-width:100%}

@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>U.S. gateway and waterway atlas | VerbaEdge Ops</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css">
+    
+    
     <link rel="stylesheet" href="atlas.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    
+    
     <script defer src="atlas.js"></script>
-</head>
+<link rel="stylesheet" href="/assets/maps/leaflet/leaflet.css"><script src="/assets/maps/leaflet/leaflet.min.js"></script><script src="/assets/maps/basemap.js"></script><style>.leaflet-container{background:#d3e8ee}</style></head>
 <body>
     <main class="atlas">
         <header class="atlas-header">
@@ -19,7 +19,7 @@
         </header>
         <div class="atlas-content">
             <section class="atlas-overview" aria-label="Static map overview">
-                <p>The interactive map requires an internet connection for map tiles.</p>
+                <p>Gateway map and regional reference.</p>
                 <a href="usa-overview.png" target="_top"><img src="usa-overview.png" width="1612" height="771" alt="Map of reference locations at U.S. coastal gateways, inland waterways and the Great Lakes."></a>
             </section>
             <div class="folium-map" id="map_94347e50ed30e44db49c1e3c1ebeac9d" role="region" aria-label="Interactive u.s. gateway and waterway atlas"></div>
@@ -44,29 +44,13 @@
                 }
             );
             L.control.scale().addTo(map_94347e50ed30e44db49c1e3c1ebeac9d);
+            addAtlasLand(map_94347e50ed30e44db49c1e3c1ebeac9d).catch(() => console.warn("Local geography unavailable"));
 
             
 
         
     
-            var tile_layer_c298ce7fe81e81fb48acc5d3d02ae97e = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 20,
-  "maxNativeZoom": 20,
-  "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
-  "subdomains": "abcd",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
-            );
-        
-    
-            tile_layer_c298ce7fe81e81fb48acc5d3d02ae97e.addTo(map_94347e50ed30e44db49c1e3c1ebeac9d);
+            
         
     
             if (L.control.fullscreen) {
@@ -1753,9 +1737,7 @@
         
     
             var layer_control_6149f6bbf4540425dad2dcb5b34a4915_layers = {
-                base_layers : {
-                    "cartodbpositron" : tile_layer_c298ce7fe81e81fb48acc5d3d02ae97e,
-                },
+                base_layers : {},
                 overlays :  {
                     "China\u2013USA" : feature_group_89918735d13bd92bce80308b019ecbe6,
                     "US Atlantic" : feature_group_18ea1b3de31b7248360aceddabfbefa4,
@@ -1776,7 +1758,7 @@
             ).addTo(map_94347e50ed30e44db49c1e3c1ebeac9d);
 
         
-            finishAtlas(tile_layer_c298ce7fe81e81fb48acc5d3d02ae97e, layer_control_6149f6bbf4540425dad2dcb5b34a4915_layers.overlays);
+            finishAtlas(layer_control_6149f6bbf4540425dad2dcb5b34a4915_layers.overlays);
         });
     </script>
 </body>

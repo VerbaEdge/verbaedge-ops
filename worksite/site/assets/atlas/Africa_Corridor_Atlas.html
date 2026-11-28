@@ -3,19 +3,19 @@
 <head>
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
             <meta name="viewport" content="width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+                initial-scale=1.0" />
             <style>
                 #map_60ca10ca96d919390f39177d63c234fc {
                     position: relative;
@@ -50,11 +50,11 @@
             </script>
 
         
-    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
-    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
-</head>
+    
+    
+    
+    
+<link rel="stylesheet" href="/assets/maps/leaflet/leaflet.css"><script src="/assets/maps/leaflet/leaflet.min.js"></script><script src="/assets/maps/basemap.js"></script><style>.leaflet-container{background:#d3e8ee}</style></head>
 <body>
     
     <div style="position:fixed;bottom:22px;left:20px;z-index:9999;background:#ffffffed;border:1px solid #ced8d9;padding:12px 16px;border-radius:8px;max-width:340px;font:13px/1.45 system-ui;box-shadow:0 2px 14px #0002"><b>VerbaEdge | Africa corridor atlas</b><br><span style="color:#34495e">OpenStreetMap cartographic base · Approximate waypoints only. No route lines, live movements, customs clearance, road permissions or guaranteed transit.</span></div>
@@ -79,69 +79,19 @@
                 }
             );
             L.control.scale().addTo(map_60ca10ca96d919390f39177d63c234fc);
+            addAtlasLand(map_60ca10ca96d919390f39177d63c234fc).catch(() => console.warn("Local geography unavailable"));
 
             
 
         
     
-            var tile_layer_c72cc092f58df08a49b0066f0485cf5a = L.tileLayer(
-                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 19,
-  "maxNativeZoom": 19,
-  "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
-  "subdomains": "abc",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
-            );
+            
         
     
-            tile_layer_c72cc092f58df08a49b0066f0485cf5a.addTo(map_60ca10ca96d919390f39177d63c234fc);
+            
         
     
-            var tile_layer_1820aea4ce246bf289e9f183d19c1a91 = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 20,
-  "maxNativeZoom": 20,
-  "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
-  "subdomains": "abcd",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
-            );
-        
-    
-            tile_layer_1820aea4ce246bf289e9f183d19c1a91.addTo(map_60ca10ca96d919390f39177d63c234fc);
-        
-    
-            var tile_layer_ee2d7dbf7a684ea2ba613553fb624558 = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 20,
-  "maxNativeZoom": 20,
-  "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
-  "subdomains": "abcd",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
-            );
-        
-    
-            tile_layer_ee2d7dbf7a684ea2ba613553fb624558.addTo(map_60ca10ca96d919390f39177d63c234fc);
+            
         
     
             var feature_group_e9fda10614e33e64c46ef69397872366 = L.featureGroup(
@@ -162,7 +112,7 @@
 
         
             
-                var html_112ac0e2a109b4aa3c9b6e34b77cc7b2 = $(`<div id="html_112ac0e2a109b4aa3c9b6e34b77cc7b2" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Mombasa</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_112ac0e2a109b4aa3c9b6e34b77cc7b2 = `<div id="html_112ac0e2a109b4aa3c9b6e34b77cc7b2" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Mombasa</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_3a59641a7f5cbb6c9fa57682a70ae486.setContent(html_112ac0e2a109b4aa3c9b6e34b77cc7b2);
             
         
@@ -195,7 +145,7 @@
 
         
             
-                var html_e172ce5921626bcd2b5e50dd2ea7d82f = $(`<div id="html_e172ce5921626bcd2b5e50dd2ea7d82f" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Nairobi</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_e172ce5921626bcd2b5e50dd2ea7d82f = `<div id="html_e172ce5921626bcd2b5e50dd2ea7d82f" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Nairobi</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_860af30c1841ceab02ea474cb0f31bb5.setContent(html_e172ce5921626bcd2b5e50dd2ea7d82f);
             
         
@@ -228,7 +178,7 @@
 
         
             
-                var html_a4960427c4fd0449ebb4635d1eb3f97e = $(`<div id="html_a4960427c4fd0449ebb4635d1eb3f97e" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Nakuru</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_a4960427c4fd0449ebb4635d1eb3f97e = `<div id="html_a4960427c4fd0449ebb4635d1eb3f97e" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Nakuru</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_ac952cea07b508072fa13ca7c55df58f.setContent(html_a4960427c4fd0449ebb4635d1eb3f97e);
             
         
@@ -261,7 +211,7 @@
 
         
             
-                var html_46d836fd5652988b54f7a066b913ec4a = $(`<div id="html_46d836fd5652988b54f7a066b913ec4a" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Eldoret</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_46d836fd5652988b54f7a066b913ec4a = `<div id="html_46d836fd5652988b54f7a066b913ec4a" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Eldoret</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_eb7289c7f524536192ae6fb203d41d96.setContent(html_46d836fd5652988b54f7a066b913ec4a);
             
         
@@ -294,7 +244,7 @@
 
         
             
-                var html_e9992103e7e71589ab8b49d092a7901d = $(`<div id="html_e9992103e7e71589ab8b49d092a7901d" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Malaba</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_e9992103e7e71589ab8b49d092a7901d = `<div id="html_e9992103e7e71589ab8b49d092a7901d" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Malaba</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_0c5a198a567da60b7c90bc44b857ca39.setContent(html_e9992103e7e71589ab8b49d092a7901d);
             
         
@@ -327,7 +277,7 @@
 
         
             
-                var html_3f6755c027d577ca991bb8639867fb32 = $(`<div id="html_3f6755c027d577ca991bb8639867fb32" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Jinja</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_3f6755c027d577ca991bb8639867fb32 = `<div id="html_3f6755c027d577ca991bb8639867fb32" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Jinja</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_743806a8477bf49443b747cc41d17d7f.setContent(html_3f6755c027d577ca991bb8639867fb32);
             
         
@@ -360,7 +310,7 @@
 
         
             
-                var html_4fa32994a2494a16d9effecbd6571142 = $(`<div id="html_4fa32994a2494a16d9effecbd6571142" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kampala</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_4fa32994a2494a16d9effecbd6571142 = `<div id="html_4fa32994a2494a16d9effecbd6571142" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kampala</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_0d27389a935e96bb33661a333356e4b5.setContent(html_4fa32994a2494a16d9effecbd6571142);
             
         
@@ -393,7 +343,7 @@
 
         
             
-                var html_544dae442316faa5ee32017d6307f8df = $(`<div id="html_544dae442316faa5ee32017d6307f8df" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Katuna/Gatuna</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_544dae442316faa5ee32017d6307f8df = `<div id="html_544dae442316faa5ee32017d6307f8df" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Katuna/Gatuna</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_2ae93c8ecfebdc3baef082983f869bc6.setContent(html_544dae442316faa5ee32017d6307f8df);
             
         
@@ -426,7 +376,7 @@
 
         
             
-                var html_7a324d08ccd29f9fbbbd63e71da56650 = $(`<div id="html_7a324d08ccd29f9fbbbd63e71da56650" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kigali</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_7a324d08ccd29f9fbbbd63e71da56650 = `<div id="html_7a324d08ccd29f9fbbbd63e71da56650" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kigali</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_c8f21c40aad7fd7d477188948f74ef26.setContent(html_7a324d08ccd29f9fbbbd63e71da56650);
             
         
@@ -468,7 +418,7 @@
 
         
             
-                var html_a7ab1aaea7d71d6293c9b03b6dbf8b61 = $(`<div id="html_a7ab1aaea7d71d6293c9b03b6dbf8b61" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Mombasa</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_a7ab1aaea7d71d6293c9b03b6dbf8b61 = `<div id="html_a7ab1aaea7d71d6293c9b03b6dbf8b61" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Mombasa</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_5b3ba359d2f13470d0298dd9832bfb46.setContent(html_a7ab1aaea7d71d6293c9b03b6dbf8b61);
             
         
@@ -501,7 +451,7 @@
 
         
             
-                var html_a73f66c4eced53543e0290ab70c6f529 = $(`<div id="html_a73f66c4eced53543e0290ab70c6f529" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Nairobi</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_a73f66c4eced53543e0290ab70c6f529 = `<div id="html_a73f66c4eced53543e0290ab70c6f529" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Nairobi</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_8b075681c70e736dd75d8355a4e55d2b.setContent(html_a73f66c4eced53543e0290ab70c6f529);
             
         
@@ -534,7 +484,7 @@
 
         
             
-                var html_56e9ebf03e488cb1358b23bc11dd9b05 = $(`<div id="html_56e9ebf03e488cb1358b23bc11dd9b05" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Busia</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_56e9ebf03e488cb1358b23bc11dd9b05 = `<div id="html_56e9ebf03e488cb1358b23bc11dd9b05" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Busia</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_238bbc814167d8de57e5ce7674c5e35e.setContent(html_56e9ebf03e488cb1358b23bc11dd9b05);
             
         
@@ -567,7 +517,7 @@
 
         
             
-                var html_c113c9da2f19427aec6f514c76b94fce = $(`<div id="html_c113c9da2f19427aec6f514c76b94fce" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kampala</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_c113c9da2f19427aec6f514c76b94fce = `<div id="html_c113c9da2f19427aec6f514c76b94fce" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kampala</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_e039764ca2dba13fd5a885774daf2fb8.setContent(html_c113c9da2f19427aec6f514c76b94fce);
             
         
@@ -600,7 +550,7 @@
 
         
             
-                var html_667a14ee40e319a8ac191434a73bdaa9 = $(`<div id="html_667a14ee40e319a8ac191434a73bdaa9" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kagitumba/Mirama Hills</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_667a14ee40e319a8ac191434a73bdaa9 = `<div id="html_667a14ee40e319a8ac191434a73bdaa9" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kagitumba/Mirama Hills</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_ac8ccc97c9cacfce2de4b70906a5b2f7.setContent(html_667a14ee40e319a8ac191434a73bdaa9);
             
         
@@ -633,7 +583,7 @@
 
         
             
-                var html_df1af5841296ba943db2d2511b8e8dc9 = $(`<div id="html_df1af5841296ba943db2d2511b8e8dc9" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kigali</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_df1af5841296ba943db2d2511b8e8dc9 = `<div id="html_df1af5841296ba943db2d2511b8e8dc9" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kigali</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_33803e58eaa6ad10512eb124744d4bc2.setContent(html_df1af5841296ba943db2d2511b8e8dc9);
             
         
@@ -675,7 +625,7 @@
 
         
             
-                var html_6dc1b0da77841d82c54904931a8eb6de = $(`<div id="html_6dc1b0da77841d82c54904931a8eb6de" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Mombasa</h3><div>Northern Corridor network — Burundi branch</div><p>Regional-network destinations verified; exact chain illustrative</p><p>Do not assume every operator uses Rwanda or a single set of border crossings.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_6dc1b0da77841d82c54904931a8eb6de = `<div id="html_6dc1b0da77841d82c54904931a8eb6de" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Mombasa</h3><div>Northern Corridor network — Burundi branch</div><p>Regional-network destinations verified; exact chain illustrative</p><p>Do not assume every operator uses Rwanda or a single set of border crossings.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_a480cf2b415499fed4f90eafc1ea766e.setContent(html_6dc1b0da77841d82c54904931a8eb6de);
             
         
@@ -708,7 +658,7 @@
 
         
             
-                var html_a4f466b3ff91b2fffea1f9e5b4a84c54 = $(`<div id="html_a4f466b3ff91b2fffea1f9e5b4a84c54" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kampala</h3><div>Northern Corridor network — Burundi branch</div><p>Regional-network destinations verified; exact chain illustrative</p><p>Do not assume every operator uses Rwanda or a single set of border crossings.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_a4f466b3ff91b2fffea1f9e5b4a84c54 = `<div id="html_a4f466b3ff91b2fffea1f9e5b4a84c54" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kampala</h3><div>Northern Corridor network — Burundi branch</div><p>Regional-network destinations verified; exact chain illustrative</p><p>Do not assume every operator uses Rwanda or a single set of border crossings.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_c51fca16dbe8999be93ee6eac541bc8f.setContent(html_a4f466b3ff91b2fffea1f9e5b4a84c54);
             
         
@@ -741,7 +691,7 @@
 
         
             
-                var html_c53bda4b09a4dcb48c35df30e759199b = $(`<div id="html_c53bda4b09a4dcb48c35df30e759199b" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kigali</h3><div>Northern Corridor network — Burundi branch</div><p>Regional-network destinations verified; exact chain illustrative</p><p>Do not assume every operator uses Rwanda or a single set of border crossings.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_c53bda4b09a4dcb48c35df30e759199b = `<div id="html_c53bda4b09a4dcb48c35df30e759199b" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kigali</h3><div>Northern Corridor network — Burundi branch</div><p>Regional-network destinations verified; exact chain illustrative</p><p>Do not assume every operator uses Rwanda or a single set of border crossings.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_338126213bf2e3fa0718ce05700ce495.setContent(html_c53bda4b09a4dcb48c35df30e759199b);
             
         
@@ -774,7 +724,7 @@
 
         
             
-                var html_58ec13e0f8b1891c89745ecbc16c6ebc = $(`<div id="html_58ec13e0f8b1891c89745ecbc16c6ebc" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Bujumbura</h3><div>Northern Corridor network — Burundi branch</div><p>Regional-network destinations verified; exact chain illustrative</p><p>Do not assume every operator uses Rwanda or a single set of border crossings.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_58ec13e0f8b1891c89745ecbc16c6ebc = `<div id="html_58ec13e0f8b1891c89745ecbc16c6ebc" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Bujumbura</h3><div>Northern Corridor network — Burundi branch</div><p>Regional-network destinations verified; exact chain illustrative</p><p>Do not assume every operator uses Rwanda or a single set of border crossings.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_5d779ac49ae2058914c35b5c196eaf36.setContent(html_58ec13e0f8b1891c89745ecbc16c6ebc);
             
         
@@ -816,7 +766,7 @@
 
         
             
-                var html_65f11c451d8319d29087a49e3ab68617 = $(`<div id="html_65f11c451d8319d29087a49e3ab68617" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Mombasa</h3><div>Northern Corridor network — eastern DRC branch</div><p>Regional-network DRC destination verified; route chain illustrative</p><p>DRC also belongs to the southern North–South network; eastern and southern branches are different.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_65f11c451d8319d29087a49e3ab68617 = `<div id="html_65f11c451d8319d29087a49e3ab68617" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Mombasa</h3><div>Northern Corridor network — eastern DRC branch</div><p>Regional-network DRC destination verified; route chain illustrative</p><p>DRC also belongs to the southern North–South network; eastern and southern branches are different.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_821205d2d56d1f065eb03da440d2671d.setContent(html_65f11c451d8319d29087a49e3ab68617);
             
         
@@ -849,7 +799,7 @@
 
         
             
-                var html_19bd144164f63f94f9b31be44b4c7705 = $(`<div id="html_19bd144164f63f94f9b31be44b4c7705" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kampala</h3><div>Northern Corridor network — eastern DRC branch</div><p>Regional-network DRC destination verified; route chain illustrative</p><p>DRC also belongs to the southern North–South network; eastern and southern branches are different.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_19bd144164f63f94f9b31be44b4c7705 = `<div id="html_19bd144164f63f94f9b31be44b4c7705" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kampala</h3><div>Northern Corridor network — eastern DRC branch</div><p>Regional-network DRC destination verified; route chain illustrative</p><p>DRC also belongs to the southern North–South network; eastern and southern branches are different.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_48ab8a1e64ae6037753dc1fa4bbad4ba.setContent(html_19bd144164f63f94f9b31be44b4c7705);
             
         
@@ -882,7 +832,7 @@
 
         
             
-                var html_94f95697dc754c0d72e609fba4840a9d = $(`<div id="html_94f95697dc754c0d72e609fba4840a9d" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kigali</h3><div>Northern Corridor network — eastern DRC branch</div><p>Regional-network DRC destination verified; route chain illustrative</p><p>DRC also belongs to the southern North–South network; eastern and southern branches are different.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_94f95697dc754c0d72e609fba4840a9d = `<div id="html_94f95697dc754c0d72e609fba4840a9d" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kigali</h3><div>Northern Corridor network — eastern DRC branch</div><p>Regional-network DRC destination verified; route chain illustrative</p><p>DRC also belongs to the southern North–South network; eastern and southern branches are different.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_958396e38b42190c6e4d06b3bb57f4fb.setContent(html_94f95697dc754c0d72e609fba4840a9d);
             
         
@@ -915,7 +865,7 @@
 
         
             
-                var html_bee444ed56b734c8eb3d2f00c93439bf = $(`<div id="html_bee444ed56b734c8eb3d2f00c93439bf" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Goma</h3><div>Northern Corridor network — eastern DRC branch</div><p>Regional-network DRC destination verified; route chain illustrative</p><p>DRC also belongs to the southern North–South network; eastern and southern branches are different.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_bee444ed56b734c8eb3d2f00c93439bf = `<div id="html_bee444ed56b734c8eb3d2f00c93439bf" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Goma</h3><div>Northern Corridor network — eastern DRC branch</div><p>Regional-network DRC destination verified; route chain illustrative</p><p>DRC also belongs to the southern North–South network; eastern and southern branches are different.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_ad0fe8b06f6cdd03f5decce1a3e2b9c9.setContent(html_bee444ed56b734c8eb3d2f00c93439bf);
             
         
@@ -957,7 +907,7 @@
 
         
             
-                var html_2cdbe896cd66a90777ec16ea11d5c32b = $(`<div id="html_2cdbe896cd66a90777ec16ea11d5c32b" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Mombasa</h3><div>Northern Corridor network — South Sudan branch</div><p>Member/destination verified; exact routing unvalidated</p><p>Operational corridor and security due diligence required.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_2cdbe896cd66a90777ec16ea11d5c32b = `<div id="html_2cdbe896cd66a90777ec16ea11d5c32b" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Mombasa</h3><div>Northern Corridor network — South Sudan branch</div><p>Member/destination verified; exact routing unvalidated</p><p>Operational corridor and security due diligence required.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_3d0516ebe96e0b8d3470fe58be636cdb.setContent(html_2cdbe896cd66a90777ec16ea11d5c32b);
             
         
@@ -990,7 +940,7 @@
 
         
             
-                var html_720eb134b652bc03778f03ccbd8afae1 = $(`<div id="html_720eb134b652bc03778f03ccbd8afae1" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kampala</h3><div>Northern Corridor network — South Sudan branch</div><p>Member/destination verified; exact routing unvalidated</p><p>Operational corridor and security due diligence required.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_720eb134b652bc03778f03ccbd8afae1 = `<div id="html_720eb134b652bc03778f03ccbd8afae1" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kampala</h3><div>Northern Corridor network — South Sudan branch</div><p>Member/destination verified; exact routing unvalidated</p><p>Operational corridor and security due diligence required.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_c82c30530b1fcac8693c83d84eb08fbd.setContent(html_720eb134b652bc03778f03ccbd8afae1);
             
         
@@ -1023,7 +973,7 @@
 
         
             
-                var html_d51b72143b41a2fc40721b45ee30a1fa = $(`<div id="html_d51b72143b41a2fc40721b45ee30a1fa" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Juba</h3><div>Northern Corridor network — South Sudan branch</div><p>Member/destination verified; exact routing unvalidated</p><p>Operational corridor and security due diligence required.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_d51b72143b41a2fc40721b45ee30a1fa = `<div id="html_d51b72143b41a2fc40721b45ee30a1fa" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Juba</h3><div>Northern Corridor network — South Sudan branch</div><p>Member/destination verified; exact routing unvalidated</p><p>Operational corridor and security due diligence required.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_95d16f503f71b99f50f8a6cf3c88b676.setContent(html_d51b72143b41a2fc40721b45ee30a1fa);
             
         
@@ -1065,7 +1015,7 @@
 
         
             
-                var html_cb537b8abd0192fa8fcff4c0d9c0bc6b = $(`<div id="html_cb537b8abd0192fa8fcff4c0d9c0bc6b" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Tema</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_cb537b8abd0192fa8fcff4c0d9c0bc6b = `<div id="html_cb537b8abd0192fa8fcff4c0d9c0bc6b" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Tema</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_055c03f2d9e1369ac7f4716fab2c7266.setContent(html_cb537b8abd0192fa8fcff4c0d9c0bc6b);
             
         
@@ -1098,7 +1048,7 @@
 
         
             
-                var html_56b8f9c6058793db6a4f7cde7daf2e76 = $(`<div id="html_56b8f9c6058793db6a4f7cde7daf2e76" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Accra</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_56b8f9c6058793db6a4f7cde7daf2e76 = `<div id="html_56b8f9c6058793db6a4f7cde7daf2e76" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Accra</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_6ced667cf4b1f7529078c21d76ae59e9.setContent(html_56b8f9c6058793db6a4f7cde7daf2e76);
             
         
@@ -1131,7 +1081,7 @@
 
         
             
-                var html_8c1fe51f6434adf454ab0431c18509bd = $(`<div id="html_8c1fe51f6434adf454ab0431c18509bd" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kumasi</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_8c1fe51f6434adf454ab0431c18509bd = `<div id="html_8c1fe51f6434adf454ab0431c18509bd" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kumasi</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_f40558f58e72622a6a5d7cf87ef0a9ad.setContent(html_8c1fe51f6434adf454ab0431c18509bd);
             
         
@@ -1164,7 +1114,7 @@
 
         
             
-                var html_9bde857461966efeaa285b43c2b5b087 = $(`<div id="html_9bde857461966efeaa285b43c2b5b087" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Tamale</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_9bde857461966efeaa285b43c2b5b087 = `<div id="html_9bde857461966efeaa285b43c2b5b087" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Tamale</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_a1718491a9f7d0ac2c42ffb50d5e95b9.setContent(html_9bde857461966efeaa285b43c2b5b087);
             
         
@@ -1197,7 +1147,7 @@
 
         
             
-                var html_a6a7cb058962e85be60ba94eb255cd7b = $(`<div id="html_a6a7cb058962e85be60ba94eb255cd7b" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Paga</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_a6a7cb058962e85be60ba94eb255cd7b = `<div id="html_a6a7cb058962e85be60ba94eb255cd7b" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Paga</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_0153bbc4c38a262dc33ca4887f88c04b.setContent(html_a6a7cb058962e85be60ba94eb255cd7b);
             
         
@@ -1230,7 +1180,7 @@
 
         
             
-                var html_8aa69ada81b1953ec0a73afa6721ef99 = $(`<div id="html_8aa69ada81b1953ec0a73afa6721ef99" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Ouagadougou</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_8aa69ada81b1953ec0a73afa6721ef99 = `<div id="html_8aa69ada81b1953ec0a73afa6721ef99" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Ouagadougou</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_cf75e7b25f0d9ba553732679e9b0f049.setContent(html_8aa69ada81b1953ec0a73afa6721ef99);
             
         
@@ -1272,7 +1222,7 @@
 
         
             
-                var html_ee7525a377b16ab6608f1e3692505be3 = $(`<div id="html_ee7525a377b16ab6608f1e3692505be3" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Takoradi</h3><div>Ghana gateway — Mali / Niger destination possibilities</div><p>Destination connectivity; NOT a single verified drivable sequence</p><p>Map contains terminals/destination pins only; individual road and borders not asserted.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_ee7525a377b16ab6608f1e3692505be3 = `<div id="html_ee7525a377b16ab6608f1e3692505be3" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Takoradi</h3><div>Ghana gateway — Mali / Niger destination possibilities</div><p>Destination connectivity; NOT a single verified drivable sequence</p><p>Map contains terminals/destination pins only; individual road and borders not asserted.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_1e0ddf3807bdbe52ce25a8fee56af804.setContent(html_ee7525a377b16ab6608f1e3692505be3);
             
         
@@ -1305,7 +1255,7 @@
 
         
             
-                var html_fcf914a145f41a43c5c47a4ebd241b89 = $(`<div id="html_fcf914a145f41a43c5c47a4ebd241b89" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Tema</h3><div>Ghana gateway — Mali / Niger destination possibilities</div><p>Destination connectivity; NOT a single verified drivable sequence</p><p>Map contains terminals/destination pins only; individual road and borders not asserted.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_fcf914a145f41a43c5c47a4ebd241b89 = `<div id="html_fcf914a145f41a43c5c47a4ebd241b89" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Tema</h3><div>Ghana gateway — Mali / Niger destination possibilities</div><p>Destination connectivity; NOT a single verified drivable sequence</p><p>Map contains terminals/destination pins only; individual road and borders not asserted.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_c92254bb13f76dff933b9ee6e9aa7083.setContent(html_fcf914a145f41a43c5c47a4ebd241b89);
             
         
@@ -1338,7 +1288,7 @@
 
         
             
-                var html_a0e7535f7e04ad9c85a43e225fafe8d6 = $(`<div id="html_a0e7535f7e04ad9c85a43e225fafe8d6" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Bamako</h3><div>Ghana gateway — Mali / Niger destination possibilities</div><p>Destination connectivity; NOT a single verified drivable sequence</p><p>Map contains terminals/destination pins only; individual road and borders not asserted.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_a0e7535f7e04ad9c85a43e225fafe8d6 = `<div id="html_a0e7535f7e04ad9c85a43e225fafe8d6" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Bamako</h3><div>Ghana gateway — Mali / Niger destination possibilities</div><p>Destination connectivity; NOT a single verified drivable sequence</p><p>Map contains terminals/destination pins only; individual road and borders not asserted.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_33c7d39317b4051842c1f085967aee2b.setContent(html_a0e7535f7e04ad9c85a43e225fafe8d6);
             
         
@@ -1371,7 +1321,7 @@
 
         
             
-                var html_9c8309524f32f5195fd278c39fa5b14a = $(`<div id="html_9c8309524f32f5195fd278c39fa5b14a" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Niamey</h3><div>Ghana gateway — Mali / Niger destination possibilities</div><p>Destination connectivity; NOT a single verified drivable sequence</p><p>Map contains terminals/destination pins only; individual road and borders not asserted.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_9c8309524f32f5195fd278c39fa5b14a = `<div id="html_9c8309524f32f5195fd278c39fa5b14a" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Niamey</h3><div>Ghana gateway — Mali / Niger destination possibilities</div><p>Destination connectivity; NOT a single verified drivable sequence</p><p>Map contains terminals/destination pins only; individual road and borders not asserted.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_b8000b374af21fe984bf79d02f003424.setContent(html_9c8309524f32f5195fd278c39fa5b14a);
             
         
@@ -1413,7 +1363,7 @@
 
         
             
-                var html_0e6bcf14d8dbb9276154e5d99ccb5d4e = $(`<div id="html_0e6bcf14d8dbb9276154e5d99ccb5d4e" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Abidjan</h3><div>Abidjan–Lagos existing coastal corridor</div><p>Recognized corridor; proposed 6-lane highway not complete</p><p>Existing road connections must not be confused with unfinished highway development.</p><a href="https://www.ecowas.int/road-ministers-endorse-the-first-set-of-sections-of-the-abidjan-lagos-corridor-highway-to-commence-the-construction-stage-stressing-on-the-need-to-ensure-continuity-of-sections-in-the-phasing/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_0e6bcf14d8dbb9276154e5d99ccb5d4e = `<div id="html_0e6bcf14d8dbb9276154e5d99ccb5d4e" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Abidjan</h3><div>Abidjan–Lagos existing coastal corridor</div><p>Recognized corridor; proposed 6-lane highway not complete</p><p>Existing road connections must not be confused with unfinished highway development.</p><a href="https://www.ecowas.int/road-ministers-endorse-the-first-set-of-sections-of-the-abidjan-lagos-corridor-highway-to-commence-the-construction-stage-stressing-on-the-need-to-ensure-continuity-of-sections-in-the-phasing/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_73779398ad9fa4148b82379ed3a21951.setContent(html_0e6bcf14d8dbb9276154e5d99ccb5d4e);
             
         
@@ -1446,7 +1396,7 @@
 
         
             
-                var html_2aeb85b514146b3b1f63d370f6ed1d39 = $(`<div id="html_2aeb85b514146b3b1f63d370f6ed1d39" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Accra</h3><div>Abidjan–Lagos existing coastal corridor</div><p>Recognized corridor; proposed 6-lane highway not complete</p><p>Existing road connections must not be confused with unfinished highway development.</p><a href="https://www.ecowas.int/road-ministers-endorse-the-first-set-of-sections-of-the-abidjan-lagos-corridor-highway-to-commence-the-construction-stage-stressing-on-the-need-to-ensure-continuity-of-sections-in-the-phasing/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_2aeb85b514146b3b1f63d370f6ed1d39 = `<div id="html_2aeb85b514146b3b1f63d370f6ed1d39" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Accra</h3><div>Abidjan–Lagos existing coastal corridor</div><p>Recognized corridor; proposed 6-lane highway not complete</p><p>Existing road connections must not be confused with unfinished highway development.</p><a href="https://www.ecowas.int/road-ministers-endorse-the-first-set-of-sections-of-the-abidjan-lagos-corridor-highway-to-commence-the-construction-stage-stressing-on-the-need-to-ensure-continuity-of-sections-in-the-phasing/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_b8d48c1f7af0c3a6db6cbeea81b8fd44.setContent(html_2aeb85b514146b3b1f63d370f6ed1d39);
             
         
@@ -1479,7 +1429,7 @@
 
         
             
-                var html_23ddb1559b15470c3f3f8e2eef3d7fc6 = $(`<div id="html_23ddb1559b15470c3f3f8e2eef3d7fc6" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lomé</h3><div>Abidjan–Lagos existing coastal corridor</div><p>Recognized corridor; proposed 6-lane highway not complete</p><p>Existing road connections must not be confused with unfinished highway development.</p><a href="https://www.ecowas.int/road-ministers-endorse-the-first-set-of-sections-of-the-abidjan-lagos-corridor-highway-to-commence-the-construction-stage-stressing-on-the-need-to-ensure-continuity-of-sections-in-the-phasing/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_23ddb1559b15470c3f3f8e2eef3d7fc6 = `<div id="html_23ddb1559b15470c3f3f8e2eef3d7fc6" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lomé</h3><div>Abidjan–Lagos existing coastal corridor</div><p>Recognized corridor; proposed 6-lane highway not complete</p><p>Existing road connections must not be confused with unfinished highway development.</p><a href="https://www.ecowas.int/road-ministers-endorse-the-first-set-of-sections-of-the-abidjan-lagos-corridor-highway-to-commence-the-construction-stage-stressing-on-the-need-to-ensure-continuity-of-sections-in-the-phasing/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_813c9bdbf0b009b33d707573b6b7c4af.setContent(html_23ddb1559b15470c3f3f8e2eef3d7fc6);
             
         
@@ -1512,7 +1462,7 @@
 
         
             
-                var html_ac43db87476c68381ca322923d03454d = $(`<div id="html_ac43db87476c68381ca322923d03454d" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Cotonou</h3><div>Abidjan–Lagos existing coastal corridor</div><p>Recognized corridor; proposed 6-lane highway not complete</p><p>Existing road connections must not be confused with unfinished highway development.</p><a href="https://www.ecowas.int/road-ministers-endorse-the-first-set-of-sections-of-the-abidjan-lagos-corridor-highway-to-commence-the-construction-stage-stressing-on-the-need-to-ensure-continuity-of-sections-in-the-phasing/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_ac43db87476c68381ca322923d03454d = `<div id="html_ac43db87476c68381ca322923d03454d" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Cotonou</h3><div>Abidjan–Lagos existing coastal corridor</div><p>Recognized corridor; proposed 6-lane highway not complete</p><p>Existing road connections must not be confused with unfinished highway development.</p><a href="https://www.ecowas.int/road-ministers-endorse-the-first-set-of-sections-of-the-abidjan-lagos-corridor-highway-to-commence-the-construction-stage-stressing-on-the-need-to-ensure-continuity-of-sections-in-the-phasing/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_8a1e1d9971ddf6fbd62ebf568591b693.setContent(html_ac43db87476c68381ca322923d03454d);
             
         
@@ -1545,7 +1495,7 @@
 
         
             
-                var html_366a85ff242571ea6eeaa9b4888922ee = $(`<div id="html_366a85ff242571ea6eeaa9b4888922ee" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lagos</h3><div>Abidjan–Lagos existing coastal corridor</div><p>Recognized corridor; proposed 6-lane highway not complete</p><p>Existing road connections must not be confused with unfinished highway development.</p><a href="https://www.ecowas.int/road-ministers-endorse-the-first-set-of-sections-of-the-abidjan-lagos-corridor-highway-to-commence-the-construction-stage-stressing-on-the-need-to-ensure-continuity-of-sections-in-the-phasing/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_366a85ff242571ea6eeaa9b4888922ee = `<div id="html_366a85ff242571ea6eeaa9b4888922ee" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lagos</h3><div>Abidjan–Lagos existing coastal corridor</div><p>Recognized corridor; proposed 6-lane highway not complete</p><p>Existing road connections must not be confused with unfinished highway development.</p><a href="https://www.ecowas.int/road-ministers-endorse-the-first-set-of-sections-of-the-abidjan-lagos-corridor-highway-to-commence-the-construction-stage-stressing-on-the-need-to-ensure-continuity-of-sections-in-the-phasing/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_8c6784ebd4ea74a901ba64c683a8cf3f.setContent(html_366a85ff242571ea6eeaa9b4888922ee);
             
         
@@ -1587,7 +1537,7 @@
 
         
             
-                var html_bc1081351c0236652a591de82bf3011f = $(`<div id="html_bc1081351c0236652a591de82bf3011f" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Johannesburg</h3><div>Southern North–South — old Johannesburg to Lusaka scope</div><p>Source-project corridor reference supported by SADC</p><p>Preserved legacy project corridor ID.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_bc1081351c0236652a591de82bf3011f = `<div id="html_bc1081351c0236652a591de82bf3011f" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Johannesburg</h3><div>Southern North–South — old Johannesburg to Lusaka scope</div><p>Source-project corridor reference supported by SADC</p><p>Preserved legacy project corridor ID.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_dff7823e8c9591cf4e4236f4fea564e2.setContent(html_bc1081351c0236652a591de82bf3011f);
             
         
@@ -1620,7 +1570,7 @@
 
         
             
-                var html_e16c6b8a6ab934016acdd4d1626cb2b7 = $(`<div id="html_e16c6b8a6ab934016acdd4d1626cb2b7" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Beitbridge</h3><div>Southern North–South — old Johannesburg to Lusaka scope</div><p>Source-project corridor reference supported by SADC</p><p>Preserved legacy project corridor ID.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_e16c6b8a6ab934016acdd4d1626cb2b7 = `<div id="html_e16c6b8a6ab934016acdd4d1626cb2b7" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Beitbridge</h3><div>Southern North–South — old Johannesburg to Lusaka scope</div><p>Source-project corridor reference supported by SADC</p><p>Preserved legacy project corridor ID.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_e2125c496ef711b4f7d26f829d3f486f.setContent(html_e16c6b8a6ab934016acdd4d1626cb2b7);
             
         
@@ -1653,7 +1603,7 @@
 
         
             
-                var html_b965566622b357630e32605e717f6b00 = $(`<div id="html_b965566622b357630e32605e717f6b00" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Harare</h3><div>Southern North–South — old Johannesburg to Lusaka scope</div><p>Source-project corridor reference supported by SADC</p><p>Preserved legacy project corridor ID.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_b965566622b357630e32605e717f6b00 = `<div id="html_b965566622b357630e32605e717f6b00" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Harare</h3><div>Southern North–South — old Johannesburg to Lusaka scope</div><p>Source-project corridor reference supported by SADC</p><p>Preserved legacy project corridor ID.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_17d5cc801bec3feab8eb702066551f4a.setContent(html_b965566622b357630e32605e717f6b00);
             
         
@@ -1686,7 +1636,7 @@
 
         
             
-                var html_42e5f8b5c25473ad032dc6eea381481c = $(`<div id="html_42e5f8b5c25473ad032dc6eea381481c" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Chirundu</h3><div>Southern North–South — old Johannesburg to Lusaka scope</div><p>Source-project corridor reference supported by SADC</p><p>Preserved legacy project corridor ID.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_42e5f8b5c25473ad032dc6eea381481c = `<div id="html_42e5f8b5c25473ad032dc6eea381481c" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Chirundu</h3><div>Southern North–South — old Johannesburg to Lusaka scope</div><p>Source-project corridor reference supported by SADC</p><p>Preserved legacy project corridor ID.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_05357078358cb75bb47fb62c27a92cb3.setContent(html_42e5f8b5c25473ad032dc6eea381481c);
             
         
@@ -1719,7 +1669,7 @@
 
         
             
-                var html_9e2958cd2c692afc9c7c4c4c94b31e2a = $(`<div id="html_9e2958cd2c692afc9c7c4c4c94b31e2a" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lusaka</h3><div>Southern North–South — old Johannesburg to Lusaka scope</div><p>Source-project corridor reference supported by SADC</p><p>Preserved legacy project corridor ID.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_9e2958cd2c692afc9c7c4c4c94b31e2a = `<div id="html_9e2958cd2c692afc9c7c4c4c94b31e2a" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lusaka</h3><div>Southern North–South — old Johannesburg to Lusaka scope</div><p>Source-project corridor reference supported by SADC</p><p>Preserved legacy project corridor ID.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_3e658e1177079a30cd74aab1062acfc3.setContent(html_9e2958cd2c692afc9c7c4c4c94b31e2a);
             
         
@@ -1761,7 +1711,7 @@
 
         
             
-                var html_ef909a0180e4fc77c584b32b2fd0d864 = $(`<div id="html_ef909a0180e4fc77c584b32b2fd0d864" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Durban</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_ef909a0180e4fc77c584b32b2fd0d864 = `<div id="html_ef909a0180e4fc77c584b32b2fd0d864" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Durban</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_0405feba131a048185c275a728ecc700.setContent(html_ef909a0180e4fc77c584b32b2fd0d864);
             
         
@@ -1794,7 +1744,7 @@
 
         
             
-                var html_8237c1eeff2b349fc93ad5acc2dfaff7 = $(`<div id="html_8237c1eeff2b349fc93ad5acc2dfaff7" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Johannesburg</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_8237c1eeff2b349fc93ad5acc2dfaff7 = `<div id="html_8237c1eeff2b349fc93ad5acc2dfaff7" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Johannesburg</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_0992e1af455ec660679733370359175b.setContent(html_8237c1eeff2b349fc93ad5acc2dfaff7);
             
         
@@ -1827,7 +1777,7 @@
 
         
             
-                var html_7f42a9b93567393e7363fc7a40959ece = $(`<div id="html_7f42a9b93567393e7363fc7a40959ece" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Beitbridge</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_7f42a9b93567393e7363fc7a40959ece = `<div id="html_7f42a9b93567393e7363fc7a40959ece" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Beitbridge</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_a0bae356ff3403f8273a88058a7b2418.setContent(html_7f42a9b93567393e7363fc7a40959ece);
             
         
@@ -1860,7 +1810,7 @@
 
         
             
-                var html_284633100fe3a0325c3d3f8335400704 = $(`<div id="html_284633100fe3a0325c3d3f8335400704" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Harare</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_284633100fe3a0325c3d3f8335400704 = `<div id="html_284633100fe3a0325c3d3f8335400704" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Harare</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_e7589ce7846ffa353a3f0e10e4bf4199.setContent(html_284633100fe3a0325c3d3f8335400704);
             
         
@@ -1893,7 +1843,7 @@
 
         
             
-                var html_06a8e1d4ae65fb29dd5182967a202586 = $(`<div id="html_06a8e1d4ae65fb29dd5182967a202586" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Chirundu</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_06a8e1d4ae65fb29dd5182967a202586 = `<div id="html_06a8e1d4ae65fb29dd5182967a202586" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Chirundu</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_884b91888f02a612e4166bc184c933b0.setContent(html_06a8e1d4ae65fb29dd5182967a202586);
             
         
@@ -1926,7 +1876,7 @@
 
         
             
-                var html_479551cb55e6479671bbee5a6a4b2dc9 = $(`<div id="html_479551cb55e6479671bbee5a6a4b2dc9" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lusaka</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_479551cb55e6479671bbee5a6a4b2dc9 = `<div id="html_479551cb55e6479671bbee5a6a4b2dc9" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lusaka</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_e10fb309f5d440baf1ea3b89f332423b.setContent(html_479551cb55e6479671bbee5a6a4b2dc9);
             
         
@@ -1959,7 +1909,7 @@
 
         
             
-                var html_807528aee9c992326bee9979e4fd367e = $(`<div id="html_807528aee9c992326bee9979e4fd367e" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Ndola</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_807528aee9c992326bee9979e4fd367e = `<div id="html_807528aee9c992326bee9979e4fd367e" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Ndola</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_d50e29b6803b148bd9aee51ec7b81084.setContent(html_807528aee9c992326bee9979e4fd367e);
             
         
@@ -1992,7 +1942,7 @@
 
         
             
-                var html_7996049c63a0f359f545804914bbf1e6 = $(`<div id="html_7996049c63a0f359f545804914bbf1e6" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kasumbalesa</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_7996049c63a0f359f545804914bbf1e6 = `<div id="html_7996049c63a0f359f545804914bbf1e6" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kasumbalesa</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_3d3c1db94d106d76e14df5bed7ed7cb8.setContent(html_7996049c63a0f359f545804914bbf1e6);
             
         
@@ -2025,7 +1975,7 @@
 
         
             
-                var html_c36854b113a9634112acc14201680064 = $(`<div id="html_c36854b113a9634112acc14201680064" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lubumbashi</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_c36854b113a9634112acc14201680064 = `<div id="html_c36854b113a9634112acc14201680064" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lubumbashi</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_eed4bf5339d4079bbedae4f5bd080578.setContent(html_c36854b113a9634112acc14201680064);
             
         
@@ -2067,7 +2017,7 @@
 
         
             
-                var html_01d25daf7c977b1b206e0db8c50011b5 = $(`<div id="html_01d25daf7c977b1b206e0db8c50011b5" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Johannesburg</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_01d25daf7c977b1b206e0db8c50011b5 = `<div id="html_01d25daf7c977b1b206e0db8c50011b5" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Johannesburg</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_cb8d182af28741c81e66a34600b6608e.setContent(html_01d25daf7c977b1b206e0db8c50011b5);
             
         
@@ -2100,7 +2050,7 @@
 
         
             
-                var html_a9aee954e4d2fc17fc177af32eed4a9b = $(`<div id="html_a9aee954e4d2fc17fc177af32eed4a9b" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Gaborone</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_a9aee954e4d2fc17fc177af32eed4a9b = `<div id="html_a9aee954e4d2fc17fc177af32eed4a9b" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Gaborone</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_bf8e77272d7d5b6109916e3525e4b203.setContent(html_a9aee954e4d2fc17fc177af32eed4a9b);
             
         
@@ -2133,7 +2083,7 @@
 
         
             
-                var html_7c5d9b7b6bb769db829584e91b7bfe2e = $(`<div id="html_7c5d9b7b6bb769db829584e91b7bfe2e" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kazungula</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_7c5d9b7b6bb769db829584e91b7bfe2e = `<div id="html_7c5d9b7b6bb769db829584e91b7bfe2e" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kazungula</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_6699c74cf602e000135e821c7c9e4920.setContent(html_7c5d9b7b6bb769db829584e91b7bfe2e);
             
         
@@ -2166,7 +2116,7 @@
 
         
             
-                var html_2f977cd3dca23260c442c3a429aee653 = $(`<div id="html_2f977cd3dca23260c442c3a429aee653" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lusaka</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_2f977cd3dca23260c442c3a429aee653 = `<div id="html_2f977cd3dca23260c442c3a429aee653" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lusaka</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_aea4b5b0d18e3ed4c829d709eb8867d0.setContent(html_2f977cd3dca23260c442c3a429aee653);
             
         
@@ -2199,7 +2149,7 @@
 
         
             
-                var html_8723cca9556d17a1be19f186997c637a = $(`<div id="html_8723cca9556d17a1be19f186997c637a" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Ndola</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_8723cca9556d17a1be19f186997c637a = `<div id="html_8723cca9556d17a1be19f186997c637a" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Ndola</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_7e78dba4e415d8decc5a4c10de489502.setContent(html_8723cca9556d17a1be19f186997c637a);
             
         
@@ -2232,7 +2182,7 @@
 
         
             
-                var html_19591d591d10617e327b7a0e4f1fcae8 = $(`<div id="html_19591d591d10617e327b7a0e4f1fcae8" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kasumbalesa</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_19591d591d10617e327b7a0e4f1fcae8 = `<div id="html_19591d591d10617e327b7a0e4f1fcae8" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kasumbalesa</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_4e51fddef90dbb7fe208486430e7f982.setContent(html_19591d591d10617e327b7a0e4f1fcae8);
             
         
@@ -2265,7 +2215,7 @@
 
         
             
-                var html_1eaaca5eeab04aa6836948196e8373dc = $(`<div id="html_1eaaca5eeab04aa6836948196e8373dc" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lubumbashi</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_1eaaca5eeab04aa6836948196e8373dc = `<div id="html_1eaaca5eeab04aa6836948196e8373dc" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lubumbashi</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_0bf99bb58fc6e0f1852001a75af16370.setContent(html_1eaaca5eeab04aa6836948196e8373dc);
             
         
@@ -2307,7 +2257,7 @@
 
         
             
-                var html_25b54f8e1efa1b2d4d3b3ddde23229e7 = $(`<div id="html_25b54f8e1efa1b2d4d3b3ddde23229e7" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Paris</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_25b54f8e1efa1b2d4d3b3ddde23229e7 = `<div id="html_25b54f8e1efa1b2d4d3b3ddde23229e7" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Paris</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_ff495c675c42b9ae8d0bce6b313dd4ec.setContent(html_25b54f8e1efa1b2d4d3b3ddde23229e7);
             
         
@@ -2340,7 +2290,7 @@
 
         
             
-                var html_b6fe33dddda2f2432d69607d9c22173d = $(`<div id="html_b6fe33dddda2f2432d69607d9c22173d" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Marseille</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_b6fe33dddda2f2432d69607d9c22173d = `<div id="html_b6fe33dddda2f2432d69607d9c22173d" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Marseille</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_e6b0fd56e1e0ee72b145704875cd76cc.setContent(html_b6fe33dddda2f2432d69607d9c22173d);
             
         
@@ -2373,7 +2323,7 @@
 
         
             
-                var html_345a7c17c3217e072a25fce69b60c3d5 = $(`<div id="html_345a7c17c3217e072a25fce69b60c3d5" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Tangier</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_345a7c17c3217e072a25fce69b60c3d5 = `<div id="html_345a7c17c3217e072a25fce69b60c3d5" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Tangier</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_9b09bc5bb7f61ac2e7523ac313cca9e2.setContent(html_345a7c17c3217e072a25fce69b60c3d5);
             
         
@@ -2406,7 +2356,7 @@
 
         
             
-                var html_9cbcf10402ac287d3342c1b96faaaf22 = $(`<div id="html_9cbcf10402ac287d3342c1b96faaaf22" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Casablanca</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_9cbcf10402ac287d3342c1b96faaaf22 = `<div id="html_9cbcf10402ac287d3342c1b96faaaf22" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Casablanca</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_f7b8c282c46fefbbc81df2911207eb5e.setContent(html_9cbcf10402ac287d3342c1b96faaaf22);
             
         
@@ -2439,7 +2389,7 @@
 
         
             
-                var html_1b5f2759f0b0e2b63cf664c484e68d9e = $(`<div id="html_1b5f2759f0b0e2b63cf664c484e68d9e" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Dakar</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_1b5f2759f0b0e2b63cf664c484e68d9e = `<div id="html_1b5f2759f0b0e2b63cf664c484e68d9e" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Dakar</h3><div>Africa–Europe — France, Morocco, Senegal document workflows</div><p>Inherited document-workflow market scope; NOT one continuous road</p><p>Maritime/air/inland modalities cannot be inferred from city sequence.</p><a href="https://trade.ec.europa.eu/access-to-markets/en/content/eu-morocco-association-agreement" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_8f882cc589eff9eeacd4b58f8c862b4e.setContent(html_1b5f2759f0b0e2b63cf664c484e68d9e);
             
         
@@ -2478,7 +2428,7 @@
 
         
             
-                var html_a8f53518fe9b97839f6503415a222b27 = $(`<div id="html_a8f53518fe9b97839f6503415a222b27" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Dar es Salaam</h3><div>Central Corridor — Dar es Salaam and Great Lakes</div><p>Official Central Corridor network; example country destinations</p><p>Actual access routes to DRC, Zambia and Malawi depend on operator and network.</p><a href="https://centralcorridor-ttfa.org/overview/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_a8f53518fe9b97839f6503415a222b27 = `<div id="html_a8f53518fe9b97839f6503415a222b27" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Dar es Salaam</h3><div>Central Corridor — Dar es Salaam and Great Lakes</div><p>Official Central Corridor network; example country destinations</p><p>Actual access routes to DRC, Zambia and Malawi depend on operator and network.</p><a href="https://centralcorridor-ttfa.org/overview/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_62ee906acb8fbade4fc2779d65f5fff0.setContent(html_a8f53518fe9b97839f6503415a222b27);
             
         
@@ -2511,7 +2461,7 @@
 
         
             
-                var html_5b43030a733a0cbb1779851886989212 = $(`<div id="html_5b43030a733a0cbb1779851886989212" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Rusumo</h3><div>Central Corridor — Dar es Salaam and Great Lakes</div><p>Official Central Corridor network; example country destinations</p><p>Actual access routes to DRC, Zambia and Malawi depend on operator and network.</p><a href="https://centralcorridor-ttfa.org/overview/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_5b43030a733a0cbb1779851886989212 = `<div id="html_5b43030a733a0cbb1779851886989212" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Rusumo</h3><div>Central Corridor — Dar es Salaam and Great Lakes</div><p>Official Central Corridor network; example country destinations</p><p>Actual access routes to DRC, Zambia and Malawi depend on operator and network.</p><a href="https://centralcorridor-ttfa.org/overview/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_8a131b73f1917adc48ce3938e29feeea.setContent(html_5b43030a733a0cbb1779851886989212);
             
         
@@ -2544,7 +2494,7 @@
 
         
             
-                var html_7ad18d41be6e4bb3d6bfeebf44133b34 = $(`<div id="html_7ad18d41be6e4bb3d6bfeebf44133b34" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kigali</h3><div>Central Corridor — Dar es Salaam and Great Lakes</div><p>Official Central Corridor network; example country destinations</p><p>Actual access routes to DRC, Zambia and Malawi depend on operator and network.</p><a href="https://centralcorridor-ttfa.org/overview/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_7ad18d41be6e4bb3d6bfeebf44133b34 = `<div id="html_7ad18d41be6e4bb3d6bfeebf44133b34" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kigali</h3><div>Central Corridor — Dar es Salaam and Great Lakes</div><p>Official Central Corridor network; example country destinations</p><p>Actual access routes to DRC, Zambia and Malawi depend on operator and network.</p><a href="https://centralcorridor-ttfa.org/overview/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_cc971a3089847979e8cef2d0c3b967a7.setContent(html_7ad18d41be6e4bb3d6bfeebf44133b34);
             
         
@@ -2577,7 +2527,7 @@
 
         
             
-                var html_12ee9060fa3516a9e6a61169fe5df24c = $(`<div id="html_12ee9060fa3516a9e6a61169fe5df24c" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Bujumbura</h3><div>Central Corridor — Dar es Salaam and Great Lakes</div><p>Official Central Corridor network; example country destinations</p><p>Actual access routes to DRC, Zambia and Malawi depend on operator and network.</p><a href="https://centralcorridor-ttfa.org/overview/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_12ee9060fa3516a9e6a61169fe5df24c = `<div id="html_12ee9060fa3516a9e6a61169fe5df24c" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Bujumbura</h3><div>Central Corridor — Dar es Salaam and Great Lakes</div><p>Official Central Corridor network; example country destinations</p><p>Actual access routes to DRC, Zambia and Malawi depend on operator and network.</p><a href="https://centralcorridor-ttfa.org/overview/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_cbb2d30870651001409f4f26ad037c48.setContent(html_12ee9060fa3516a9e6a61169fe5df24c);
             
         
@@ -2616,7 +2566,7 @@
 
         
             
-                var html_7227aedcaac2360cc4e3bae19e8413e0 = $(`<div id="html_7227aedcaac2360cc4e3bae19e8413e0" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lobito</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_7227aedcaac2360cc4e3bae19e8413e0 = `<div id="html_7227aedcaac2360cc4e3bae19e8413e0" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lobito</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_928f61b4293b91383c7bc4580bb6ec5e.setContent(html_7227aedcaac2360cc4e3bae19e8413e0);
             
         
@@ -2649,7 +2599,7 @@
 
         
             
-                var html_bc9d50490559393698177e4fce6ead5f = $(`<div id="html_bc9d50490559393698177e4fce6ead5f" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Huambo</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_bc9d50490559393698177e4fce6ead5f = `<div id="html_bc9d50490559393698177e4fce6ead5f" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Huambo</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_bd7fb51385fbf6b0df3d900fa9dc7983.setContent(html_bc9d50490559393698177e4fce6ead5f);
             
         
@@ -2682,7 +2632,7 @@
 
         
             
-                var html_ac1043e672aad86053dd9a3c3466a757 = $(`<div id="html_ac1043e672aad86053dd9a3c3466a757" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Luau</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_ac1043e672aad86053dd9a3c3466a757 = `<div id="html_ac1043e672aad86053dd9a3c3466a757" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Luau</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_d5b8eefcdb870eb173a93e8b5f5328c5.setContent(html_ac1043e672aad86053dd9a3c3466a757);
             
         
@@ -2715,7 +2665,7 @@
 
         
             
-                var html_ee7813d1d5070fa2cfae754c616e3d69 = $(`<div id="html_ee7813d1d5070fa2cfae754c616e3d69" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Dilolo</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_ee7813d1d5070fa2cfae754c616e3d69 = `<div id="html_ee7813d1d5070fa2cfae754c616e3d69" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Dilolo</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_e142250cb2e43e867fff12f44049eb8e.setContent(html_ee7813d1d5070fa2cfae754c616e3d69);
             
         
@@ -2748,7 +2698,7 @@
 
         
             
-                var html_45c935f0392167f2802cdc75b7f6ce4f = $(`<div id="html_45c935f0392167f2802cdc75b7f6ce4f" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kolwezi</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_45c935f0392167f2802cdc75b7f6ce4f = `<div id="html_45c935f0392167f2802cdc75b7f6ce4f" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kolwezi</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_5f26ea5fa43f198dc9f97a80ed2dc9cd.setContent(html_45c935f0392167f2802cdc75b7f6ce4f);
             
         
@@ -2781,7 +2731,7 @@
 
         
             
-                var html_b0c7e2218309fa61d96801b5e0116a09 = $(`<div id="html_b0c7e2218309fa61d96801b5e0116a09" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lubumbashi</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_b0c7e2218309fa61d96801b5e0116a09 = `<div id="html_b0c7e2218309fa61d96801b5e0116a09" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lubumbashi</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_f700c7a431f6a3fa6b909abd723db836.setContent(html_b0c7e2218309fa61d96801b5e0116a09);
             
         
@@ -2814,7 +2764,7 @@
 
         
             
-                var html_9dd34e99c3e4a65ba4f4908fa8e40fb6 = $(`<div id="html_9dd34e99c3e4a65ba4f4908fa8e40fb6" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Ndola</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                var html_9dd34e99c3e4a65ba4f4908fa8e40fb6 = `<div id="html_9dd34e99c3e4a65ba4f4908fa8e40fb6" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Ndola</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`;
                 popup_d55c5576e5e98a2b4ec5aa0c59db0729.setContent(html_9dd34e99c3e4a65ba4f4908fa8e40fb6);
             
         
@@ -2836,11 +2786,7 @@
         
     
             var layer_control_a8dad2295834ba11a8c30a5fda417a21_layers = {
-                base_layers : {
-                    "openstreetmap" : tile_layer_c72cc092f58df08a49b0066f0485cf5a,
-                    "Light cartographic base" : tile_layer_1820aea4ce246bf289e9f183d19c1a91,
-                    "Dark cartographic base" : tile_layer_ee2d7dbf7a684ea2ba613553fb624558,
-                },
+                base_layers : {},
                 overlays :  {
                     "Northern Corridor \u2014 Rwanda (Gatuna reference)" : feature_group_e9fda10614e33e64c46ef69397872366,
                     "Northern Corridor \u2014 Rwanda (Kagitumba option)" : feature_group_42ff4621185e9130a4890f185b08b27a,
@@ -2870,7 +2816,7 @@
 
         
     
-            L.control.fullscreen(
+            if (L.control.fullscreen) L.control.fullscreen(
                 {
   "position": "topleft",
   "title": "Full Screen",
@@ -2880,7 +2826,7 @@
             ).addTo(map_60ca10ca96d919390f39177d63c234fc);
         
     
-            var mouse_position_25e8a48ae2c8e1325a09f1491c9c9dfa = new L.Control.MousePosition(
+            if (L.Control.MousePosition) {var mouse_position_25e8a48ae2c8e1325a09f1491c9c9dfa = new L.Control.MousePosition(
                 {
   "position": "bottomright",
   "separator": " : ",
@@ -2894,7 +2840,7 @@
                 undefined;
             mouse_position_25e8a48ae2c8e1325a09f1491c9c9dfa.options["lngFormatter"] =
                 undefined;
-            map_60ca10ca96d919390f39177d63c234fc.addControl(mouse_position_25e8a48ae2c8e1325a09f1491c9c9dfa);
+            map_60ca10ca96d919390f39177d63c234fc.addControl(mouse_position_25e8a48ae2c8e1325a09f1491c9c9dfa);}
         
 </script>
 </html>
