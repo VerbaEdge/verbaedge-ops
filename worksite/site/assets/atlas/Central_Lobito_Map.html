@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_86912679599a7349c0d4ec7981c4bed6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+</head>
+<body>
+    
+    <div style="position:fixed;bottom:22px;left:20px;z-index:9999;background:#ffffffed;border:1px solid #ced8d9;padding:12px 16px;border-radius:8px;max-width:340px;font:13px/1.45 system-ui;box-shadow:0 2px 14px #0002"><b>ZARVEUM | Central &amp; Lobito connections</b><br><span style="color:#34495e">OpenStreetMap cartographic base · Approximate waypoints only. No route lines, live movements, customs clearance, road permissions or guaranteed transit.</span></div>
+    
+            <div class="folium-map" id="map_86912679599a7349c0d4ec7981c4bed6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_86912679599a7349c0d4ec7981c4bed6 = L.map(
+                "map_86912679599a7349c0d4ec7981c4bed6",
+                {
+                    center: [-9.0, 25.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": true,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_86912679599a7349c0d4ec7981c4bed6);
+
+            
+
+        
+    
+            var tile_layer_36dfdf5486c2c4fab93488e87bb4d58e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_36dfdf5486c2c4fab93488e87bb4d58e.addTo(map_86912679599a7349c0d4ec7981c4bed6);
+        
+    
+            var tile_layer_8e1341ac0e3a9870a841afc7b2f61b63 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8e1341ac0e3a9870a841afc7b2f61b63.addTo(map_86912679599a7349c0d4ec7981c4bed6);
+        
+    
+            var tile_layer_5a50f82b1daba3054eb4337ca1f9c3c2 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5a50f82b1daba3054eb4337ca1f9c3c2.addTo(map_86912679599a7349c0d4ec7981c4bed6);
+        
+    
+            var feature_group_2aeb3cf8cf2e99b235bd27ae5e989c3b = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_414255f9f388fbbe5096d0c3ed16fbf4 = L.circleMarker(
+                [-6.7924, 39.2083],
+                {"bubblingMouseEvents": true, "color": "#ce6e83", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ce6e83", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2aeb3cf8cf2e99b235bd27ae5e989c3b);
+        
+    
+        var popup_96211d08ee1cc529bc0970afd2edbda2 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_64d3caf1da8894a239cf9f771be589ca = $(`<div id="html_64d3caf1da8894a239cf9f771be589ca" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Dar es Salaam</h3><div>Central Corridor — Dar es Salaam and Great Lakes</div><p>Official Central Corridor network; example country destinations</p><p>Actual access routes to DRC, Zambia and Malawi depend on operator and network.</p><a href="https://centralcorridor-ttfa.org/overview/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_96211d08ee1cc529bc0970afd2edbda2.setContent(html_64d3caf1da8894a239cf9f771be589ca);
+            
+        
+
+        circle_marker_414255f9f388fbbe5096d0c3ed16fbf4.bindPopup(popup_96211d08ee1cc529bc0970afd2edbda2)
+        ;
+
+        
+    
+    
+            circle_marker_414255f9f388fbbe5096d0c3ed16fbf4.bindTooltip(
+                `<div>
+                     <strong>Dar es Salaam</strong><br>Tanzania<br><small>Waypoint 1 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e5bb043c3085c6a1a417ed23e9420131 = L.circleMarker(
+                [-2.38, 30.782],
+                {"bubblingMouseEvents": true, "color": "#ce6e83", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ce6e83", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2aeb3cf8cf2e99b235bd27ae5e989c3b);
+        
+    
+        var popup_1ba7a899c8327e9b3a2d6c704cebb852 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_c5700d264244a9e15bb061df9ba08f62 = $(`<div id="html_c5700d264244a9e15bb061df9ba08f62" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Rusumo</h3><div>Central Corridor — Dar es Salaam and Great Lakes</div><p>Official Central Corridor network; example country destinations</p><p>Actual access routes to DRC, Zambia and Malawi depend on operator and network.</p><a href="https://centralcorridor-ttfa.org/overview/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_1ba7a899c8327e9b3a2d6c704cebb852.setContent(html_c5700d264244a9e15bb061df9ba08f62);
+            
+        
+
+        circle_marker_e5bb043c3085c6a1a417ed23e9420131.bindPopup(popup_1ba7a899c8327e9b3a2d6c704cebb852)
+        ;
+
+        
+    
+    
+            circle_marker_e5bb043c3085c6a1a417ed23e9420131.bindTooltip(
+                `<div>
+                     <strong>Rusumo</strong><br>Tanzania/Rwanda border<br><small>Waypoint 2 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_166a35e7c15e0c726395edaf8f22e457 = L.circleMarker(
+                [-1.9441, 30.0619],
+                {"bubblingMouseEvents": true, "color": "#ce6e83", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ce6e83", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2aeb3cf8cf2e99b235bd27ae5e989c3b);
+        
+    
+        var popup_8d40a24f78b6bbfe76d7fc32f8eb6c6e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_fef223737375e011dda5f6a792f55583 = $(`<div id="html_fef223737375e011dda5f6a792f55583" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kigali</h3><div>Central Corridor — Dar es Salaam and Great Lakes</div><p>Official Central Corridor network; example country destinations</p><p>Actual access routes to DRC, Zambia and Malawi depend on operator and network.</p><a href="https://centralcorridor-ttfa.org/overview/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_8d40a24f78b6bbfe76d7fc32f8eb6c6e.setContent(html_fef223737375e011dda5f6a792f55583);
+            
+        
+
+        circle_marker_166a35e7c15e0c726395edaf8f22e457.bindPopup(popup_8d40a24f78b6bbfe76d7fc32f8eb6c6e)
+        ;
+
+        
+    
+    
+            circle_marker_166a35e7c15e0c726395edaf8f22e457.bindTooltip(
+                `<div>
+                     <strong>Kigali</strong><br>Rwanda<br><small>Waypoint 3 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_417c409a82d76b18eac7ed6a5b160aaa = L.circleMarker(
+                [-3.3822, 29.3644],
+                {"bubblingMouseEvents": true, "color": "#ce6e83", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ce6e83", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_2aeb3cf8cf2e99b235bd27ae5e989c3b);
+        
+    
+        var popup_fac04aa2952864b7fbcbb183d72425e1 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_00280d85b16c5ccacb7d7d8109738fa6 = $(`<div id="html_00280d85b16c5ccacb7d7d8109738fa6" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Bujumbura</h3><div>Central Corridor — Dar es Salaam and Great Lakes</div><p>Official Central Corridor network; example country destinations</p><p>Actual access routes to DRC, Zambia and Malawi depend on operator and network.</p><a href="https://centralcorridor-ttfa.org/overview/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_fac04aa2952864b7fbcbb183d72425e1.setContent(html_00280d85b16c5ccacb7d7d8109738fa6);
+            
+        
+
+        circle_marker_417c409a82d76b18eac7ed6a5b160aaa.bindPopup(popup_fac04aa2952864b7fbcbb183d72425e1)
+        ;
+
+        
+    
+    
+            circle_marker_417c409a82d76b18eac7ed6a5b160aaa.bindTooltip(
+                `<div>
+                     <strong>Bujumbura</strong><br>Burundi<br><small>Waypoint 4 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_2aeb3cf8cf2e99b235bd27ae5e989c3b.addTo(map_86912679599a7349c0d4ec7981c4bed6);
+        
+    
+            var feature_group_c5e126eaf6009b03f552255528495227 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_cc2886688c5c23d0425851f03a4a429f = L.circleMarker(
+                [-12.348, 13.545],
+                {"bubblingMouseEvents": true, "color": "#ce6e83", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ce6e83", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c5e126eaf6009b03f552255528495227);
+        
+    
+        var popup_963a7dd48e40a90b976cb274c19b9913 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_545136b23d49be19443a5808ec145939 = $(`<div id="html_545136b23d49be19443a5808ec145939" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lobito</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_963a7dd48e40a90b976cb274c19b9913.setContent(html_545136b23d49be19443a5808ec145939);
+            
+        
+
+        circle_marker_cc2886688c5c23d0425851f03a4a429f.bindPopup(popup_963a7dd48e40a90b976cb274c19b9913)
+        ;
+
+        
+    
+    
+            circle_marker_cc2886688c5c23d0425851f03a4a429f.bindTooltip(
+                `<div>
+                     <strong>Lobito</strong><br>Angola<br><small>Waypoint 1 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aeb352378cd892f7ab312524b07e869c = L.circleMarker(
+                [-12.776, 15.739],
+                {"bubblingMouseEvents": true, "color": "#ce6e83", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ce6e83", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c5e126eaf6009b03f552255528495227);
+        
+    
+        var popup_e6971df6b0aaf81d43e4b111bf4de458 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_e519c361eae94d8958ac14c35e7459a1 = $(`<div id="html_e519c361eae94d8958ac14c35e7459a1" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Huambo</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_e6971df6b0aaf81d43e4b111bf4de458.setContent(html_e519c361eae94d8958ac14c35e7459a1);
+            
+        
+
+        circle_marker_aeb352378cd892f7ab312524b07e869c.bindPopup(popup_e6971df6b0aaf81d43e4b111bf4de458)
+        ;
+
+        
+    
+    
+            circle_marker_aeb352378cd892f7ab312524b07e869c.bindTooltip(
+                `<div>
+                     <strong>Huambo</strong><br>Angola<br><small>Waypoint 2 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a3e645f2e2406b3d0c88fb44d95edaa4 = L.circleMarker(
+                [-10.707, 22.219],
+                {"bubblingMouseEvents": true, "color": "#ce6e83", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ce6e83", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c5e126eaf6009b03f552255528495227);
+        
+    
+        var popup_a12414ac2ac7b0abe711c860783f0da3 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_6187bcc267d761c2f5241d3dafb3f5c1 = $(`<div id="html_6187bcc267d761c2f5241d3dafb3f5c1" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Luau</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_a12414ac2ac7b0abe711c860783f0da3.setContent(html_6187bcc267d761c2f5241d3dafb3f5c1);
+            
+        
+
+        circle_marker_a3e645f2e2406b3d0c88fb44d95edaa4.bindPopup(popup_a12414ac2ac7b0abe711c860783f0da3)
+        ;
+
+        
+    
+    
+            circle_marker_a3e645f2e2406b3d0c88fb44d95edaa4.bindTooltip(
+                `<div>
+                     <strong>Luau</strong><br>Angola<br><small>Waypoint 3 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_216ee3b40120128d122571f68d8ce5ad = L.circleMarker(
+                [-10.692, 22.339],
+                {"bubblingMouseEvents": true, "color": "#ce6e83", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ce6e83", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c5e126eaf6009b03f552255528495227);
+        
+    
+        var popup_089167cc5bdce3147b8dffef7fd96749 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_f3e021d37c2118a286a2fa12351e51ab = $(`<div id="html_f3e021d37c2118a286a2fa12351e51ab" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Dilolo</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_089167cc5bdce3147b8dffef7fd96749.setContent(html_f3e021d37c2118a286a2fa12351e51ab);
+            
+        
+
+        circle_marker_216ee3b40120128d122571f68d8ce5ad.bindPopup(popup_089167cc5bdce3147b8dffef7fd96749)
+        ;
+
+        
+    
+    
+            circle_marker_216ee3b40120128d122571f68d8ce5ad.bindTooltip(
+                `<div>
+                     <strong>Dilolo</strong><br>DRC<br><small>Waypoint 4 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ee3f6ee239ee398fbbb2a2a74ea9e575 = L.circleMarker(
+                [-10.7167, 25.4667],
+                {"bubblingMouseEvents": true, "color": "#ce6e83", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ce6e83", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c5e126eaf6009b03f552255528495227);
+        
+    
+        var popup_0c6f28d01cd1c2aaaad643973226f940 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_28607555eec54361df54a5c9c37b949b = $(`<div id="html_28607555eec54361df54a5c9c37b949b" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kolwezi</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_0c6f28d01cd1c2aaaad643973226f940.setContent(html_28607555eec54361df54a5c9c37b949b);
+            
+        
+
+        circle_marker_ee3f6ee239ee398fbbb2a2a74ea9e575.bindPopup(popup_0c6f28d01cd1c2aaaad643973226f940)
+        ;
+
+        
+    
+    
+            circle_marker_ee3f6ee239ee398fbbb2a2a74ea9e575.bindTooltip(
+                `<div>
+                     <strong>Kolwezi</strong><br>DRC<br><small>Waypoint 5 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_49bb3f8cdc86c69fd270f6ff67b7c324 = L.circleMarker(
+                [-11.6647, 27.4794],
+                {"bubblingMouseEvents": true, "color": "#ce6e83", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ce6e83", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c5e126eaf6009b03f552255528495227);
+        
+    
+        var popup_4dd74adde93d6d5e0392e7c6caecfa97 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_be4a8e609a752c132fcd9f65cba4acd1 = $(`<div id="html_be4a8e609a752c132fcd9f65cba4acd1" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lubumbashi</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_4dd74adde93d6d5e0392e7c6caecfa97.setContent(html_be4a8e609a752c132fcd9f65cba4acd1);
+            
+        
+
+        circle_marker_49bb3f8cdc86c69fd270f6ff67b7c324.bindPopup(popup_4dd74adde93d6d5e0392e7c6caecfa97)
+        ;
+
+        
+    
+    
+            circle_marker_49bb3f8cdc86c69fd270f6ff67b7c324.bindTooltip(
+                `<div>
+                     <strong>Lubumbashi</strong><br>DRC<br><small>Waypoint 6 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac82e4ebf7eb901073ac88db082565c3 = L.circleMarker(
+                [-12.9683, 28.6366],
+                {"bubblingMouseEvents": true, "color": "#ce6e83", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ce6e83", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c5e126eaf6009b03f552255528495227);
+        
+    
+        var popup_682329198c3ebdc381b8ab09cc753a9b = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_52e267750e8423e730470d8c041b9cf8 = $(`<div id="html_52e267750e8423e730470d8c041b9cf8" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Ndola</h3><div>Lobito Corridor — Angola, DRC and Zambia</div><p>Regional corridor concept; not an assertion of through rail availability</p><p>Future multi-modal planning; rail service, capacity and customs conditions require current check.</p><a href="https://international-partnerships.ec.europa.eu/policies/global-gateway/connecting-democratic-republic-congo-zambia-and-angola-global-markets-through-lobito-corridor_en" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_682329198c3ebdc381b8ab09cc753a9b.setContent(html_52e267750e8423e730470d8c041b9cf8);
+            
+        
+
+        circle_marker_ac82e4ebf7eb901073ac88db082565c3.bindPopup(popup_682329198c3ebdc381b8ab09cc753a9b)
+        ;
+
+        
+    
+    
+            circle_marker_ac82e4ebf7eb901073ac88db082565c3.bindTooltip(
+                `<div>
+                     <strong>Ndola</strong><br>Zambia<br><small>Waypoint 7 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_c5e126eaf6009b03f552255528495227.addTo(map_86912679599a7349c0d4ec7981c4bed6);
+        
+    
+            var layer_control_55fe08261acd092c4c4971df355676ec_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_36dfdf5486c2c4fab93488e87bb4d58e,
+                    "Light cartographic base" : tile_layer_8e1341ac0e3a9870a841afc7b2f61b63,
+                    "Dark cartographic base" : tile_layer_5a50f82b1daba3054eb4337ca1f9c3c2,
+                },
+                overlays :  {
+                    "Central Corridor \u2014 Dar es Salaam and Great Lakes" : feature_group_2aeb3cf8cf2e99b235bd27ae5e989c3b,
+                    "Lobito Corridor \u2014 Angola, DRC and Zambia" : feature_group_c5e126eaf6009b03f552255528495227,
+                },
+            };
+            let layer_control_55fe08261acd092c4c4971df355676ec = L.control.layers(
+                layer_control_55fe08261acd092c4c4971df355676ec_layers.base_layers,
+                layer_control_55fe08261acd092c4c4971df355676ec_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_86912679599a7349c0d4ec7981c4bed6);
+
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_86912679599a7349c0d4ec7981c4bed6);
+        
+    
+            var mouse_position_795d5c0e2fedf0e29a0aa55cecd9ff6a = new L.Control.MousePosition(
+                {
+  "position": "bottomright",
+  "separator": " : ",
+  "emptyString": "Unavailable",
+  "lngFirst": false,
+  "numDigits": 5,
+  "prefix": "",
+}
+            );
+            mouse_position_795d5c0e2fedf0e29a0aa55cecd9ff6a.options["latFormatter"] =
+                undefined;
+            mouse_position_795d5c0e2fedf0e29a0aa55cecd9ff6a.options["lngFormatter"] =
+                undefined;
+            map_86912679599a7349c0d4ec7981c4bed6.addControl(mouse_position_795d5c0e2fedf0e29a0aa55cecd9ff6a);
+        
+</script>
+</html>

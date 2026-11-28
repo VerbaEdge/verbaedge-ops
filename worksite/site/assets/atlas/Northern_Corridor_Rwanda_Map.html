@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_337c42c6b9c41705495c801591bfac8b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+</head>
+<body>
+    
+    <div style="position:fixed;bottom:22px;left:20px;z-index:9999;background:#ffffffed;border:1px solid #ced8d9;padding:12px 16px;border-radius:8px;max-width:340px;font:13px/1.45 system-ui;box-shadow:0 2px 14px #0002"><b>ZARVEUM | Northern Corridor &amp; Rwanda</b><br><span style="color:#34495e">OpenStreetMap cartographic base · Approximate waypoints only. No route lines, live movements, customs clearance, road permissions or guaranteed transit.</span></div>
+    
+            <div class="folium-map" id="map_337c42c6b9c41705495c801591bfac8b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_337c42c6b9c41705495c801591bfac8b = L.map(
+                "map_337c42c6b9c41705495c801591bfac8b",
+                {
+                    center: [-0.5, 32.8],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": true,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_337c42c6b9c41705495c801591bfac8b);
+
+            
+
+        
+    
+            var tile_layer_60aca2152dd985dc9f2dc6486d4fd05f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_60aca2152dd985dc9f2dc6486d4fd05f.addTo(map_337c42c6b9c41705495c801591bfac8b);
+        
+    
+            var tile_layer_6f798cf2e76600d67c2bc9d1998614f9 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6f798cf2e76600d67c2bc9d1998614f9.addTo(map_337c42c6b9c41705495c801591bfac8b);
+        
+    
+            var tile_layer_2d00f8bad1e3650a78e87638d4e3dc35 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2d00f8bad1e3650a78e87638d4e3dc35.addTo(map_337c42c6b9c41705495c801591bfac8b);
+        
+    
+            var feature_group_d22feee4483641769457620f0a83cd72 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_6a66e53e358a420e8783691106fb59fa = L.circleMarker(
+                [-4.0435, 39.6682],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d22feee4483641769457620f0a83cd72);
+        
+    
+        var popup_9a4178ffc535206d1598ef7973283ead = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_7fcda515a78fc97c5ce25a2c7338b2d1 = $(`<div id="html_7fcda515a78fc97c5ce25a2c7338b2d1" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Mombasa</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_9a4178ffc535206d1598ef7973283ead.setContent(html_7fcda515a78fc97c5ce25a2c7338b2d1);
+            
+        
+
+        circle_marker_6a66e53e358a420e8783691106fb59fa.bindPopup(popup_9a4178ffc535206d1598ef7973283ead)
+        ;
+
+        
+    
+    
+            circle_marker_6a66e53e358a420e8783691106fb59fa.bindTooltip(
+                `<div>
+                     <strong>Mombasa</strong><br>Kenya<br><small>Waypoint 1 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa0253e6b142fa5a8426b46e8a1ec8ed = L.circleMarker(
+                [-1.2864, 36.8172],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d22feee4483641769457620f0a83cd72);
+        
+    
+        var popup_4854c2639ed76a850195b16527c04458 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_5ec1ebc9d33c942d7e9a3a82c35a5982 = $(`<div id="html_5ec1ebc9d33c942d7e9a3a82c35a5982" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Nairobi</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_4854c2639ed76a850195b16527c04458.setContent(html_5ec1ebc9d33c942d7e9a3a82c35a5982);
+            
+        
+
+        circle_marker_fa0253e6b142fa5a8426b46e8a1ec8ed.bindPopup(popup_4854c2639ed76a850195b16527c04458)
+        ;
+
+        
+    
+    
+            circle_marker_fa0253e6b142fa5a8426b46e8a1ec8ed.bindTooltip(
+                `<div>
+                     <strong>Nairobi</strong><br>Kenya<br><small>Waypoint 2 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_80ba371de825c946da96d102dfa91aff = L.circleMarker(
+                [-0.3031, 36.08],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d22feee4483641769457620f0a83cd72);
+        
+    
+        var popup_3713a4022579ff0267e060eae766f9cd = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_e29d63bb0d0da5ff95054abe9991e789 = $(`<div id="html_e29d63bb0d0da5ff95054abe9991e789" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Nakuru</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_3713a4022579ff0267e060eae766f9cd.setContent(html_e29d63bb0d0da5ff95054abe9991e789);
+            
+        
+
+        circle_marker_80ba371de825c946da96d102dfa91aff.bindPopup(popup_3713a4022579ff0267e060eae766f9cd)
+        ;
+
+        
+    
+    
+            circle_marker_80ba371de825c946da96d102dfa91aff.bindTooltip(
+                `<div>
+                     <strong>Nakuru</strong><br>Kenya<br><small>Waypoint 3 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fee121c344836d4f8a75966f48e34405 = L.circleMarker(
+                [0.5143, 35.2698],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d22feee4483641769457620f0a83cd72);
+        
+    
+        var popup_4984446fb59534a5986cc691e0356a75 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_66cd64d97c49c651d5fafb94726e4124 = $(`<div id="html_66cd64d97c49c651d5fafb94726e4124" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Eldoret</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_4984446fb59534a5986cc691e0356a75.setContent(html_66cd64d97c49c651d5fafb94726e4124);
+            
+        
+
+        circle_marker_fee121c344836d4f8a75966f48e34405.bindPopup(popup_4984446fb59534a5986cc691e0356a75)
+        ;
+
+        
+    
+    
+            circle_marker_fee121c344836d4f8a75966f48e34405.bindTooltip(
+                `<div>
+                     <strong>Eldoret</strong><br>Kenya<br><small>Waypoint 4 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a8f0cab8ff2448a4ba10fbe8af793e8 = L.circleMarker(
+                [0.636, 34.275],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d22feee4483641769457620f0a83cd72);
+        
+    
+        var popup_6bf28d036164fdc4460da6731501b0bb = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_5ae5afec565b5ff77911b0de333b247d = $(`<div id="html_5ae5afec565b5ff77911b0de333b247d" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Malaba</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_6bf28d036164fdc4460da6731501b0bb.setContent(html_5ae5afec565b5ff77911b0de333b247d);
+            
+        
+
+        circle_marker_1a8f0cab8ff2448a4ba10fbe8af793e8.bindPopup(popup_6bf28d036164fdc4460da6731501b0bb)
+        ;
+
+        
+    
+    
+            circle_marker_1a8f0cab8ff2448a4ba10fbe8af793e8.bindTooltip(
+                `<div>
+                     <strong>Malaba</strong><br>Kenya/Uganda border<br><small>Waypoint 5 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4a075d50b44968ebabafd5c87aa6bba4 = L.circleMarker(
+                [0.431, 33.205],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d22feee4483641769457620f0a83cd72);
+        
+    
+        var popup_784011cf07f431ffbd26e91f51848382 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_f72ee4931baa58cfeffa087b861a1d9a = $(`<div id="html_f72ee4931baa58cfeffa087b861a1d9a" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Jinja</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_784011cf07f431ffbd26e91f51848382.setContent(html_f72ee4931baa58cfeffa087b861a1d9a);
+            
+        
+
+        circle_marker_4a075d50b44968ebabafd5c87aa6bba4.bindPopup(popup_784011cf07f431ffbd26e91f51848382)
+        ;
+
+        
+    
+    
+            circle_marker_4a075d50b44968ebabafd5c87aa6bba4.bindTooltip(
+                `<div>
+                     <strong>Jinja</strong><br>Uganda<br><small>Waypoint 6 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_900d7c476ab165cde3cf933179bdd6c3 = L.circleMarker(
+                [0.3476, 32.5825],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d22feee4483641769457620f0a83cd72);
+        
+    
+        var popup_1880f1da025005e5ddbae798132cd390 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b588ae5cf566f5cc0efc9bc5b7d5d841 = $(`<div id="html_b588ae5cf566f5cc0efc9bc5b7d5d841" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kampala</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_1880f1da025005e5ddbae798132cd390.setContent(html_b588ae5cf566f5cc0efc9bc5b7d5d841);
+            
+        
+
+        circle_marker_900d7c476ab165cde3cf933179bdd6c3.bindPopup(popup_1880f1da025005e5ddbae798132cd390)
+        ;
+
+        
+    
+    
+            circle_marker_900d7c476ab165cde3cf933179bdd6c3.bindTooltip(
+                `<div>
+                     <strong>Kampala</strong><br>Uganda<br><small>Waypoint 7 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9853d428eba39a63ea4ce2aca3180f77 = L.circleMarker(
+                [-1.427, 30.02],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d22feee4483641769457620f0a83cd72);
+        
+    
+        var popup_28670974652a8a10149aca3493d5509e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_3fb57dfd9c8b6e4e097dc69ea5ae2ce5 = $(`<div id="html_3fb57dfd9c8b6e4e097dc69ea5ae2ce5" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Katuna/Gatuna</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_28670974652a8a10149aca3493d5509e.setContent(html_3fb57dfd9c8b6e4e097dc69ea5ae2ce5);
+            
+        
+
+        circle_marker_9853d428eba39a63ea4ce2aca3180f77.bindPopup(popup_28670974652a8a10149aca3493d5509e)
+        ;
+
+        
+    
+    
+            circle_marker_9853d428eba39a63ea4ce2aca3180f77.bindTooltip(
+                `<div>
+                     <strong>Katuna/Gatuna</strong><br>Uganda/Rwanda border<br><small>Waypoint 8 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8ffaac9efa3eac839804141ecf1341f5 = L.circleMarker(
+                [-1.9441, 30.0619],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_d22feee4483641769457620f0a83cd72);
+        
+    
+        var popup_91260238aed163201e2bf3e1838a19d5 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_79af9a99bd0cc97e315e9dad14c7e1e3 = $(`<div id="html_79af9a99bd0cc97e315e9dad14c7e1e3" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kigali</h3><div>Northern Corridor — Rwanda (Gatuna reference)</div><p>Official geographic corridor family; road itinerary not surveyed</p><p>Port of Mombasa through Kenya and Uganda to Rwanda; the crossing is carrier-selected.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_91260238aed163201e2bf3e1838a19d5.setContent(html_79af9a99bd0cc97e315e9dad14c7e1e3);
+            
+        
+
+        circle_marker_8ffaac9efa3eac839804141ecf1341f5.bindPopup(popup_91260238aed163201e2bf3e1838a19d5)
+        ;
+
+        
+    
+    
+            circle_marker_8ffaac9efa3eac839804141ecf1341f5.bindTooltip(
+                `<div>
+                     <strong>Kigali</strong><br>Rwanda<br><small>Waypoint 9 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_d22feee4483641769457620f0a83cd72.addTo(map_337c42c6b9c41705495c801591bfac8b);
+        
+    
+            var feature_group_75571661f3d0b51567aca06742e8fb30 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_5b237eab5d26cc217ffab6fb2633d95c = L.circleMarker(
+                [-4.0435, 39.6682],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_75571661f3d0b51567aca06742e8fb30);
+        
+    
+        var popup_29e6ac8b38e98446e4d57fb899e9e80e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_38d18a2ae914b7a9d82f1cf1d840d6cb = $(`<div id="html_38d18a2ae914b7a9d82f1cf1d840d6cb" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Mombasa</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_29e6ac8b38e98446e4d57fb899e9e80e.setContent(html_38d18a2ae914b7a9d82f1cf1d840d6cb);
+            
+        
+
+        circle_marker_5b237eab5d26cc217ffab6fb2633d95c.bindPopup(popup_29e6ac8b38e98446e4d57fb899e9e80e)
+        ;
+
+        
+    
+    
+            circle_marker_5b237eab5d26cc217ffab6fb2633d95c.bindTooltip(
+                `<div>
+                     <strong>Mombasa</strong><br>Kenya<br><small>Waypoint 1 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_61eadca80be1db2de4f7cb0f354d1369 = L.circleMarker(
+                [-1.2864, 36.8172],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_75571661f3d0b51567aca06742e8fb30);
+        
+    
+        var popup_6e4acba344175c8357a4301cd41df93e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_55d118a661ec926eaab358aea3c35ab1 = $(`<div id="html_55d118a661ec926eaab358aea3c35ab1" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Nairobi</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_6e4acba344175c8357a4301cd41df93e.setContent(html_55d118a661ec926eaab358aea3c35ab1);
+            
+        
+
+        circle_marker_61eadca80be1db2de4f7cb0f354d1369.bindPopup(popup_6e4acba344175c8357a4301cd41df93e)
+        ;
+
+        
+    
+    
+            circle_marker_61eadca80be1db2de4f7cb0f354d1369.bindTooltip(
+                `<div>
+                     <strong>Nairobi</strong><br>Kenya<br><small>Waypoint 2 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3feafc099b88f0f292721660cc4cc457 = L.circleMarker(
+                [0.46, 34.09],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_75571661f3d0b51567aca06742e8fb30);
+        
+    
+        var popup_4414ad070f4518e46653006dcc11dd01 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_d2b9fe9c573ecbfef6a1c8bc1058b79b = $(`<div id="html_d2b9fe9c573ecbfef6a1c8bc1058b79b" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Busia</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_4414ad070f4518e46653006dcc11dd01.setContent(html_d2b9fe9c573ecbfef6a1c8bc1058b79b);
+            
+        
+
+        circle_marker_3feafc099b88f0f292721660cc4cc457.bindPopup(popup_4414ad070f4518e46653006dcc11dd01)
+        ;
+
+        
+    
+    
+            circle_marker_3feafc099b88f0f292721660cc4cc457.bindTooltip(
+                `<div>
+                     <strong>Busia</strong><br>Kenya/Uganda border<br><small>Waypoint 3 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ed72a281bb283388837da308e6b79c7e = L.circleMarker(
+                [0.3476, 32.5825],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_75571661f3d0b51567aca06742e8fb30);
+        
+    
+        var popup_5a06d48b52fceb72d345b9118798c68e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_a6b28c4167ffb25d375ac2cc8b6cc8f2 = $(`<div id="html_a6b28c4167ffb25d375ac2cc8b6cc8f2" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kampala</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_5a06d48b52fceb72d345b9118798c68e.setContent(html_a6b28c4167ffb25d375ac2cc8b6cc8f2);
+            
+        
+
+        circle_marker_ed72a281bb283388837da308e6b79c7e.bindPopup(popup_5a06d48b52fceb72d345b9118798c68e)
+        ;
+
+        
+    
+    
+            circle_marker_ed72a281bb283388837da308e6b79c7e.bindTooltip(
+                `<div>
+                     <strong>Kampala</strong><br>Uganda<br><small>Waypoint 4 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_92ba4f8da7654a0f18cdad89a900a47e = L.circleMarker(
+                [-1.049, 30.477],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_75571661f3d0b51567aca06742e8fb30);
+        
+    
+        var popup_921c0245046a63e30a6abc21e17da1e8 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_2d7e8c594ad9de133f535bbb779e072f = $(`<div id="html_2d7e8c594ad9de133f535bbb779e072f" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kagitumba/Mirama Hills</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_921c0245046a63e30a6abc21e17da1e8.setContent(html_2d7e8c594ad9de133f535bbb779e072f);
+            
+        
+
+        circle_marker_92ba4f8da7654a0f18cdad89a900a47e.bindPopup(popup_921c0245046a63e30a6abc21e17da1e8)
+        ;
+
+        
+    
+    
+            circle_marker_92ba4f8da7654a0f18cdad89a900a47e.bindTooltip(
+                `<div>
+                     <strong>Kagitumba/Mirama Hills</strong><br>Uganda/Rwanda border<br><small>Waypoint 5 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5a8d1247239f6b0f1082001dfe230c46 = L.circleMarker(
+                [-1.9441, 30.0619],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_75571661f3d0b51567aca06742e8fb30);
+        
+    
+        var popup_73bd9797e166951c657139bcc3f7f9bc = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_f0a05a32c7c3404e0ddfd76a95874b20 = $(`<div id="html_f0a05a32c7c3404e0ddfd76a95874b20" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kigali</h3><div>Northern Corridor — Rwanda (Kagitumba option)</div><p>Alternative planning itinerary; validate road/border particulars</p><p>An alternative Rwanda-bound border family, not a guaranteed clearance route.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_73bd9797e166951c657139bcc3f7f9bc.setContent(html_f0a05a32c7c3404e0ddfd76a95874b20);
+            
+        
+
+        circle_marker_5a8d1247239f6b0f1082001dfe230c46.bindPopup(popup_73bd9797e166951c657139bcc3f7f9bc)
+        ;
+
+        
+    
+    
+            circle_marker_5a8d1247239f6b0f1082001dfe230c46.bindTooltip(
+                `<div>
+                     <strong>Kigali</strong><br>Rwanda<br><small>Waypoint 6 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_75571661f3d0b51567aca06742e8fb30.addTo(map_337c42c6b9c41705495c801591bfac8b);
+        
+    
+            var feature_group_982e0471030b45cbebaa7774957562a7 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_51990a639a111247556377de1738cbcf = L.circleMarker(
+                [-4.0435, 39.6682],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_982e0471030b45cbebaa7774957562a7);
+        
+    
+        var popup_8669a05da6886ec3c1c9eb63e6aa9aa6 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_051c1ae39a9a27175f4f3bd4961c0504 = $(`<div id="html_051c1ae39a9a27175f4f3bd4961c0504" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Mombasa</h3><div>Northern Corridor network — Burundi branch</div><p>Regional-network destinations verified; exact chain illustrative</p><p>Do not assume every operator uses Rwanda or a single set of border crossings.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_8669a05da6886ec3c1c9eb63e6aa9aa6.setContent(html_051c1ae39a9a27175f4f3bd4961c0504);
+            
+        
+
+        circle_marker_51990a639a111247556377de1738cbcf.bindPopup(popup_8669a05da6886ec3c1c9eb63e6aa9aa6)
+        ;
+
+        
+    
+    
+            circle_marker_51990a639a111247556377de1738cbcf.bindTooltip(
+                `<div>
+                     <strong>Mombasa</strong><br>Kenya<br><small>Waypoint 1 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_43615c3a38ba3ce8c3ac1e161340031b = L.circleMarker(
+                [0.3476, 32.5825],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_982e0471030b45cbebaa7774957562a7);
+        
+    
+        var popup_ab25110e28d88ec7560a352026ec6a8b = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_f89d3a0dbe79063fceda04111fb4b4c3 = $(`<div id="html_f89d3a0dbe79063fceda04111fb4b4c3" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kampala</h3><div>Northern Corridor network — Burundi branch</div><p>Regional-network destinations verified; exact chain illustrative</p><p>Do not assume every operator uses Rwanda or a single set of border crossings.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_ab25110e28d88ec7560a352026ec6a8b.setContent(html_f89d3a0dbe79063fceda04111fb4b4c3);
+            
+        
+
+        circle_marker_43615c3a38ba3ce8c3ac1e161340031b.bindPopup(popup_ab25110e28d88ec7560a352026ec6a8b)
+        ;
+
+        
+    
+    
+            circle_marker_43615c3a38ba3ce8c3ac1e161340031b.bindTooltip(
+                `<div>
+                     <strong>Kampala</strong><br>Uganda<br><small>Waypoint 2 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_997dcfcd977127dad995ecb807991378 = L.circleMarker(
+                [-1.9441, 30.0619],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_982e0471030b45cbebaa7774957562a7);
+        
+    
+        var popup_db89c2142cc34f910f66540b576c7a76 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b5b7cb1decdb2d1e6fee692d53dc15f1 = $(`<div id="html_b5b7cb1decdb2d1e6fee692d53dc15f1" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kigali</h3><div>Northern Corridor network — Burundi branch</div><p>Regional-network destinations verified; exact chain illustrative</p><p>Do not assume every operator uses Rwanda or a single set of border crossings.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_db89c2142cc34f910f66540b576c7a76.setContent(html_b5b7cb1decdb2d1e6fee692d53dc15f1);
+            
+        
+
+        circle_marker_997dcfcd977127dad995ecb807991378.bindPopup(popup_db89c2142cc34f910f66540b576c7a76)
+        ;
+
+        
+    
+    
+            circle_marker_997dcfcd977127dad995ecb807991378.bindTooltip(
+                `<div>
+                     <strong>Kigali</strong><br>Rwanda<br><small>Waypoint 3 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_37d0db6cf68ddf6b910f567bc23bb900 = L.circleMarker(
+                [-3.3822, 29.3644],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_982e0471030b45cbebaa7774957562a7);
+        
+    
+        var popup_a7e12454dc5b60ad92e8d090743f5fe0 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_66cd572b50af4428d07a00837294a12d = $(`<div id="html_66cd572b50af4428d07a00837294a12d" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Bujumbura</h3><div>Northern Corridor network — Burundi branch</div><p>Regional-network destinations verified; exact chain illustrative</p><p>Do not assume every operator uses Rwanda or a single set of border crossings.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_a7e12454dc5b60ad92e8d090743f5fe0.setContent(html_66cd572b50af4428d07a00837294a12d);
+            
+        
+
+        circle_marker_37d0db6cf68ddf6b910f567bc23bb900.bindPopup(popup_a7e12454dc5b60ad92e8d090743f5fe0)
+        ;
+
+        
+    
+    
+            circle_marker_37d0db6cf68ddf6b910f567bc23bb900.bindTooltip(
+                `<div>
+                     <strong>Bujumbura</strong><br>Burundi<br><small>Waypoint 4 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_982e0471030b45cbebaa7774957562a7.addTo(map_337c42c6b9c41705495c801591bfac8b);
+        
+    
+            var feature_group_0bcda1ce01eadea5c051882afcacf850 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_16c4a7b866e5d762686cc57060eed6b7 = L.circleMarker(
+                [-4.0435, 39.6682],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_0bcda1ce01eadea5c051882afcacf850);
+        
+    
+        var popup_f463ca6b47aa5bcece849da830c5d19f = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_278cf0860c2cf96ed01b82e2da6b8f37 = $(`<div id="html_278cf0860c2cf96ed01b82e2da6b8f37" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Mombasa</h3><div>Northern Corridor network — eastern DRC branch</div><p>Regional-network DRC destination verified; route chain illustrative</p><p>DRC also belongs to the southern North–South network; eastern and southern branches are different.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_f463ca6b47aa5bcece849da830c5d19f.setContent(html_278cf0860c2cf96ed01b82e2da6b8f37);
+            
+        
+
+        circle_marker_16c4a7b866e5d762686cc57060eed6b7.bindPopup(popup_f463ca6b47aa5bcece849da830c5d19f)
+        ;
+
+        
+    
+    
+            circle_marker_16c4a7b866e5d762686cc57060eed6b7.bindTooltip(
+                `<div>
+                     <strong>Mombasa</strong><br>Kenya<br><small>Waypoint 1 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8b0126f79b4d14de723b0c91ae58a49a = L.circleMarker(
+                [0.3476, 32.5825],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_0bcda1ce01eadea5c051882afcacf850);
+        
+    
+        var popup_98d67b8ae10d4144a1d20ce53a5d3007 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_7a0f2afb058f4947a3c0da7256996f6a = $(`<div id="html_7a0f2afb058f4947a3c0da7256996f6a" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kampala</h3><div>Northern Corridor network — eastern DRC branch</div><p>Regional-network DRC destination verified; route chain illustrative</p><p>DRC also belongs to the southern North–South network; eastern and southern branches are different.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_98d67b8ae10d4144a1d20ce53a5d3007.setContent(html_7a0f2afb058f4947a3c0da7256996f6a);
+            
+        
+
+        circle_marker_8b0126f79b4d14de723b0c91ae58a49a.bindPopup(popup_98d67b8ae10d4144a1d20ce53a5d3007)
+        ;
+
+        
+    
+    
+            circle_marker_8b0126f79b4d14de723b0c91ae58a49a.bindTooltip(
+                `<div>
+                     <strong>Kampala</strong><br>Uganda<br><small>Waypoint 2 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6e3d8e2bdfd232a5d18077f36e5e1897 = L.circleMarker(
+                [-1.9441, 30.0619],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_0bcda1ce01eadea5c051882afcacf850);
+        
+    
+        var popup_5c0d5ff3e679690f7938728daceebb01 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_804936f137bc0ab58c3878009cc18e0e = $(`<div id="html_804936f137bc0ab58c3878009cc18e0e" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kigali</h3><div>Northern Corridor network — eastern DRC branch</div><p>Regional-network DRC destination verified; route chain illustrative</p><p>DRC also belongs to the southern North–South network; eastern and southern branches are different.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_5c0d5ff3e679690f7938728daceebb01.setContent(html_804936f137bc0ab58c3878009cc18e0e);
+            
+        
+
+        circle_marker_6e3d8e2bdfd232a5d18077f36e5e1897.bindPopup(popup_5c0d5ff3e679690f7938728daceebb01)
+        ;
+
+        
+    
+    
+            circle_marker_6e3d8e2bdfd232a5d18077f36e5e1897.bindTooltip(
+                `<div>
+                     <strong>Kigali</strong><br>Rwanda<br><small>Waypoint 3 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b72b1c1cfb8f30c1c467f7b9948f5ac1 = L.circleMarker(
+                [-1.679, 29.223],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_0bcda1ce01eadea5c051882afcacf850);
+        
+    
+        var popup_85ce8ba15859f901ab94439e653c0404 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_2cc1d56e7e7c7fef08771f3e98d281b3 = $(`<div id="html_2cc1d56e7e7c7fef08771f3e98d281b3" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Goma</h3><div>Northern Corridor network — eastern DRC branch</div><p>Regional-network DRC destination verified; route chain illustrative</p><p>DRC also belongs to the southern North–South network; eastern and southern branches are different.</p><a href="https://www.ttcanc.org/corridor-infrastructure/road-network/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_85ce8ba15859f901ab94439e653c0404.setContent(html_2cc1d56e7e7c7fef08771f3e98d281b3);
+            
+        
+
+        circle_marker_b72b1c1cfb8f30c1c467f7b9948f5ac1.bindPopup(popup_85ce8ba15859f901ab94439e653c0404)
+        ;
+
+        
+    
+    
+            circle_marker_b72b1c1cfb8f30c1c467f7b9948f5ac1.bindTooltip(
+                `<div>
+                     <strong>Goma</strong><br>DRC<br><small>Waypoint 4 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_0bcda1ce01eadea5c051882afcacf850.addTo(map_337c42c6b9c41705495c801591bfac8b);
+        
+    
+            var feature_group_0005301c5bedced5b5c5efb5f6f4ed51 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_73fe05a30ba621a767d9c18792be30a0 = L.circleMarker(
+                [-4.0435, 39.6682],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_0005301c5bedced5b5c5efb5f6f4ed51);
+        
+    
+        var popup_963499e09bc27685bce137a0b4dd4067 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_690ff3d61aec83c1dc93d17e348f8931 = $(`<div id="html_690ff3d61aec83c1dc93d17e348f8931" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Mombasa</h3><div>Northern Corridor network — South Sudan branch</div><p>Member/destination verified; exact routing unvalidated</p><p>Operational corridor and security due diligence required.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_963499e09bc27685bce137a0b4dd4067.setContent(html_690ff3d61aec83c1dc93d17e348f8931);
+            
+        
+
+        circle_marker_73fe05a30ba621a767d9c18792be30a0.bindPopup(popup_963499e09bc27685bce137a0b4dd4067)
+        ;
+
+        
+    
+    
+            circle_marker_73fe05a30ba621a767d9c18792be30a0.bindTooltip(
+                `<div>
+                     <strong>Mombasa</strong><br>Kenya<br><small>Waypoint 1 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_76b553ecc659278ca3626156203acef9 = L.circleMarker(
+                [0.3476, 32.5825],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_0005301c5bedced5b5c5efb5f6f4ed51);
+        
+    
+        var popup_ce3ddb7d0f5140326eeb07dfcc513b7c = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_18b5e6c3f85e4fd23393d01fa5f5af5e = $(`<div id="html_18b5e6c3f85e4fd23393d01fa5f5af5e" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kampala</h3><div>Northern Corridor network — South Sudan branch</div><p>Member/destination verified; exact routing unvalidated</p><p>Operational corridor and security due diligence required.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_ce3ddb7d0f5140326eeb07dfcc513b7c.setContent(html_18b5e6c3f85e4fd23393d01fa5f5af5e);
+            
+        
+
+        circle_marker_76b553ecc659278ca3626156203acef9.bindPopup(popup_ce3ddb7d0f5140326eeb07dfcc513b7c)
+        ;
+
+        
+    
+    
+            circle_marker_76b553ecc659278ca3626156203acef9.bindTooltip(
+                `<div>
+                     <strong>Kampala</strong><br>Uganda<br><small>Waypoint 2 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_95a7ccb637fbe3fb5b1ee92dda4a5bbb = L.circleMarker(
+                [4.859, 31.572],
+                {"bubblingMouseEvents": true, "color": "#2e9281", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9281", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_0005301c5bedced5b5c5efb5f6f4ed51);
+        
+    
+        var popup_dcb064d1e3cbec5601b669af3d4422f9 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_592199350d224e1bba0660b9dbf7b1d8 = $(`<div id="html_592199350d224e1bba0660b9dbf7b1d8" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Juba</h3><div>Northern Corridor network — South Sudan branch</div><p>Member/destination verified; exact routing unvalidated</p><p>Operational corridor and security due diligence required.</p><a href="https://www.ttcanc.org/about-us/the-northern-corridor-transit-and-transport-agreement/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_dcb064d1e3cbec5601b669af3d4422f9.setContent(html_592199350d224e1bba0660b9dbf7b1d8);
+            
+        
+
+        circle_marker_95a7ccb637fbe3fb5b1ee92dda4a5bbb.bindPopup(popup_dcb064d1e3cbec5601b669af3d4422f9)
+        ;
+
+        
+    
+    
+            circle_marker_95a7ccb637fbe3fb5b1ee92dda4a5bbb.bindTooltip(
+                `<div>
+                     <strong>Juba</strong><br>South Sudan<br><small>Waypoint 3 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_0005301c5bedced5b5c5efb5f6f4ed51.addTo(map_337c42c6b9c41705495c801591bfac8b);
+        
+    
+            var layer_control_d1e2560e5d952336f104ff9d21b29639_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_60aca2152dd985dc9f2dc6486d4fd05f,
+                    "Light cartographic base" : tile_layer_6f798cf2e76600d67c2bc9d1998614f9,
+                    "Dark cartographic base" : tile_layer_2d00f8bad1e3650a78e87638d4e3dc35,
+                },
+                overlays :  {
+                    "Northern Corridor \u2014 Rwanda (Gatuna reference)" : feature_group_d22feee4483641769457620f0a83cd72,
+                    "Northern Corridor \u2014 Rwanda (Kagitumba option)" : feature_group_75571661f3d0b51567aca06742e8fb30,
+                    "Northern Corridor network \u2014 Burundi branch" : feature_group_982e0471030b45cbebaa7774957562a7,
+                    "Northern Corridor network \u2014 eastern DRC branch" : feature_group_0bcda1ce01eadea5c051882afcacf850,
+                    "Northern Corridor network \u2014 South Sudan branch" : feature_group_0005301c5bedced5b5c5efb5f6f4ed51,
+                },
+            };
+            let layer_control_d1e2560e5d952336f104ff9d21b29639 = L.control.layers(
+                layer_control_d1e2560e5d952336f104ff9d21b29639_layers.base_layers,
+                layer_control_d1e2560e5d952336f104ff9d21b29639_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_337c42c6b9c41705495c801591bfac8b);
+
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_337c42c6b9c41705495c801591bfac8b);
+        
+    
+            var mouse_position_bfc0f7907e6cfba6a71b299ec1c3b1ba = new L.Control.MousePosition(
+                {
+  "position": "bottomright",
+  "separator": " : ",
+  "emptyString": "Unavailable",
+  "lngFirst": false,
+  "numDigits": 5,
+  "prefix": "",
+}
+            );
+            mouse_position_bfc0f7907e6cfba6a71b299ec1c3b1ba.options["latFormatter"] =
+                undefined;
+            mouse_position_bfc0f7907e6cfba6a71b299ec1c3b1ba.options["lngFormatter"] =
+                undefined;
+            map_337c42c6b9c41705495c801591bfac8b.addControl(mouse_position_bfc0f7907e6cfba6a71b299ec1c3b1ba);
+        
+</script>
+</html>

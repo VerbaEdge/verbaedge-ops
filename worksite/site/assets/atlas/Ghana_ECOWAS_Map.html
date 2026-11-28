@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ffa5d5d2f48ca55cf384a2afdeb2c455 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+</head>
+<body>
+    
+    <div style="position:fixed;bottom:22px;left:20px;z-index:9999;background:#ffffffed;border:1px solid #ced8d9;padding:12px 16px;border-radius:8px;max-width:340px;font:13px/1.45 system-ui;box-shadow:0 2px 14px #0002"><b>ZARVEUM | Ghana and ECOWAS corridors</b><br><span style="color:#34495e">OpenStreetMap cartographic base · Approximate waypoints only. No route lines, live movements, customs clearance, road permissions or guaranteed transit.</span></div>
+    
+            <div class="folium-map" id="map_ffa5d5d2f48ca55cf384a2afdeb2c455" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ffa5d5d2f48ca55cf384a2afdeb2c455 = L.map(
+                "map_ffa5d5d2f48ca55cf384a2afdeb2c455",
+                {
+                    center: [9.0, -0.8],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": true,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_ffa5d5d2f48ca55cf384a2afdeb2c455);
+
+            
+
+        
+    
+            var tile_layer_3cbaf1ff6fb9e56151fb8f0647dab5be = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3cbaf1ff6fb9e56151fb8f0647dab5be.addTo(map_ffa5d5d2f48ca55cf384a2afdeb2c455);
+        
+    
+            var tile_layer_fae18e3d99fed1a0d0c2a9a106486de9 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_fae18e3d99fed1a0d0c2a9a106486de9.addTo(map_ffa5d5d2f48ca55cf384a2afdeb2c455);
+        
+    
+            var tile_layer_267a8d6fa17b09f7e0031d14b8b38189 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_267a8d6fa17b09f7e0031d14b8b38189.addTo(map_ffa5d5d2f48ca55cf384a2afdeb2c455);
+        
+    
+            var feature_group_9590ca109e2ec7f61cffce06d976db0e = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_559137cf8233917991a7c865aa0549c4 = L.circleMarker(
+                [5.669, 0.017],
+                {"bubblingMouseEvents": true, "color": "#d8994b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8994b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9590ca109e2ec7f61cffce06d976db0e);
+        
+    
+        var popup_a57adcba1ccdf634dd6d49157be07b6e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_e15cd4d97778e2befef356dd97818701 = $(`<div id="html_e15cd4d97778e2befef356dd97818701" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Tema</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_a57adcba1ccdf634dd6d49157be07b6e.setContent(html_e15cd4d97778e2befef356dd97818701);
+            
+        
+
+        circle_marker_559137cf8233917991a7c865aa0549c4.bindPopup(popup_a57adcba1ccdf634dd6d49157be07b6e)
+        ;
+
+        
+    
+    
+            circle_marker_559137cf8233917991a7c865aa0549c4.bindTooltip(
+                `<div>
+                     <strong>Tema</strong><br>Ghana<br><small>Waypoint 1 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5e078e5f5974b2e2ffd785a6aa80a7ff = L.circleMarker(
+                [5.6037, -0.187],
+                {"bubblingMouseEvents": true, "color": "#d8994b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8994b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9590ca109e2ec7f61cffce06d976db0e);
+        
+    
+        var popup_41064599f8a3202ce340e2a023ea4595 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_a18ce1a3ea696dd387891f77af575698 = $(`<div id="html_a18ce1a3ea696dd387891f77af575698" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Accra</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_41064599f8a3202ce340e2a023ea4595.setContent(html_a18ce1a3ea696dd387891f77af575698);
+            
+        
+
+        circle_marker_5e078e5f5974b2e2ffd785a6aa80a7ff.bindPopup(popup_41064599f8a3202ce340e2a023ea4595)
+        ;
+
+        
+    
+    
+            circle_marker_5e078e5f5974b2e2ffd785a6aa80a7ff.bindTooltip(
+                `<div>
+                     <strong>Accra</strong><br>Ghana<br><small>Waypoint 2 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_35519a3f8bf3318d9eb008269eaa1b7a = L.circleMarker(
+                [6.6885, -1.6244],
+                {"bubblingMouseEvents": true, "color": "#d8994b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8994b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9590ca109e2ec7f61cffce06d976db0e);
+        
+    
+        var popup_29d489ffe87a8bceff4af65653301cec = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_c50341494dffb8782c90bd43a95c46b9 = $(`<div id="html_c50341494dffb8782c90bd43a95c46b9" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kumasi</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_29d489ffe87a8bceff4af65653301cec.setContent(html_c50341494dffb8782c90bd43a95c46b9);
+            
+        
+
+        circle_marker_35519a3f8bf3318d9eb008269eaa1b7a.bindPopup(popup_29d489ffe87a8bceff4af65653301cec)
+        ;
+
+        
+    
+    
+            circle_marker_35519a3f8bf3318d9eb008269eaa1b7a.bindTooltip(
+                `<div>
+                     <strong>Kumasi</strong><br>Ghana<br><small>Waypoint 3 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1e031e87834a13cd858c9cedb5dbbeef = L.circleMarker(
+                [9.4047, -0.8393],
+                {"bubblingMouseEvents": true, "color": "#d8994b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8994b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9590ca109e2ec7f61cffce06d976db0e);
+        
+    
+        var popup_1aa808c66b268dbff6b5670fe8e6ec2a = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_5c48558e91b5c4abf8830a55c69d1ad8 = $(`<div id="html_5c48558e91b5c4abf8830a55c69d1ad8" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Tamale</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_1aa808c66b268dbff6b5670fe8e6ec2a.setContent(html_5c48558e91b5c4abf8830a55c69d1ad8);
+            
+        
+
+        circle_marker_1e031e87834a13cd858c9cedb5dbbeef.bindPopup(popup_1aa808c66b268dbff6b5670fe8e6ec2a)
+        ;
+
+        
+    
+    
+            circle_marker_1e031e87834a13cd858c9cedb5dbbeef.bindTooltip(
+                `<div>
+                     <strong>Tamale</strong><br>Ghana<br><small>Waypoint 4 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c8f29956ec8d876f9db9414e6ecf2c3b = L.circleMarker(
+                [10.998, -1.113],
+                {"bubblingMouseEvents": true, "color": "#d8994b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8994b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9590ca109e2ec7f61cffce06d976db0e);
+        
+    
+        var popup_847641cf6468d91bde1b4401cd020c84 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_71b686744689ef2c503b14d54abbea30 = $(`<div id="html_71b686744689ef2c503b14d54abbea30" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Paga</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_847641cf6468d91bde1b4401cd020c84.setContent(html_71b686744689ef2c503b14d54abbea30);
+            
+        
+
+        circle_marker_c8f29956ec8d876f9db9414e6ecf2c3b.bindPopup(popup_847641cf6468d91bde1b4401cd020c84)
+        ;
+
+        
+    
+    
+            circle_marker_c8f29956ec8d876f9db9414e6ecf2c3b.bindTooltip(
+                `<div>
+                     <strong>Paga</strong><br>Ghana/Burkina Faso border<br><small>Waypoint 5 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5c0ee2f14f75ee7248416d0ee2517d3e = L.circleMarker(
+                [12.3714, -1.5197],
+                {"bubblingMouseEvents": true, "color": "#d8994b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8994b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9590ca109e2ec7f61cffce06d976db0e);
+        
+    
+        var popup_05381060d435d6162d84b32a133f54e7 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_f0e4817781080cf0105034fae194f5e1 = $(`<div id="html_f0e4817781080cf0105034fae194f5e1" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Ouagadougou</h3><div>Ghana gateway — Burkina Faso</div><p>GRA transit destination verified; intermediate waypoints planning-only</p><p>Ghana customs transit, origin and bonds need licensed operator verification.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_05381060d435d6162d84b32a133f54e7.setContent(html_f0e4817781080cf0105034fae194f5e1);
+            
+        
+
+        circle_marker_5c0ee2f14f75ee7248416d0ee2517d3e.bindPopup(popup_05381060d435d6162d84b32a133f54e7)
+        ;
+
+        
+    
+    
+            circle_marker_5c0ee2f14f75ee7248416d0ee2517d3e.bindTooltip(
+                `<div>
+                     <strong>Ouagadougou</strong><br>Burkina Faso<br><small>Waypoint 6 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_9590ca109e2ec7f61cffce06d976db0e.addTo(map_ffa5d5d2f48ca55cf384a2afdeb2c455);
+        
+    
+            var feature_group_55ef41801769293bbcdda856b9b8401d = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_0d23a097aacb6c90bb7046294c0c738c = L.circleMarker(
+                [4.895, -1.755],
+                {"bubblingMouseEvents": true, "color": "#d8994b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8994b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_55ef41801769293bbcdda856b9b8401d);
+        
+    
+        var popup_76074a712cd1a18be1e9edc7a1ac45bd = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_3f6d00bec96ad889cf099b0a13fb4b2b = $(`<div id="html_3f6d00bec96ad889cf099b0a13fb4b2b" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Takoradi</h3><div>Ghana gateway — Mali / Niger destination possibilities</div><p>Destination connectivity; NOT a single verified drivable sequence</p><p>Map contains terminals/destination pins only; individual road and borders not asserted.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_76074a712cd1a18be1e9edc7a1ac45bd.setContent(html_3f6d00bec96ad889cf099b0a13fb4b2b);
+            
+        
+
+        circle_marker_0d23a097aacb6c90bb7046294c0c738c.bindPopup(popup_76074a712cd1a18be1e9edc7a1ac45bd)
+        ;
+
+        
+    
+    
+            circle_marker_0d23a097aacb6c90bb7046294c0c738c.bindTooltip(
+                `<div>
+                     <strong>Takoradi</strong><br>Ghana<br><small>Waypoint 1 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_338fff4d9da6bce6336f36607d2310cb = L.circleMarker(
+                [5.669, 0.017],
+                {"bubblingMouseEvents": true, "color": "#d8994b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8994b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_55ef41801769293bbcdda856b9b8401d);
+        
+    
+        var popup_8fb43575fd06679afc0f2dddb245c907 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_cd9735c3a086f306620eb4c3e446c3f3 = $(`<div id="html_cd9735c3a086f306620eb4c3e446c3f3" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Tema</h3><div>Ghana gateway — Mali / Niger destination possibilities</div><p>Destination connectivity; NOT a single verified drivable sequence</p><p>Map contains terminals/destination pins only; individual road and borders not asserted.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_8fb43575fd06679afc0f2dddb245c907.setContent(html_cd9735c3a086f306620eb4c3e446c3f3);
+            
+        
+
+        circle_marker_338fff4d9da6bce6336f36607d2310cb.bindPopup(popup_8fb43575fd06679afc0f2dddb245c907)
+        ;
+
+        
+    
+    
+            circle_marker_338fff4d9da6bce6336f36607d2310cb.bindTooltip(
+                `<div>
+                     <strong>Tema</strong><br>Ghana<br><small>Waypoint 2 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_242323b0a952d398392018fb3ede61b4 = L.circleMarker(
+                [12.6392, -8.0029],
+                {"bubblingMouseEvents": true, "color": "#d8994b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8994b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_55ef41801769293bbcdda856b9b8401d);
+        
+    
+        var popup_c3993d8df8989971fcc4bb4d54ff3bc1 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_28b05ae403e60f57014f9184406d6600 = $(`<div id="html_28b05ae403e60f57014f9184406d6600" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Bamako</h3><div>Ghana gateway — Mali / Niger destination possibilities</div><p>Destination connectivity; NOT a single verified drivable sequence</p><p>Map contains terminals/destination pins only; individual road and borders not asserted.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_c3993d8df8989971fcc4bb4d54ff3bc1.setContent(html_28b05ae403e60f57014f9184406d6600);
+            
+        
+
+        circle_marker_242323b0a952d398392018fb3ede61b4.bindPopup(popup_c3993d8df8989971fcc4bb4d54ff3bc1)
+        ;
+
+        
+    
+    
+            circle_marker_242323b0a952d398392018fb3ede61b4.bindTooltip(
+                `<div>
+                     <strong>Bamako</strong><br>Mali<br><small>Waypoint 3 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f7d07d776ff3c3ac9756576ea346940f = L.circleMarker(
+                [13.5116, 2.1254],
+                {"bubblingMouseEvents": true, "color": "#d8994b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8994b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_55ef41801769293bbcdda856b9b8401d);
+        
+    
+        var popup_505631f0f6cea3a02235985eac0764dd = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_245190bfdccda977295488e9c47a7cba = $(`<div id="html_245190bfdccda977295488e9c47a7cba" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Niamey</h3><div>Ghana gateway — Mali / Niger destination possibilities</div><p>Destination connectivity; NOT a single verified drivable sequence</p><p>Map contains terminals/destination pins only; individual road and borders not asserted.</p><a href="https://gra.gov.gh/customs/transit-unit/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_505631f0f6cea3a02235985eac0764dd.setContent(html_245190bfdccda977295488e9c47a7cba);
+            
+        
+
+        circle_marker_f7d07d776ff3c3ac9756576ea346940f.bindPopup(popup_505631f0f6cea3a02235985eac0764dd)
+        ;
+
+        
+    
+    
+            circle_marker_f7d07d776ff3c3ac9756576ea346940f.bindTooltip(
+                `<div>
+                     <strong>Niamey</strong><br>Niger<br><small>Waypoint 4 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_55ef41801769293bbcdda856b9b8401d.addTo(map_ffa5d5d2f48ca55cf384a2afdeb2c455);
+        
+    
+            var feature_group_5c3342bb7e045bee229c9ee905ae76c5 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_7db8883f272d75f8cc0c46b468c1537e = L.circleMarker(
+                [5.3599, -4.0083],
+                {"bubblingMouseEvents": true, "color": "#d8994b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8994b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_5c3342bb7e045bee229c9ee905ae76c5);
+        
+    
+        var popup_cd1baa79b7ede14d56ed25f9833c703a = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_28806c6ae3828a11f3c3092c94d7e955 = $(`<div id="html_28806c6ae3828a11f3c3092c94d7e955" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Abidjan</h3><div>Abidjan–Lagos existing coastal corridor</div><p>Recognized corridor; proposed 6-lane highway not complete</p><p>Existing road connections must not be confused with unfinished highway development.</p><a href="https://www.ecowas.int/road-ministers-endorse-the-first-set-of-sections-of-the-abidjan-lagos-corridor-highway-to-commence-the-construction-stage-stressing-on-the-need-to-ensure-continuity-of-sections-in-the-phasing/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_cd1baa79b7ede14d56ed25f9833c703a.setContent(html_28806c6ae3828a11f3c3092c94d7e955);
+            
+        
+
+        circle_marker_7db8883f272d75f8cc0c46b468c1537e.bindPopup(popup_cd1baa79b7ede14d56ed25f9833c703a)
+        ;
+
+        
+    
+    
+            circle_marker_7db8883f272d75f8cc0c46b468c1537e.bindTooltip(
+                `<div>
+                     <strong>Abidjan</strong><br>Côte d’Ivoire<br><small>Waypoint 1 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fbd2eca47b00a4cbdaebf066228bffb4 = L.circleMarker(
+                [5.6037, -0.187],
+                {"bubblingMouseEvents": true, "color": "#d8994b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8994b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_5c3342bb7e045bee229c9ee905ae76c5);
+        
+    
+        var popup_aa11bf5cd1f7c62b57c3e18938cc788e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_aff0d8e6d59117ee59e024180c325828 = $(`<div id="html_aff0d8e6d59117ee59e024180c325828" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Accra</h3><div>Abidjan–Lagos existing coastal corridor</div><p>Recognized corridor; proposed 6-lane highway not complete</p><p>Existing road connections must not be confused with unfinished highway development.</p><a href="https://www.ecowas.int/road-ministers-endorse-the-first-set-of-sections-of-the-abidjan-lagos-corridor-highway-to-commence-the-construction-stage-stressing-on-the-need-to-ensure-continuity-of-sections-in-the-phasing/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_aa11bf5cd1f7c62b57c3e18938cc788e.setContent(html_aff0d8e6d59117ee59e024180c325828);
+            
+        
+
+        circle_marker_fbd2eca47b00a4cbdaebf066228bffb4.bindPopup(popup_aa11bf5cd1f7c62b57c3e18938cc788e)
+        ;
+
+        
+    
+    
+            circle_marker_fbd2eca47b00a4cbdaebf066228bffb4.bindTooltip(
+                `<div>
+                     <strong>Accra</strong><br>Ghana<br><small>Waypoint 2 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b8d0566de1d48d52cb62c7530f5cbd24 = L.circleMarker(
+                [6.1375, 1.2123],
+                {"bubblingMouseEvents": true, "color": "#d8994b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8994b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_5c3342bb7e045bee229c9ee905ae76c5);
+        
+    
+        var popup_c9b4a327727f613e4c54e964a751d107 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_029a5941f2fa2be8190e4502c3df51ec = $(`<div id="html_029a5941f2fa2be8190e4502c3df51ec" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lomé</h3><div>Abidjan–Lagos existing coastal corridor</div><p>Recognized corridor; proposed 6-lane highway not complete</p><p>Existing road connections must not be confused with unfinished highway development.</p><a href="https://www.ecowas.int/road-ministers-endorse-the-first-set-of-sections-of-the-abidjan-lagos-corridor-highway-to-commence-the-construction-stage-stressing-on-the-need-to-ensure-continuity-of-sections-in-the-phasing/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_c9b4a327727f613e4c54e964a751d107.setContent(html_029a5941f2fa2be8190e4502c3df51ec);
+            
+        
+
+        circle_marker_b8d0566de1d48d52cb62c7530f5cbd24.bindPopup(popup_c9b4a327727f613e4c54e964a751d107)
+        ;
+
+        
+    
+    
+            circle_marker_b8d0566de1d48d52cb62c7530f5cbd24.bindTooltip(
+                `<div>
+                     <strong>Lomé</strong><br>Togo<br><small>Waypoint 3 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_29ec5c853652c3265e22a96a512835c9 = L.circleMarker(
+                [6.3703, 2.3912],
+                {"bubblingMouseEvents": true, "color": "#d8994b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8994b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_5c3342bb7e045bee229c9ee905ae76c5);
+        
+    
+        var popup_b19caee19b8a8e5175a8a62ed6761b23 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_70f6385dc286978a9ec7ae2cdeb4b2d4 = $(`<div id="html_70f6385dc286978a9ec7ae2cdeb4b2d4" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Cotonou</h3><div>Abidjan–Lagos existing coastal corridor</div><p>Recognized corridor; proposed 6-lane highway not complete</p><p>Existing road connections must not be confused with unfinished highway development.</p><a href="https://www.ecowas.int/road-ministers-endorse-the-first-set-of-sections-of-the-abidjan-lagos-corridor-highway-to-commence-the-construction-stage-stressing-on-the-need-to-ensure-continuity-of-sections-in-the-phasing/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_b19caee19b8a8e5175a8a62ed6761b23.setContent(html_70f6385dc286978a9ec7ae2cdeb4b2d4);
+            
+        
+
+        circle_marker_29ec5c853652c3265e22a96a512835c9.bindPopup(popup_b19caee19b8a8e5175a8a62ed6761b23)
+        ;
+
+        
+    
+    
+            circle_marker_29ec5c853652c3265e22a96a512835c9.bindTooltip(
+                `<div>
+                     <strong>Cotonou</strong><br>Benin<br><small>Waypoint 4 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_95916ee385e36267108d50729d96a0b2 = L.circleMarker(
+                [6.5244, 3.3792],
+                {"bubblingMouseEvents": true, "color": "#d8994b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8994b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_5c3342bb7e045bee229c9ee905ae76c5);
+        
+    
+        var popup_9da7ff92a55a87c8aad661c61aef3b4f = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_90b22c8b2156272dd82485f92013e2f1 = $(`<div id="html_90b22c8b2156272dd82485f92013e2f1" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lagos</h3><div>Abidjan–Lagos existing coastal corridor</div><p>Recognized corridor; proposed 6-lane highway not complete</p><p>Existing road connections must not be confused with unfinished highway development.</p><a href="https://www.ecowas.int/road-ministers-endorse-the-first-set-of-sections-of-the-abidjan-lagos-corridor-highway-to-commence-the-construction-stage-stressing-on-the-need-to-ensure-continuity-of-sections-in-the-phasing/" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_9da7ff92a55a87c8aad661c61aef3b4f.setContent(html_90b22c8b2156272dd82485f92013e2f1);
+            
+        
+
+        circle_marker_95916ee385e36267108d50729d96a0b2.bindPopup(popup_9da7ff92a55a87c8aad661c61aef3b4f)
+        ;
+
+        
+    
+    
+            circle_marker_95916ee385e36267108d50729d96a0b2.bindTooltip(
+                `<div>
+                     <strong>Lagos</strong><br>Nigeria<br><small>Waypoint 5 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_5c3342bb7e045bee229c9ee905ae76c5.addTo(map_ffa5d5d2f48ca55cf384a2afdeb2c455);
+        
+    
+            var layer_control_176eeb4c117cf9be0c5ec091c203e51b_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_3cbaf1ff6fb9e56151fb8f0647dab5be,
+                    "Light cartographic base" : tile_layer_fae18e3d99fed1a0d0c2a9a106486de9,
+                    "Dark cartographic base" : tile_layer_267a8d6fa17b09f7e0031d14b8b38189,
+                },
+                overlays :  {
+                    "Ghana gateway \u2014 Burkina Faso" : feature_group_9590ca109e2ec7f61cffce06d976db0e,
+                    "Ghana gateway \u2014 Mali / Niger destination possibilities" : feature_group_55ef41801769293bbcdda856b9b8401d,
+                    "Abidjan\u2013Lagos existing coastal corridor" : feature_group_5c3342bb7e045bee229c9ee905ae76c5,
+                },
+            };
+            let layer_control_176eeb4c117cf9be0c5ec091c203e51b = L.control.layers(
+                layer_control_176eeb4c117cf9be0c5ec091c203e51b_layers.base_layers,
+                layer_control_176eeb4c117cf9be0c5ec091c203e51b_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_ffa5d5d2f48ca55cf384a2afdeb2c455);
+
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_ffa5d5d2f48ca55cf384a2afdeb2c455);
+        
+    
+            var mouse_position_1b28d60d2a83360c01b22a6fd685fe01 = new L.Control.MousePosition(
+                {
+  "position": "bottomright",
+  "separator": " : ",
+  "emptyString": "Unavailable",
+  "lngFirst": false,
+  "numDigits": 5,
+  "prefix": "",
+}
+            );
+            mouse_position_1b28d60d2a83360c01b22a6fd685fe01.options["latFormatter"] =
+                undefined;
+            mouse_position_1b28d60d2a83360c01b22a6fd685fe01.options["lngFormatter"] =
+                undefined;
+            map_ffa5d5d2f48ca55cf384a2afdeb2c455.addControl(mouse_position_1b28d60d2a83360c01b22a6fd685fe01);
+        
+</script>
+</html>

@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9364c68daf311ade4bcbc65d2659ca08 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+</head>
+<body>
+    
+    <div style="position:fixed;bottom:22px;left:20px;z-index:9999;background:#ffffffed;border:1px solid #ced8d9;padding:12px 16px;border-radius:8px;max-width:340px;font:13px/1.45 system-ui;box-shadow:0 2px 14px #0002"><b>ZARVEUM | Southern Africa &amp; DRC</b><br><span style="color:#34495e">OpenStreetMap cartographic base · Approximate waypoints only. No route lines, live movements, customs clearance, road permissions or guaranteed transit.</span></div>
+    
+            <div class="folium-map" id="map_9364c68daf311ade4bcbc65d2659ca08" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9364c68daf311ade4bcbc65d2659ca08 = L.map(
+                "map_9364c68daf311ade4bcbc65d2659ca08",
+                {
+                    center: [-18.5, 28.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": true,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_9364c68daf311ade4bcbc65d2659ca08);
+
+            
+
+        
+    
+            var tile_layer_fd4ea05752d56c6a4d4111b372f21767 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_fd4ea05752d56c6a4d4111b372f21767.addTo(map_9364c68daf311ade4bcbc65d2659ca08);
+        
+    
+            var tile_layer_cf5788a35e0899a8d0b3d30ade46e92a = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_cf5788a35e0899a8d0b3d30ade46e92a.addTo(map_9364c68daf311ade4bcbc65d2659ca08);
+        
+    
+            var tile_layer_9be60989f8df8fe9773437a27eb63b85 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9be60989f8df8fe9773437a27eb63b85.addTo(map_9364c68daf311ade4bcbc65d2659ca08);
+        
+    
+            var feature_group_98c64fbee827669d3f41c90b86d1e927 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_697213690e8eaf368bfa604a44fa5993 = L.circleMarker(
+                [-26.2041, 28.0473],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_98c64fbee827669d3f41c90b86d1e927);
+        
+    
+        var popup_252e5ca0ad48f43e00896afdb8c5b2e7 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_4a5a83e16dc8b287a6a8916389f2b1de = $(`<div id="html_4a5a83e16dc8b287a6a8916389f2b1de" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Johannesburg</h3><div>Southern North–South — old Johannesburg to Lusaka scope</div><p>Source-project corridor reference supported by SADC</p><p>Preserved legacy project corridor ID.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_252e5ca0ad48f43e00896afdb8c5b2e7.setContent(html_4a5a83e16dc8b287a6a8916389f2b1de);
+            
+        
+
+        circle_marker_697213690e8eaf368bfa604a44fa5993.bindPopup(popup_252e5ca0ad48f43e00896afdb8c5b2e7)
+        ;
+
+        
+    
+    
+            circle_marker_697213690e8eaf368bfa604a44fa5993.bindTooltip(
+                `<div>
+                     <strong>Johannesburg</strong><br>South Africa<br><small>Waypoint 1 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2cf0f0a8d27f313d22abd0855517fe2c = L.circleMarker(
+                [-22.2165, 30.0],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_98c64fbee827669d3f41c90b86d1e927);
+        
+    
+        var popup_90881dd7e178f28b28913d8d70558ffd = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_2fddec89f7e60c826c52817a7106d23a = $(`<div id="html_2fddec89f7e60c826c52817a7106d23a" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Beitbridge</h3><div>Southern North–South — old Johannesburg to Lusaka scope</div><p>Source-project corridor reference supported by SADC</p><p>Preserved legacy project corridor ID.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_90881dd7e178f28b28913d8d70558ffd.setContent(html_2fddec89f7e60c826c52817a7106d23a);
+            
+        
+
+        circle_marker_2cf0f0a8d27f313d22abd0855517fe2c.bindPopup(popup_90881dd7e178f28b28913d8d70558ffd)
+        ;
+
+        
+    
+    
+            circle_marker_2cf0f0a8d27f313d22abd0855517fe2c.bindTooltip(
+                `<div>
+                     <strong>Beitbridge</strong><br>South Africa/Zimbabwe border<br><small>Waypoint 2 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e9ce46b047b963bcc90b022f2025188b = L.circleMarker(
+                [-17.8252, 31.0335],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_98c64fbee827669d3f41c90b86d1e927);
+        
+    
+        var popup_be7598e6e78b00f1e381ddcb2017716e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_a13b67e573f7936b0c1bffc3bc4c1c1c = $(`<div id="html_a13b67e573f7936b0c1bffc3bc4c1c1c" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Harare</h3><div>Southern North–South — old Johannesburg to Lusaka scope</div><p>Source-project corridor reference supported by SADC</p><p>Preserved legacy project corridor ID.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_be7598e6e78b00f1e381ddcb2017716e.setContent(html_a13b67e573f7936b0c1bffc3bc4c1c1c);
+            
+        
+
+        circle_marker_e9ce46b047b963bcc90b022f2025188b.bindPopup(popup_be7598e6e78b00f1e381ddcb2017716e)
+        ;
+
+        
+    
+    
+            circle_marker_e9ce46b047b963bcc90b022f2025188b.bindTooltip(
+                `<div>
+                     <strong>Harare</strong><br>Zimbabwe<br><small>Waypoint 3 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_48a6fff292e8f9c6f43774b123ea98f1 = L.circleMarker(
+                [-16.034, 28.849],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_98c64fbee827669d3f41c90b86d1e927);
+        
+    
+        var popup_0ab52bc686169e0befd0533c01a04cb5 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_21f9f5330d6f3fc0b577e318409f6f27 = $(`<div id="html_21f9f5330d6f3fc0b577e318409f6f27" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Chirundu</h3><div>Southern North–South — old Johannesburg to Lusaka scope</div><p>Source-project corridor reference supported by SADC</p><p>Preserved legacy project corridor ID.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_0ab52bc686169e0befd0533c01a04cb5.setContent(html_21f9f5330d6f3fc0b577e318409f6f27);
+            
+        
+
+        circle_marker_48a6fff292e8f9c6f43774b123ea98f1.bindPopup(popup_0ab52bc686169e0befd0533c01a04cb5)
+        ;
+
+        
+    
+    
+            circle_marker_48a6fff292e8f9c6f43774b123ea98f1.bindTooltip(
+                `<div>
+                     <strong>Chirundu</strong><br>Zambia/Zimbabwe border<br><small>Waypoint 4 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_51ae723b9fc28e285b17eb275bd84293 = L.circleMarker(
+                [-15.3875, 28.3228],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_98c64fbee827669d3f41c90b86d1e927);
+        
+    
+        var popup_dbddab0c5745f17b845dc905f4953020 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b47cf66221983f059fb8fb0ce43fdb15 = $(`<div id="html_b47cf66221983f059fb8fb0ce43fdb15" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lusaka</h3><div>Southern North–South — old Johannesburg to Lusaka scope</div><p>Source-project corridor reference supported by SADC</p><p>Preserved legacy project corridor ID.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_dbddab0c5745f17b845dc905f4953020.setContent(html_b47cf66221983f059fb8fb0ce43fdb15);
+            
+        
+
+        circle_marker_51ae723b9fc28e285b17eb275bd84293.bindPopup(popup_dbddab0c5745f17b845dc905f4953020)
+        ;
+
+        
+    
+    
+            circle_marker_51ae723b9fc28e285b17eb275bd84293.bindTooltip(
+                `<div>
+                     <strong>Lusaka</strong><br>Zambia<br><small>Waypoint 5 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_98c64fbee827669d3f41c90b86d1e927.addTo(map_9364c68daf311ade4bcbc65d2659ca08);
+        
+    
+            var feature_group_639289a28b177cfa31045b40ae6a7703 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_1b4ac97eecdda3ce68c1e3f26cd43ffa = L.circleMarker(
+                [-29.8587, 31.0218],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_639289a28b177cfa31045b40ae6a7703);
+        
+    
+        var popup_8a04f17817d0f4051eb09741436d158b = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_87bd89242d43ef42388b7c1f2dee5a9e = $(`<div id="html_87bd89242d43ef42388b7c1f2dee5a9e" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Durban</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_8a04f17817d0f4051eb09741436d158b.setContent(html_87bd89242d43ef42388b7c1f2dee5a9e);
+            
+        
+
+        circle_marker_1b4ac97eecdda3ce68c1e3f26cd43ffa.bindPopup(popup_8a04f17817d0f4051eb09741436d158b)
+        ;
+
+        
+    
+    
+            circle_marker_1b4ac97eecdda3ce68c1e3f26cd43ffa.bindTooltip(
+                `<div>
+                     <strong>Durban</strong><br>South Africa<br><small>Waypoint 1 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c0d4fd89be6529d0c49d9f416fd811c5 = L.circleMarker(
+                [-26.2041, 28.0473],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_639289a28b177cfa31045b40ae6a7703);
+        
+    
+        var popup_2f44725502075bba3f7180beaa2ae3ae = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_c79beeca6b672480676b8590a16ba413 = $(`<div id="html_c79beeca6b672480676b8590a16ba413" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Johannesburg</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_2f44725502075bba3f7180beaa2ae3ae.setContent(html_c79beeca6b672480676b8590a16ba413);
+            
+        
+
+        circle_marker_c0d4fd89be6529d0c49d9f416fd811c5.bindPopup(popup_2f44725502075bba3f7180beaa2ae3ae)
+        ;
+
+        
+    
+    
+            circle_marker_c0d4fd89be6529d0c49d9f416fd811c5.bindTooltip(
+                `<div>
+                     <strong>Johannesburg</strong><br>South Africa<br><small>Waypoint 2 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_40c5fe065a3af1e1576164cdfbd6df25 = L.circleMarker(
+                [-22.2165, 30.0],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_639289a28b177cfa31045b40ae6a7703);
+        
+    
+        var popup_da6c77f6b81d4849c67b97c6a9b36086 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_b54eedbef6eded4615ea06a4deda921e = $(`<div id="html_b54eedbef6eded4615ea06a4deda921e" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Beitbridge</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_da6c77f6b81d4849c67b97c6a9b36086.setContent(html_b54eedbef6eded4615ea06a4deda921e);
+            
+        
+
+        circle_marker_40c5fe065a3af1e1576164cdfbd6df25.bindPopup(popup_da6c77f6b81d4849c67b97c6a9b36086)
+        ;
+
+        
+    
+    
+            circle_marker_40c5fe065a3af1e1576164cdfbd6df25.bindTooltip(
+                `<div>
+                     <strong>Beitbridge</strong><br>South Africa/Zimbabwe border<br><small>Waypoint 3 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a3d9fd6d1b0760b092b5d67abbb42b61 = L.circleMarker(
+                [-17.8252, 31.0335],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_639289a28b177cfa31045b40ae6a7703);
+        
+    
+        var popup_45e0c17be4c12bab05fd16f80f544906 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_83528cbb177d77ab93d5c6dbcdfc599c = $(`<div id="html_83528cbb177d77ab93d5c6dbcdfc599c" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Harare</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_45e0c17be4c12bab05fd16f80f544906.setContent(html_83528cbb177d77ab93d5c6dbcdfc599c);
+            
+        
+
+        circle_marker_a3d9fd6d1b0760b092b5d67abbb42b61.bindPopup(popup_45e0c17be4c12bab05fd16f80f544906)
+        ;
+
+        
+    
+    
+            circle_marker_a3d9fd6d1b0760b092b5d67abbb42b61.bindTooltip(
+                `<div>
+                     <strong>Harare</strong><br>Zimbabwe<br><small>Waypoint 4 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_275cba286a6834e1f1f81b164c793c28 = L.circleMarker(
+                [-16.034, 28.849],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_639289a28b177cfa31045b40ae6a7703);
+        
+    
+        var popup_926209e014e92edc2d23c1fe2aa2c60a = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_987110b2c03b0f875a95c3c37011ccb8 = $(`<div id="html_987110b2c03b0f875a95c3c37011ccb8" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Chirundu</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_926209e014e92edc2d23c1fe2aa2c60a.setContent(html_987110b2c03b0f875a95c3c37011ccb8);
+            
+        
+
+        circle_marker_275cba286a6834e1f1f81b164c793c28.bindPopup(popup_926209e014e92edc2d23c1fe2aa2c60a)
+        ;
+
+        
+    
+    
+            circle_marker_275cba286a6834e1f1f81b164c793c28.bindTooltip(
+                `<div>
+                     <strong>Chirundu</strong><br>Zambia/Zimbabwe border<br><small>Waypoint 5 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3964452eaf862c2c7f225c89261ac5d7 = L.circleMarker(
+                [-15.3875, 28.3228],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_639289a28b177cfa31045b40ae6a7703);
+        
+    
+        var popup_ba5029b77bc4e5de3bb2248bf734409b = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_4306bfe5dd3e86cc8a28595cc107611e = $(`<div id="html_4306bfe5dd3e86cc8a28595cc107611e" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lusaka</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_ba5029b77bc4e5de3bb2248bf734409b.setContent(html_4306bfe5dd3e86cc8a28595cc107611e);
+            
+        
+
+        circle_marker_3964452eaf862c2c7f225c89261ac5d7.bindPopup(popup_ba5029b77bc4e5de3bb2248bf734409b)
+        ;
+
+        
+    
+    
+            circle_marker_3964452eaf862c2c7f225c89261ac5d7.bindTooltip(
+                `<div>
+                     <strong>Lusaka</strong><br>Zambia<br><small>Waypoint 6 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_158bec29bd4b0eb35d0610da289c2050 = L.circleMarker(
+                [-12.9683, 28.6366],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_639289a28b177cfa31045b40ae6a7703);
+        
+    
+        var popup_939ba41025a6e6ec0dcb26c97455b195 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_ead86d7dce80d6ac0f7146a3c1a5eeb2 = $(`<div id="html_ead86d7dce80d6ac0f7146a3c1a5eeb2" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Ndola</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_939ba41025a6e6ec0dcb26c97455b195.setContent(html_ead86d7dce80d6ac0f7146a3c1a5eeb2);
+            
+        
+
+        circle_marker_158bec29bd4b0eb35d0610da289c2050.bindPopup(popup_939ba41025a6e6ec0dcb26c97455b195)
+        ;
+
+        
+    
+    
+            circle_marker_158bec29bd4b0eb35d0610da289c2050.bindTooltip(
+                `<div>
+                     <strong>Ndola</strong><br>Zambia<br><small>Waypoint 7 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa56fbcf119dc771280721148368a41f = L.circleMarker(
+                [-12.208, 27.798],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_639289a28b177cfa31045b40ae6a7703);
+        
+    
+        var popup_918326cbb3a4859ef05b8e75fa1da701 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_fa527a5ae1974496319825fbdb1141f4 = $(`<div id="html_fa527a5ae1974496319825fbdb1141f4" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kasumbalesa</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_918326cbb3a4859ef05b8e75fa1da701.setContent(html_fa527a5ae1974496319825fbdb1141f4);
+            
+        
+
+        circle_marker_fa56fbcf119dc771280721148368a41f.bindPopup(popup_918326cbb3a4859ef05b8e75fa1da701)
+        ;
+
+        
+    
+    
+            circle_marker_fa56fbcf119dc771280721148368a41f.bindTooltip(
+                `<div>
+                     <strong>Kasumbalesa</strong><br>Zambia/DRC border<br><small>Waypoint 8 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_be9fc463b86a3b70cc72d6805154a6c0 = L.circleMarker(
+                [-11.6647, 27.4794],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_639289a28b177cfa31045b40ae6a7703);
+        
+    
+        var popup_12f399b6c51cc20ee47e17033d81c4f3 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_dc0f5aec6f048b258084aa8264b981e0 = $(`<div id="html_dc0f5aec6f048b258084aa8264b981e0" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lubumbashi</h3><div>Southern North–South — DRC via Kasumbalesa</div><p>SADC-recognized North–South corridor to DRC</p><p>The added DRC destination is Kasumbalesa/Lubumbashi; border operation needs current validation.</p><a href="https://www.sadc.int/latest-news/sadc-conducts-assessment-study-beitbridge-border-post-connecting-zimbabwe-and-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_12f399b6c51cc20ee47e17033d81c4f3.setContent(html_dc0f5aec6f048b258084aa8264b981e0);
+            
+        
+
+        circle_marker_be9fc463b86a3b70cc72d6805154a6c0.bindPopup(popup_12f399b6c51cc20ee47e17033d81c4f3)
+        ;
+
+        
+    
+    
+            circle_marker_be9fc463b86a3b70cc72d6805154a6c0.bindTooltip(
+                `<div>
+                     <strong>Lubumbashi</strong><br>DRC<br><small>Waypoint 9 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_639289a28b177cfa31045b40ae6a7703.addTo(map_9364c68daf311ade4bcbc65d2659ca08);
+        
+    
+            var feature_group_adebea41eea51eb7d62dd675b7a750e1 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_17f16d44c197c749569a2398d7589992 = L.circleMarker(
+                [-26.2041, 28.0473],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_adebea41eea51eb7d62dd675b7a750e1);
+        
+    
+        var popup_ca2afaa62470b93c222ad1481bc26c44 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_5759093eec467fd78e893057d4f17526 = $(`<div id="html_5759093eec467fd78e893057d4f17526" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Johannesburg</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_ca2afaa62470b93c222ad1481bc26c44.setContent(html_5759093eec467fd78e893057d4f17526);
+            
+        
+
+        circle_marker_17f16d44c197c749569a2398d7589992.bindPopup(popup_ca2afaa62470b93c222ad1481bc26c44)
+        ;
+
+        
+    
+    
+            circle_marker_17f16d44c197c749569a2398d7589992.bindTooltip(
+                `<div>
+                     <strong>Johannesburg</strong><br>South Africa<br><small>Waypoint 1 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b892841bf38e56b8e5f671218aa9cf1 = L.circleMarker(
+                [-24.6545, 25.9086],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_adebea41eea51eb7d62dd675b7a750e1);
+        
+    
+        var popup_50ba61604a7e92e17fd8b0cb2074685f = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_81afcd0e2010347f124c079914200127 = $(`<div id="html_81afcd0e2010347f124c079914200127" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Gaborone</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_50ba61604a7e92e17fd8b0cb2074685f.setContent(html_81afcd0e2010347f124c079914200127);
+            
+        
+
+        circle_marker_4b892841bf38e56b8e5f671218aa9cf1.bindPopup(popup_50ba61604a7e92e17fd8b0cb2074685f)
+        ;
+
+        
+    
+    
+            circle_marker_4b892841bf38e56b8e5f671218aa9cf1.bindTooltip(
+                `<div>
+                     <strong>Gaborone</strong><br>Botswana<br><small>Waypoint 2 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ccb36a62fb269dbbe7a5712866938ceb = L.circleMarker(
+                [-17.784, 25.263],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_adebea41eea51eb7d62dd675b7a750e1);
+        
+    
+        var popup_0a2fec5b3c8e24886b497303d6090886 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_8eb59718fade3c117970ff8500d1f424 = $(`<div id="html_8eb59718fade3c117970ff8500d1f424" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kazungula</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_0a2fec5b3c8e24886b497303d6090886.setContent(html_8eb59718fade3c117970ff8500d1f424);
+            
+        
+
+        circle_marker_ccb36a62fb269dbbe7a5712866938ceb.bindPopup(popup_0a2fec5b3c8e24886b497303d6090886)
+        ;
+
+        
+    
+    
+            circle_marker_ccb36a62fb269dbbe7a5712866938ceb.bindTooltip(
+                `<div>
+                     <strong>Kazungula</strong><br>Botswana/Zambia border<br><small>Waypoint 3 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_637762c82c34c76c985a96ed25099ad9 = L.circleMarker(
+                [-15.3875, 28.3228],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_adebea41eea51eb7d62dd675b7a750e1);
+        
+    
+        var popup_ade95ffdd98af84663d12c57568b8076 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_42eb627964d5297b00fb1981edb4cd51 = $(`<div id="html_42eb627964d5297b00fb1981edb4cd51" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lusaka</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_ade95ffdd98af84663d12c57568b8076.setContent(html_42eb627964d5297b00fb1981edb4cd51);
+            
+        
+
+        circle_marker_637762c82c34c76c985a96ed25099ad9.bindPopup(popup_ade95ffdd98af84663d12c57568b8076)
+        ;
+
+        
+    
+    
+            circle_marker_637762c82c34c76c985a96ed25099ad9.bindTooltip(
+                `<div>
+                     <strong>Lusaka</strong><br>Zambia<br><small>Waypoint 4 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3b78b0437c76abce3470887854c6166a = L.circleMarker(
+                [-12.9683, 28.6366],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_adebea41eea51eb7d62dd675b7a750e1);
+        
+    
+        var popup_2c1f7bd22d7f1526fc1a360e7c404058 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_9043bc9c866c4fd2952dd7a8348417ce = $(`<div id="html_9043bc9c866c4fd2952dd7a8348417ce" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Ndola</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_2c1f7bd22d7f1526fc1a360e7c404058.setContent(html_9043bc9c866c4fd2952dd7a8348417ce);
+            
+        
+
+        circle_marker_3b78b0437c76abce3470887854c6166a.bindPopup(popup_2c1f7bd22d7f1526fc1a360e7c404058)
+        ;
+
+        
+    
+    
+            circle_marker_3b78b0437c76abce3470887854c6166a.bindTooltip(
+                `<div>
+                     <strong>Ndola</strong><br>Zambia<br><small>Waypoint 5 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2c67d01cdcb74d17439043dbb83bd9a2 = L.circleMarker(
+                [-12.208, 27.798],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_adebea41eea51eb7d62dd675b7a750e1);
+        
+    
+        var popup_1eb1d0e5987819f4a4de3d5d0a0d3d9c = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_73e56e4355f0b6735713bb5bf9fb58a9 = $(`<div id="html_73e56e4355f0b6735713bb5bf9fb58a9" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Kasumbalesa</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_1eb1d0e5987819f4a4de3d5d0a0d3d9c.setContent(html_73e56e4355f0b6735713bb5bf9fb58a9);
+            
+        
+
+        circle_marker_2c67d01cdcb74d17439043dbb83bd9a2.bindPopup(popup_1eb1d0e5987819f4a4de3d5d0a0d3d9c)
+        ;
+
+        
+    
+    
+            circle_marker_2c67d01cdcb74d17439043dbb83bd9a2.bindTooltip(
+                `<div>
+                     <strong>Kasumbalesa</strong><br>Zambia/DRC border<br><small>Waypoint 6 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_98cbf0d9ea46d353394c458d29a65302 = L.circleMarker(
+                [-11.6647, 27.4794],
+                {"bubblingMouseEvents": true, "color": "#987bcc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#987bcc", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(feature_group_adebea41eea51eb7d62dd675b7a750e1);
+        
+    
+        var popup_badf6bc334552ae4bc9910eb5a931eb8 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_910844233f1f319876ba9cac51818c70 = $(`<div id="html_910844233f1f319876ba9cac51818c70" style="width: 100.0%; height: 100.0%;"><div style="font-family:system-ui;max-width:300px"><h3 style="margin:0 0 5px">Lubumbashi</h3><div>Southern North–South — Botswana/Kazungula alternative</div><p>Regional alternative only; detailed trucking route not verified</p><p>Alternative to Beitbridge/Chirundu for specific operators, not automatic routing.</p><a href="https://www.sadc.int/latest-news/sadc-piloting-and-rolling-out-regional-customs-transit-guarantee-along-north-south" target="_blank" rel="noopener">Official supporting source</a><p style="font-size:11px">No street-level alignment or customs clearance represented.</p></div></div>`)[0];
+                popup_badf6bc334552ae4bc9910eb5a931eb8.setContent(html_910844233f1f319876ba9cac51818c70);
+            
+        
+
+        circle_marker_98cbf0d9ea46d353394c458d29a65302.bindPopup(popup_badf6bc334552ae4bc9910eb5a931eb8)
+        ;
+
+        
+    
+    
+            circle_marker_98cbf0d9ea46d353394c458d29a65302.bindTooltip(
+                `<div>
+                     <strong>Lubumbashi</strong><br>DRC<br><small>Waypoint 7 in reference list; position approximate</small>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_adebea41eea51eb7d62dd675b7a750e1.addTo(map_9364c68daf311ade4bcbc65d2659ca08);
+        
+    
+            var layer_control_2f1d674454c4736264dd35bd636fa1b3_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_fd4ea05752d56c6a4d4111b372f21767,
+                    "Light cartographic base" : tile_layer_cf5788a35e0899a8d0b3d30ade46e92a,
+                    "Dark cartographic base" : tile_layer_9be60989f8df8fe9773437a27eb63b85,
+                },
+                overlays :  {
+                    "Southern North\u2013South \u2014 old Johannesburg to Lusaka scope" : feature_group_98c64fbee827669d3f41c90b86d1e927,
+                    "Southern North\u2013South \u2014 DRC via Kasumbalesa" : feature_group_639289a28b177cfa31045b40ae6a7703,
+                    "Southern North\u2013South \u2014 Botswana/Kazungula alternative" : feature_group_adebea41eea51eb7d62dd675b7a750e1,
+                },
+            };
+            let layer_control_2f1d674454c4736264dd35bd636fa1b3 = L.control.layers(
+                layer_control_2f1d674454c4736264dd35bd636fa1b3_layers.base_layers,
+                layer_control_2f1d674454c4736264dd35bd636fa1b3_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_9364c68daf311ade4bcbc65d2659ca08);
+
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_9364c68daf311ade4bcbc65d2659ca08);
+        
+    
+            var mouse_position_9036e165720e1b1335c00a3a03cd67d4 = new L.Control.MousePosition(
+                {
+  "position": "bottomright",
+  "separator": " : ",
+  "emptyString": "Unavailable",
+  "lngFirst": false,
+  "numDigits": 5,
+  "prefix": "",
+}
+            );
+            mouse_position_9036e165720e1b1335c00a3a03cd67d4.options["latFormatter"] =
+                undefined;
+            mouse_position_9036e165720e1b1335c00a3a03cd67d4.options["lngFormatter"] =
+                undefined;
+            map_9364c68daf311ade4bcbc65d2659ca08.addControl(mouse_position_9036e165720e1b1335c00a3a03cd67d4);
+        
+</script>
+</html>

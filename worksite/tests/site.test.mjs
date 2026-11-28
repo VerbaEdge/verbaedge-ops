@@ -87,3 +87,29 @@ test('no unsupported live licensed-service claims', () => {
     assert.doesNotMatch(fs.readFileSync(file, 'utf8'), /we provide live tracking with carrier access|we are a licensed freight broker|our certified installers are on staff/i);
   }
 });
+
+test('the corridor picker and its accessible panels stay in sync', () => {
+  const html = fs.readFileSync(path.join(root, 'corridors/index.html'), 'utf8');
+  const picker = html.match(/<select id="at-select">([\s\S]*?)<\/select>/)[1];
+  const choices = [...picker.matchAll(/<option value="([^"]+)"/g)].map(match => match[1]);
+  const panels = [...html.matchAll(/<article id="([^"]+)" class="at-panel"/g)].map(match => match[1]);
+  assert.deepEqual(choices, panels);
+  for (const region of ['pacific', 'rivers', 'gulf', 'lakes', 'atlantic']) {
+    assert.ok(choices.includes(region));
+    const source = fs.readFileSync(path.join(root, 'assets/atlas', region + '.svg'), 'utf8');
+    assert.match(source, /<svg\b/);
+  }
+});
+
+test('primary service journeys feature local images and retain demo entry points', () => {
+  const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  for (const route of ['/maintenance/', '/tradeflow/', '/corridors/']) {
+    assert.ok(home.includes('href="' + route + '"'));
+  }
+  for (const image of ['terminal', 'welding']) {
+    assert.ok(home.includes('src="/media/' + image + '.webp"'));
+  }
+  const logistics = fs.readFileSync(path.join(root, 'tradeflow/index.html'), 'utf8');
+  assert.ok(logistics.includes('/demo/#shipment-form'));
+  assert.ok(logistics.includes('/legacy/freight-demo/'));
+});
