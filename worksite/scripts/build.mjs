@@ -1,0 +1,1 @@
+import fs from 'node:fs';import path from 'node:path';const src=path.resolve('site'),dist=path.resolve('dist');if(!fs.existsSync(src))throw new Error('site/ not found');fs.rmSync(dist,{recursive:true,force:true});fs.cpSync(src,dist,{recursive:true});console.log('Static site copied to dist/');

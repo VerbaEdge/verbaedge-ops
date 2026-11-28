@@ -1,0 +1,25 @@
+name: Website CI (worksite)
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'worksite/**'
+      - '.github/workflows/worksite-ci.yml'
+  pull_request:
+    paths:
+      - 'worksite/**'
+      - '.github/workflows/worksite-ci.yml'
+permissions:
+  contents: read
+jobs:
+  site-check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: worksite
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm run check

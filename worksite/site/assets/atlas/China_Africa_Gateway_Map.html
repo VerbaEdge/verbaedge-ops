@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0" />
+            <style>
+                #map_f064b51cc8b4e5c00f2e342e40193d3f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+    
+<link rel="stylesheet" href="/assets/maps/leaflet/leaflet.css"><script src="/assets/maps/leaflet/leaflet.min.js"></script><script src="/assets/maps/basemap.js"></script><style>.leaflet-container{background:#d3e8ee}</style></head>
+<body>
+    
+    <div style="position:fixed;bottom:20px;left:20px;z-index:9999;background:#fffffff0;padding:12px;border-radius:8px;font:13px system-ui;max-width:320px"><b>China–Africa import planning</b><br>Origins and potential African gateways only. No ocean shipping geometry, schedules, prices, or actual carrier services implied.</div>
+    
+            <div class="folium-map" id="map_f064b51cc8b4e5c00f2e342e40193d3f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f064b51cc8b4e5c00f2e342e40193d3f = L.map(
+                "map_f064b51cc8b4e5c00f2e342e40193d3f",
+                {
+                    center: [3.0, 57.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 3,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_f064b51cc8b4e5c00f2e342e40193d3f);
+            addAtlasLand(map_f064b51cc8b4e5c00f2e342e40193d3f).catch(() => console.warn("Local geography unavailable"));
+
+            
+
+        
+    
+            
+        
+    
+            
+        
+    
+            var feature_group_b8a16f7530d3f0b688827017cbd43055 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_b316a46e5ea2c3b1c895e2515c413aa3 = L.circleMarker(
+                [31.2304, 121.4737],
+                {"bubblingMouseEvents": true, "color": "#2b75b7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2b75b7", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b8a16f7530d3f0b688827017cbd43055);
+        
+    
+        var popup_676ef4f7ca488ad2f3326d9c0c2d99ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a9cabfba30ce81e1ecde48df0e932d1 = `<div id="html_5a9cabfba30ce81e1ecde48df0e932d1" style="width: 100.0%; height: 100.0%;">Shanghai: geographic marker only; no confirmed liner service</div>`;
+                popup_676ef4f7ca488ad2f3326d9c0c2d99ba.setContent(html_5a9cabfba30ce81e1ecde48df0e932d1);
+            
+        
+
+        circle_marker_b316a46e5ea2c3b1c895e2515c413aa3.bindPopup(popup_676ef4f7ca488ad2f3326d9c0c2d99ba)
+        ;
+
+        
+    
+    
+            circle_marker_b316a46e5ea2c3b1c895e2515c413aa3.bindTooltip(
+                `<div>
+                     Shanghai, China
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0db9857fd3264c38b881584225cdc44a = L.circleMarker(
+                [29.8683, 121.544],
+                {"bubblingMouseEvents": true, "color": "#2b75b7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2b75b7", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b8a16f7530d3f0b688827017cbd43055);
+        
+    
+        var popup_dacb1268c571a590a3532f14093871d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bec9fd76f44d279206be26ffa80fd684 = `<div id="html_bec9fd76f44d279206be26ffa80fd684" style="width: 100.0%; height: 100.0%;">Ningbo: geographic marker only; no confirmed liner service</div>`;
+                popup_dacb1268c571a590a3532f14093871d2.setContent(html_bec9fd76f44d279206be26ffa80fd684);
+            
+        
+
+        circle_marker_0db9857fd3264c38b881584225cdc44a.bindPopup(popup_dacb1268c571a590a3532f14093871d2)
+        ;
+
+        
+    
+    
+            circle_marker_0db9857fd3264c38b881584225cdc44a.bindTooltip(
+                `<div>
+                     Ningbo, China
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9e85ab685144a46625d903314756b3ed = L.circleMarker(
+                [22.5431, 114.0579],
+                {"bubblingMouseEvents": true, "color": "#2b75b7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2b75b7", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b8a16f7530d3f0b688827017cbd43055);
+        
+    
+        var popup_0a144227897144ecc116411adcbff16a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_64fb815039271caebe8ff91fcad939d9 = `<div id="html_64fb815039271caebe8ff91fcad939d9" style="width: 100.0%; height: 100.0%;">Shenzhen: geographic marker only; no confirmed liner service</div>`;
+                popup_0a144227897144ecc116411adcbff16a.setContent(html_64fb815039271caebe8ff91fcad939d9);
+            
+        
+
+        circle_marker_9e85ab685144a46625d903314756b3ed.bindPopup(popup_0a144227897144ecc116411adcbff16a)
+        ;
+
+        
+    
+    
+            circle_marker_9e85ab685144a46625d903314756b3ed.bindTooltip(
+                `<div>
+                     Shenzhen, China
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0a7a1b71f80d32722e0820ddd6aeb338 = L.circleMarker(
+                [23.1291, 113.2644],
+                {"bubblingMouseEvents": true, "color": "#2b75b7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2b75b7", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b8a16f7530d3f0b688827017cbd43055);
+        
+    
+        var popup_3fc15ddcee80a9f7b5bd4d1fd1076cc1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c64e14c4bcc6ebcc772937b46f75731 = `<div id="html_9c64e14c4bcc6ebcc772937b46f75731" style="width: 100.0%; height: 100.0%;">Guangzhou: geographic marker only; no confirmed liner service</div>`;
+                popup_3fc15ddcee80a9f7b5bd4d1fd1076cc1.setContent(html_9c64e14c4bcc6ebcc772937b46f75731);
+            
+        
+
+        circle_marker_0a7a1b71f80d32722e0820ddd6aeb338.bindPopup(popup_3fc15ddcee80a9f7b5bd4d1fd1076cc1)
+        ;
+
+        
+    
+    
+            circle_marker_0a7a1b71f80d32722e0820ddd6aeb338.bindTooltip(
+                `<div>
+                     Guangzhou, China
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_789bc2681f0e5728ad8ed0e2433cfa3c = L.circleMarker(
+                [36.0671, 120.3826],
+                {"bubblingMouseEvents": true, "color": "#2b75b7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2b75b7", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_b8a16f7530d3f0b688827017cbd43055);
+        
+    
+        var popup_3d43d9fa4e0b72bdaef56644ae1d1caa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b83893076ae953d308e7c6986e2985f6 = `<div id="html_b83893076ae953d308e7c6986e2985f6" style="width: 100.0%; height: 100.0%;">Qingdao: geographic marker only; no confirmed liner service</div>`;
+                popup_3d43d9fa4e0b72bdaef56644ae1d1caa.setContent(html_b83893076ae953d308e7c6986e2985f6);
+            
+        
+
+        circle_marker_789bc2681f0e5728ad8ed0e2433cfa3c.bindPopup(popup_3d43d9fa4e0b72bdaef56644ae1d1caa)
+        ;
+
+        
+    
+    
+            circle_marker_789bc2681f0e5728ad8ed0e2433cfa3c.bindTooltip(
+                `<div>
+                     Qingdao, China
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_b8a16f7530d3f0b688827017cbd43055.addTo(map_f064b51cc8b4e5c00f2e342e40193d3f);
+        
+    
+            var feature_group_1d220e66a1fa658ab9f417ea1e1bc94a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_9817d70dca471385523cb53d8939a7c3 = L.circleMarker(
+                [-4.0435, 39.6682],
+                {"bubblingMouseEvents": true, "color": "#c07b35", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c07b35", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1d220e66a1fa658ab9f417ea1e1bc94a);
+        
+    
+        var popup_5c396269792d5926d03bd7dc852b7bb8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25145ab1fdd29ab1c41ce89764b75cb8 = `<div id="html_25145ab1fdd29ab1c41ce89764b75cb8" style="width: 100.0%; height: 100.0%;">Mombasa: geographic marker only; no confirmed liner service</div>`;
+                popup_5c396269792d5926d03bd7dc852b7bb8.setContent(html_25145ab1fdd29ab1c41ce89764b75cb8);
+            
+        
+
+        circle_marker_9817d70dca471385523cb53d8939a7c3.bindPopup(popup_5c396269792d5926d03bd7dc852b7bb8)
+        ;
+
+        
+    
+    
+            circle_marker_9817d70dca471385523cb53d8939a7c3.bindTooltip(
+                `<div>
+                     Mombasa, Kenya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4bad966216784c3f577d1df13f8f549c = L.circleMarker(
+                [5.669, 0.017],
+                {"bubblingMouseEvents": true, "color": "#c07b35", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c07b35", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1d220e66a1fa658ab9f417ea1e1bc94a);
+        
+    
+        var popup_4311e7b649dd37612d0b4134f84ead77 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a388a9db39ed2164db5a628da3eef30 = `<div id="html_6a388a9db39ed2164db5a628da3eef30" style="width: 100.0%; height: 100.0%;">Tema: geographic marker only; no confirmed liner service</div>`;
+                popup_4311e7b649dd37612d0b4134f84ead77.setContent(html_6a388a9db39ed2164db5a628da3eef30);
+            
+        
+
+        circle_marker_4bad966216784c3f577d1df13f8f549c.bindPopup(popup_4311e7b649dd37612d0b4134f84ead77)
+        ;
+
+        
+    
+    
+            circle_marker_4bad966216784c3f577d1df13f8f549c.bindTooltip(
+                `<div>
+                     Tema, Ghana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c170e956337b6f6de3742cd4d5daf47e = L.circleMarker(
+                [4.895, -1.755],
+                {"bubblingMouseEvents": true, "color": "#c07b35", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c07b35", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1d220e66a1fa658ab9f417ea1e1bc94a);
+        
+    
+        var popup_231cc1d47502cf67d23cd3b12506dc3b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c4e6f69f21254a803a2b5577d73f403a = `<div id="html_c4e6f69f21254a803a2b5577d73f403a" style="width: 100.0%; height: 100.0%;">Takoradi: geographic marker only; no confirmed liner service</div>`;
+                popup_231cc1d47502cf67d23cd3b12506dc3b.setContent(html_c4e6f69f21254a803a2b5577d73f403a);
+            
+        
+
+        circle_marker_c170e956337b6f6de3742cd4d5daf47e.bindPopup(popup_231cc1d47502cf67d23cd3b12506dc3b)
+        ;
+
+        
+    
+    
+            circle_marker_c170e956337b6f6de3742cd4d5daf47e.bindTooltip(
+                `<div>
+                     Takoradi, Ghana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_38e922c4108628cd8d729c3104bdfd4e = L.circleMarker(
+                [-29.8587, 31.0218],
+                {"bubblingMouseEvents": true, "color": "#c07b35", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c07b35", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1d220e66a1fa658ab9f417ea1e1bc94a);
+        
+    
+        var popup_2d365c2a7af03ae0c1dc8483052b495d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e33fe4d439b1a51dc1c08ad0fb4ab5c6 = `<div id="html_e33fe4d439b1a51dc1c08ad0fb4ab5c6" style="width: 100.0%; height: 100.0%;">Durban: geographic marker only; no confirmed liner service</div>`;
+                popup_2d365c2a7af03ae0c1dc8483052b495d.setContent(html_e33fe4d439b1a51dc1c08ad0fb4ab5c6);
+            
+        
+
+        circle_marker_38e922c4108628cd8d729c3104bdfd4e.bindPopup(popup_2d365c2a7af03ae0c1dc8483052b495d)
+        ;
+
+        
+    
+    
+            circle_marker_38e922c4108628cd8d729c3104bdfd4e.bindTooltip(
+                `<div>
+                     Durban, South Africa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5dd4752f60755d9bd4084b7854f12f6a = L.circleMarker(
+                [-12.348, 13.545],
+                {"bubblingMouseEvents": true, "color": "#c07b35", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c07b35", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1d220e66a1fa658ab9f417ea1e1bc94a);
+        
+    
+        var popup_03d03b345afa8109a4c06b381d8969b0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_719c61495dcac41d72c712c3f5def93b = `<div id="html_719c61495dcac41d72c712c3f5def93b" style="width: 100.0%; height: 100.0%;">Lobito: geographic marker only; no confirmed liner service</div>`;
+                popup_03d03b345afa8109a4c06b381d8969b0.setContent(html_719c61495dcac41d72c712c3f5def93b);
+            
+        
+
+        circle_marker_5dd4752f60755d9bd4084b7854f12f6a.bindPopup(popup_03d03b345afa8109a4c06b381d8969b0)
+        ;
+
+        
+    
+    
+            circle_marker_5dd4752f60755d9bd4084b7854f12f6a.bindTooltip(
+                `<div>
+                     Lobito, Angola
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9ff5b32436e02a8e9bbe90c955443d08 = L.circleMarker(
+                [-6.7924, 39.2083],
+                {"bubblingMouseEvents": true, "color": "#c07b35", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c07b35", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1d220e66a1fa658ab9f417ea1e1bc94a);
+        
+    
+        var popup_d6f551ca3950eace1c328724aca1e705 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_67c252d29d3f3ea20f34a1325c24a205 = `<div id="html_67c252d29d3f3ea20f34a1325c24a205" style="width: 100.0%; height: 100.0%;">Dar es Salaam: geographic marker only; no confirmed liner service</div>`;
+                popup_d6f551ca3950eace1c328724aca1e705.setContent(html_67c252d29d3f3ea20f34a1325c24a205);
+            
+        
+
+        circle_marker_9ff5b32436e02a8e9bbe90c955443d08.bindPopup(popup_d6f551ca3950eace1c328724aca1e705)
+        ;
+
+        
+    
+    
+            circle_marker_9ff5b32436e02a8e9bbe90c955443d08.bindTooltip(
+                `<div>
+                     Dar es Salaam, Tanzania
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8cc36e2f5fa1b00b1212fa611c3f6e44 = L.circleMarker(
+                [33.5731, -7.5898],
+                {"bubblingMouseEvents": true, "color": "#c07b35", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c07b35", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1d220e66a1fa658ab9f417ea1e1bc94a);
+        
+    
+        var popup_833cc08c0a375bf1650756add0a6eaec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13458b0f740e20e27abf3f9867deafde = `<div id="html_13458b0f740e20e27abf3f9867deafde" style="width: 100.0%; height: 100.0%;">Casablanca: geographic marker only; no confirmed liner service</div>`;
+                popup_833cc08c0a375bf1650756add0a6eaec.setContent(html_13458b0f740e20e27abf3f9867deafde);
+            
+        
+
+        circle_marker_8cc36e2f5fa1b00b1212fa611c3f6e44.bindPopup(popup_833cc08c0a375bf1650756add0a6eaec)
+        ;
+
+        
+    
+    
+            circle_marker_8cc36e2f5fa1b00b1212fa611c3f6e44.bindTooltip(
+                `<div>
+                     Casablanca, Morocco
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4325a762c12e408ab4f4c4c9ce878d1e = L.circleMarker(
+                [14.7167, -17.4677],
+                {"bubblingMouseEvents": true, "color": "#c07b35", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c07b35", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1d220e66a1fa658ab9f417ea1e1bc94a);
+        
+    
+        var popup_09cf5766008c32fac8572b1ccb6e555c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9060ffd8318a4305fc5029c2a04feb70 = `<div id="html_9060ffd8318a4305fc5029c2a04feb70" style="width: 100.0%; height: 100.0%;">Dakar: geographic marker only; no confirmed liner service</div>`;
+                popup_09cf5766008c32fac8572b1ccb6e555c.setContent(html_9060ffd8318a4305fc5029c2a04feb70);
+            
+        
+
+        circle_marker_4325a762c12e408ab4f4c4c9ce878d1e.bindPopup(popup_09cf5766008c32fac8572b1ccb6e555c)
+        ;
+
+        
+    
+    
+            circle_marker_4325a762c12e408ab4f4c4c9ce878d1e.bindTooltip(
+                `<div>
+                     Dakar, Senegal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_1d220e66a1fa658ab9f417ea1e1bc94a.addTo(map_f064b51cc8b4e5c00f2e342e40193d3f);
+        
+    
+            var layer_control_78ea670d533af177ca5abd70e7215ace_layers = {
+                base_layers : {},
+                overlays :  {
+                    "Illustrative Chinese origins" : feature_group_b8a16f7530d3f0b688827017cbd43055,
+                    "African gateway locations" : feature_group_1d220e66a1fa658ab9f417ea1e1bc94a,
+                },
+            };
+            let layer_control_78ea670d533af177ca5abd70e7215ace = L.control.layers(
+                layer_control_78ea670d533af177ca5abd70e7215ace_layers.base_layers,
+                layer_control_78ea670d533af177ca5abd70e7215ace_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_f064b51cc8b4e5c00f2e342e40193d3f);
+
+        
+    
+            if (L.control.fullscreen) L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_f064b51cc8b4e5c00f2e342e40193d3f);
+        
+</script>
+</html>

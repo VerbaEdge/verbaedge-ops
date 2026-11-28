@@ -1,0 +1,3 @@
+# Work kickoff prompt
+
+Audit the attached VerbaEdge Ops website repository and strategy documents. Compare supplied source archive, current public copy and new draft source files. Build a 12-week issue-based launch plan with ownership placeholders, evidence classifications, QA tests, regulatory gates and deployment sequence. Read AGENTS.md and prepare actionable Codex tickets in Markdown. Evaluate the risks from existing domain traffic, email/DNS, licensing, imagery, performance and accessibility. Do not assume the new DBA or domain exists. Do not submit legal filings or deploy anything without explicit authorization.
